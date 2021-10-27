@@ -1,5 +1,5 @@
 <?php
-require_once(__DIR__ . '/src/php/NewsController.php');
+require_once(__DIR__ . '/src/news/php/NewsController.php');
 ?>
 
 <!DOCTYPE html>
@@ -8,11 +8,13 @@ require_once(__DIR__ . '/src/php/NewsController.php');
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/styles/style.css">
     <link rel="icon" href="assets/img/Logosemnome.svg">
-    <title>Document</title>
+    <title>SENAC Notícias</title>
 </head>
 <body>
+    
+    <!-- Header  -->
     <header class="header-navbar">
         <img src="assets/img/Logo.svg" alt="Logo" id="nav-logo">
         <nav id="navbar">
@@ -35,83 +37,99 @@ require_once(__DIR__ . '/src/php/NewsController.php');
         </ul>
         </nav>
     </header>
-    <section class="first-section classe-para-lucas">
-        <!-- <img src="assets/section-0 image.svg" alt="" class="firstsection-img"> -->
+
+    <!-- Landing-page -->
+    <!-- <section class="first-section">
+        <img src="assets/section-0 image.svg" alt="" class="firstsection-img">
         <p class="img-parag">Seja bem-vindo(a) ao seu portal de notícias favorito</p>
-        <h1 class="img-h1">
-            Veja aqui as principais notícias<br class="break-line">
-            acerca do Senac, a sua<br class="break-line">
-            instituição favorita para se tornar um<br class="break-line">
-            bom profissional
-        </h1>
+        <h1 class="img-h1">Veja aqui as principais notícias <br> acerca do Senac, a sua <br> instituição favorita para se tornar um <br> bom profissional</h1>
         <button class="img-btn">VER NOTÍCIAS</button>
-    </section>
-    <section>
+    </section> -->
+
+    <!-- Notícias -->
+    <!-- <section id="news">
         <div>
         <?php
 		$dbh = new NewsController();
 		$news = $dbh->getLatestNews();
 
-		foreach ($news as $value):
-        ?>
-			<a href="/src/pages/new.php?id=<?php echo $value['id']; ?>">
-                <div class="news">
-                    <h2><?php echo $value['title']; ?></h2>
-                    <img src="<?php echo $value['mainImage']; ?>" />
-                    <p><?php echo $value['shortDescription']; ?><p>
-			    </div>
-            </a>
-        <?php endforeach; ?>
+		foreach ($news as $value){
+			$id = $value['id'];
+			$title = $value['title'];
+			$shortDesc = $value['shortDescription'];
+			$mainImage = $value['mainImage'];
+			$href = "/src/news/pages/new.php?id=" . $id;
+
+			echo "<a href='{$href}'><div class='news'>
+				<h2>{$title}</h2>
+				<img src='{$mainImage}' />
+				<p>{$shortDesc}<p>
+			</div></a>";
+		}
+		?>
         </div>
-    </section>
-    <section>
+    </section> -->
+
+    <!-- Newsletter -->
+    <section id="newsletter">
         <h1>Receba notícias via e-mail e fique por dentro das novidades!
         </h1>
         <div>
             <img src="assets/img/Logosemnome.svg" alt="Logoform">
-            <form>
-                <input type="text" placeholder="Insira seu nome">
-                <input type="text" placeholder="Insira seu e-mail">
-                <input type="submit" value="Enviar">
+            <form id="newsletter-form">
+                <label for="name"></label>
+                <input type="text" value="" name="name" placeholder="Insira seu nome">
+                <label for="email"></label>
+                <input type="email" value="" name="email" placeholder="Insira seu e-mail">
+                <input type="submit" class="name="subscribe" value="Enviar">
             </form>
         </div>
     </section>
+
+    <!-- Footer -->
     <footer>
         <img src="assets/img/Logo.svg" alt="Senac">
         <p>Senac, 2021<br>Todos os direitos reservados</p>
+        <!-- Menus/Links do footer -->
         <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <h4></h4>
+            <li>Unidades</li>
+            <li>Licitações</li>
+            <li>Notícias</li>
+            <li>Transparência</li>
+            <li>Fale conosco</li>
         </ul>
         <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <h4></h4>
+            <li>Presenciais</li>
+            <li>EAD</li>
+            <li>SENAC Gratuidade</li>
+            <li>Resultados</li>
         </ul>
         <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+        <h4></h4>
+            <li>Salão de festas</li>
+            <li>Bibliotecas</li>
+            <li>Museu</li>
+            <li>Salão de beleza</li>
+            <li>Restaurantes</li>
+            <li>Feiras</li>
         </ul>
         <ul>
-            <li></li>
-            <li></li>
-            <li></li>
+            <h4></h4>
+            <li>Para você</li>
+            <li>Para empresas</li>
+            <li>Atendimento corporativo</li>
         </ul>
         <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <h4></h4>
+            <li>Jovem Aprendiz</li>
+            <li>Alimentos Seguros</li>
+            <li>SENAC Mais Verde</li>
+            <li>SENAC Gratuidade</li>
         </ul>
-        <div>
+        <!-- Redes sociais -->
+        <div class="footer-socials">
             <ul>
                 <li>
                     <a href="">
@@ -137,6 +155,7 @@ require_once(__DIR__ . '/src/php/NewsController.php');
         </div>
     </footer>
 
+    <!-- Scripts -->
     <script src="src/script.js"></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
-@import url('normalize.css');
+/* @import url('/assets/styles/normalize.css'); */
 
 
 :root {
@@ -44,22 +44,11 @@ html {
 }
 
 .first-section {
-    
-    /* position: relative; */
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    background-image: url(/assets/section-0\ image.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
     text-align: center;
     color: #fff;
-    height: 95vh;
-    background-image: url("/assets/section-0image.svg");
-    background-repeat: no-repeat;
-    background-position: 65%;
-    background-size: cover;
-    padding: 1em;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: start;
 }
 
 .firstsection-img {
@@ -68,7 +57,6 @@ html {
 }
 
 .img-parag {
-    /* position: absolute; */
     font-family: var(--main-font);
     font-size: 20px;
     font-weight: 500;
@@ -76,21 +64,15 @@ html {
     left: 10%;
 }
 .img-h1 {
-    /* position: absolute; */
     font-family: var(--main-font);
     text-align: left;
-    font-size: 25px;
+    font-size: 48px;
     font-weight: 700;
-    margin: 0;
-    line-height: 1.5em;
+    margin: 1em;
+    top: 15%;
+    left: 7%;
 }
-
-.break-line {
-    display: none;
-}
-
 .img-btn {
-    /* position: absolute; */
     padding: 0.7em 2em 0.7em 2em;
     background: var(--second-color);
     color: #fff;
@@ -98,27 +80,17 @@ html {
     font-weight: 700;
     font-size: 24px;
     left: 10%;
-    bottom: 55%;
+    bottom: 25%;
     border-radius: 15px;
     border-style: none;
 }
 
-@media (min-width: 768px) {
-    .first-section {
-        padding: 5em;
-    }
-
-    .break-line {
-        display: block;
-    }
-}
-
-@media (min-width: 1200px) {
-    .first-section {
-        padding: 2.5em 10em;
-    }
-
-    .break-line {
-        display: block;
-    }
+section #newsletter {
+    color: red;
+    font-family: var(--main-font);
+    background: linear-gradient(90deg, #0F0F0F 0%, #202020 100%);
+    padding: 25em;
+    border-radius: 1em;
+    width: 150px;
+    height: 150px;
 }
