@@ -1,5 +1,6 @@
 <?php
-require_once(__DIR__ . '/src/news/php/NewsController.php');
+require_once(__DIR__ . '/src/php/classes/NewsController.php');
+require_once(__DIR__ . '/src/php/functions/getPath.php');
 ?>
 
 <!DOCTYPE html>
@@ -10,10 +11,10 @@ require_once(__DIR__ . '/src/news/php/NewsController.php');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/styles/style.css">
     <link rel="icon" href="assets/img/Logosemnome.svg">
+    <script type="text/javascript" src="assets/js/NLAction.js"></script>
     <title>SENAC Notícias</title>
 </head>
 <body>
-    
     <!-- Header  -->
     <header class="header-navbar">
         <img src="assets/img/Logo.svg" alt="Logo" id="nav-logo">
@@ -23,10 +24,10 @@ require_once(__DIR__ . '/src/news/php/NewsController.php');
                 <a href="">Home</a>
             </li>
             <li>
-                <a href="">Notícias</a>
+                <a href="#news">Notícias</a>
             </li>
             <li>
-                <a href="">Newsteller</a>
+                <a href="#newsletter">Newsletter</a>
             </li>
             <li>
                 <a href="">Nos Encontre</a>
@@ -39,49 +40,46 @@ require_once(__DIR__ . '/src/news/php/NewsController.php');
     </header>
 
     <!-- Landing-page -->
-    <!-- <section class="first-section">
-        <img src="assets/section-0 image.svg" alt="" class="firstsection-img">
+    <section class="first-section">
+        <img src="assets/section-0image.svg" alt="" class="firstsection-img">
         <p class="img-parag">Seja bem-vindo(a) ao seu portal de notícias favorito</p>
         <h1 class="img-h1">Veja aqui as principais notícias <br> acerca do Senac, a sua <br> instituição favorita para se tornar um <br> bom profissional</h1>
         <button class="img-btn">VER NOTÍCIAS</button>
-    </section> -->
+    </section>
 
     <!-- Notícias -->
-    <!-- <section id="news">
+    <section id="news">
         <div>
-        <?php
-		$dbh = new NewsController();
-		$news = $dbh->getLatestNews();
+            <?php
+    		$nC = new NewsController();
+    		$news = $nC->getLatestNews();
 
-		foreach ($news as $value){
-			$id = $value['id'];
-			$title = $value['title'];
-			$shortDesc = $value['shortDescription'];
-			$mainImage = $value['mainImage'];
-			$href = "/src/news/pages/new.php?id=" . $id;
-
-			echo "<a href='{$href}'><div class='news'>
-				<h2>{$title}</h2>
-				<img src='{$mainImage}' />
-				<p>{$shortDesc}<p>
-			</div></a>";
-		}
-		?>
+    		foreach ($news as $value):
+    			$href = "/src/pages/new.php?id=" . $value['id'];
+                $mainImage = getPath($value['mainImage']);
+    		?>
+                <a href='<?php echo $href; ?>'>
+                    <div class='news'>
+                        <h2><?php echo $value['title']; ?></h2>
+                        <img src='<?php echo $mainImage; ?>' />
+                        <p><?php echo $value['shortDescription']; ?><p>
+                    </div>
+                </a>
+            <?php endforeach; ?>
         </div>
-    </section> -->
+    </section>
 
     <!-- Newsletter -->
     <section id="newsletter">
-        <h1>Receba notícias via e-mail e fique por dentro das novidades!
-        </h1>
+        <h1>Receba notícias via e-mail e fique por dentro das novidades!</h1>
         <div>
             <img src="assets/img/Logosemnome.svg" alt="Logoform">
-            <form id="newsletter-form">
+            <form id="newsletter-form" action="javascript:NLAction()" method="GET">
                 <label for="name"></label>
-                <input type="text" value="" name="name" placeholder="Insira seu nome">
+                <input type="text" id="name" name="name" placeholder="Insira seu nome">
                 <label for="email"></label>
-                <input type="email" value="" name="email" placeholder="Insira seu e-mail">
-                <input type="submit" class="name="subscribe" value="Enviar">
+                <input type="email" id="email" name="email" placeholder="Insira seu e-mail">
+                <input type="submit" name="subscribe" value="Enviar" />
             </form>
         </div>
     </section>
@@ -154,8 +152,5 @@ require_once(__DIR__ . '/src/news/php/NewsController.php');
             </ul>
         </div>
     </footer>
-
-    <!-- Scripts -->
-    <script src="src/script.js"></script>
 </body>
 </html>

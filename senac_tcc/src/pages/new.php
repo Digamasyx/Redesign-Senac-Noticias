@@ -1,9 +1,9 @@
 <?php
-require_once(dirname(__DIR__) . '/php/NewsController.php');
+require_once(dirname(__DIR__) . '/php/classes/NewsController.php');
 
 if (isset($_GET['id'])){
-	$dbh = new NewsController();
-	$new = $dbh->getNew($_GET['id']);
+	$nC = new NewsController();
+	$new = $nC->getNew($_GET['id']);
 	
 	$id = $new['id'];
 	$title = $new['title'];
@@ -16,16 +16,14 @@ if (isset($_GET['id'])){
 <html>
 <head>
 	<meta charset="utf-8" />
-	<title><?php echo htmlspecialchars($title); ?></title>
+	<title><?php echo $title; ?></title>
 </head>
 <body>
 	<main>
-		<?php
-		echo "<div class='new'>
-			<h1>{$title}</h1>
-			<div class='content'>{$content}</div>
-		</div>";
-		?>
+		<div class='new'>
+			<h1><?php echo $title; ?></h1>
+			<div class='content'><?php echo $content; ?></div>
+		</div>
 	</main>
 </body>
 </html>

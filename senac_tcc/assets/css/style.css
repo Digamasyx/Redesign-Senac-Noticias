@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
-/* @import url('/assets/styles/normalize.css'); */
+@import url('normalize.css');
 
 
 :root {
@@ -44,7 +44,7 @@ html {
 }
 
 .first-section {
-    background-image: url(/assets/section-0\ image.svg);
+    background-image: url(/assets/section-0image.svg);
     background-repeat: no-repeat;
     background-size: contain;
     text-align: center;

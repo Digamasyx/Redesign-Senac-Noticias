@@ -1,14 +1,17 @@
 <?php
-class DatabaseConfig{
+class DatabaseConfig
+{
 	protected $dbh;
 
-	protected function __construct(){
+	protected function __construct()
+	{
 		$this->dbh = new PDO('mysql:host=localhost;dbname=tcc', 'root', '');
 
 		$this->createNewsTable();
 	}
 
-	private function createNewsTable(){
+	private function createNewsTable()
+	{
 		$this->dbh->exec("CREATE TABLE IF NOT EXISTS news (
 			id INT PRIMARY KEY auto_increment,
 			title VARCHAR(255) NOT NULL,
