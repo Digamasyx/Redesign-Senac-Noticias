@@ -21,7 +21,7 @@ require_once(__DIR__ . '/src/php/functions/getPath.php');
         <nav id="navbar">
         <ul>
             <li>
-                <a href="">Home</a>
+                <a href="#">Home</a>
             </li>
             <li>
                 <a href="#news">Notícias</a>
@@ -30,10 +30,10 @@ require_once(__DIR__ . '/src/php/functions/getPath.php');
                 <a href="#newsletter">Newsletter</a>
             </li>
             <li>
-                <a href="">Nos Encontre</a>
+                <a href="#">Nos Encontre</a>
             </li>
             <li>
-                <a href="">Serviços</a>
+                <a href="#">Serviços</a>
             </li>
         </ul>
         </nav>
