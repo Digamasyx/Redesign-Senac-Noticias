@@ -9,7 +9,7 @@ require_once(__DIR__ . '/src/php/functions/getPath.php');
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="icon" href="assets/img/Logosemnome.svg">
     <script type="text/javascript" src="assets/js/NLAction.js"></script>
     <title>SENAC Notícias</title>
@@ -41,7 +41,7 @@ require_once(__DIR__ . '/src/php/functions/getPath.php');
 
     <!-- Landing-page -->
     <section class="first-section">
-        <img src="assets/section-0image.svg" alt="" class="firstsection-img">
+        <!-- <img src="assets/section-0image.svg" alt="" class="firstsection-img"> -->
         <p class="img-parag">Seja bem-vindo(a) ao seu portal de notícias favorito</p>
         <h1 class="img-h1">Veja aqui as principais notícias <br> acerca do Senac, a sua <br> instituição favorita para se tornar um <br> bom profissional</h1>
         <button class="img-btn">VER NOTÍCIAS</button>

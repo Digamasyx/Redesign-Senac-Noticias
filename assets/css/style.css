@@ -42,10 +42,15 @@ html {
     padding-right: 1em;
 }
 
+/*  Era para isso estar funcionando, mas aparentemente o projeto zoa com minha cara.
+    - Marcos
+*/
 .first-section {
+    width: 100%;
+    height: 100vh;
     background-image: url(/assets/section-0image.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
+    background-position: center;
     text-align: center;
     color: #fff;
 }
