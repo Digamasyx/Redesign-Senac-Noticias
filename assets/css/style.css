@@ -9,20 +9,25 @@
 }
 
 html {
+    scroll-behavior: smooth;
     background: var(--bg-color);
+
 }
+
+/* = Header / navbar ================ */
 
 .header-navbar {
     display: flex;
+    justify-content: space-around;
     align-items: center;
     background: var(--bg-color);
-    justify-content: space-evenly;
-    width: 100%;
-    height: 80px;
+    backdrop-filter: blur(2px);
+    height: 10vh;
 }
 
 #nav-logo {
-    height: 50px;
+    height: 2.5em;
+    cursor: pointer;
 }
 
 #navbar ul li a {
@@ -30,22 +35,73 @@ html {
     color: #fff;
 }
 
-#navbar ul li {
+#navbar ul {
     list-style: none;
-    display: inline;
-    margin: .7em;
+    display: flex;
+
     font-family: var(--main-font);
     font-weight: 700;
     font-style: normal;
 }
-#navbar ul {
-    padding-right: 1em;
+
+#navbar li {
+    margin-left: 2em;
+    transition: .6s;
 }
 
-/*  Era para isso estar funcionando, mas aparentemente o projeto zoa com minha cara.
-    - Marcos
-*/
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu div{
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+}
+
+@media (max-width: 1024px) {
+    body {
+        overflow-x: hidden;
+    }
+    #navbar ul {
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        width: 32vw;
+        height: 92vh;
+        background: var(--bg-color);
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+    }
+
+    #navbar li {
+        margin-left: 0;
+        opacity: 0;
+    }
+
+    .mobile-menu {
+        display: block;
+        margin-left: 40vh;
+    }
+
+    #navbar.active {
+        transform: translateX(0);
+    }
+}
+
+/* = Landing-page ================ */
+
 .first-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    align-items: left;
+
     width: 100%;
     height: 100vh;
     background-image: url(/assets/section-0image.svg);
@@ -55,38 +111,35 @@ html {
     color: #fff;
 }
 
-.firstsection-img {
-    width: 100%;
-    
+#landing-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    align-items: left;
+    margin-left: 8em;
+
+    font-size: 14px;
+    font-family: var(--main-font);
+    margin-bottom: 100px;
 }
 
-.img-parag {
-    font-family: var(--main-font);
-    font-size: 20px;
-    font-weight: 500;
-    top: 10%;
-    left: 10%;
-}
-.img-h1 {
-    font-family: var(--main-font);
-    text-align: left;
-    font-size: 48px;
-    font-weight: 700;
-    margin: 1em;
-    top: 15%;
-    left: 7%;
-}
-.img-btn {
-    padding: 0.7em 2em 0.7em 2em;
-    background: var(--second-color);
+.landing-btn {
+    width: 150px;
+    height: 48px;
+
+    border: none;
+    background: #0071CF;
     color: #fff;
-    font-family: var(--main-font);
     font-weight: 700;
-    font-size: 24px;
-    left: 10%;
-    bottom: 25%;
-    border-radius: 15px;
-    border-style: none;
+    border-radius: 12px;
+}
+
+@media (min-width: 1024px) {
+    #landing-text p, #landing-text h1 {
+        font-size: 2.5em;
+    }
+
 }
 
 section #newsletter {
