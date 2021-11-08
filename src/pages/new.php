@@ -20,10 +20,12 @@ if (isset($_GET['id'])){
 </head>
 <body>
 	<main>
+		<?php require_once('src/php/componentes/header.php') ?>
 		<div class='new'>
 			<h1><?php echo $title; ?></h1>
 			<div class='content'><?php echo $content; ?></div>
 		</div>
+		<?php require_once('src/php/componentes/footer.php') ?>
 	</main>
 </body>
 </html>
