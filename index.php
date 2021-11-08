@@ -1,79 +1,59 @@
-<?php
-require_once(__DIR__ . '/src/php/classes/NewsController.php');
-require_once(__DIR__ . '/src/php/functions/getPath.php');
-?>
+
 
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-<<<<<<< HEAD
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="icon" href="assets/img/Logosemnome.svg">
-=======
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="assets/styles/style.css" />
-    <link rel="icon" href="assets/img/Logosemnome.svg" />
->>>>>>> a9d541e199930dbfde0e7866b481fd700d6cf25e
     <script type="text/javascript" src="assets/js/NLAction.js"></script>
     <title>SENAC Notícias</title>
 </head>
 <body>
     <!-- Header  -->
     <header class="header-navbar">
-        <img src="assets/img/Logo.svg" alt="Logo" id="nav-logo">
         <nav id="navbar">
-        <ul>
-            <li>
-                <a href="#">Home</a>
-            </li>
-            <li>
-                <a href="#news">Notícias</a>
-            </li>
-            <li>
-                <a href="#newsletter">Newsletter</a>
-            </li>
-            <li>
-                <a href="#">Nos Encontre</a>
-            </li>
-            <li>
-                <a href="#">Serviços</a>
-            </li>
-        </ul>
+            <img src="assets/img/Logo.svg" alt="Logo" id="nav-logo">
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul>
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#news">Notícias</a>
+                </li>
+                <li>
+                    <a href="#newsletter">Newsletter</a>
+                </li>
+                <li>
+                    <a href="#">Nos Encontre</a>
+                </li>
+                <li>
+                    <a href="#footer-section">Serviços</a>
+                </li>
+            </ul>
         </nav>
     </header>
 
     <!-- Landing-page -->
     <section class="first-section">
-        <!-- <img src="assets/section-0image.svg" alt="" class="firstsection-img"> -->
-        <p class="img-parag">Seja bem-vindo(a) ao seu portal de notícias favorito</p>
-        <h1 class="img-h1">Veja aqui as principais notícias <br> acerca do Senac, a sua <br> instituição favorita para se tornar um <br> bom profissional</h1>
-        <button class="img-btn">VER NOTÍCIAS</button>
+        <div id="landing-text">
+            <p class="top-text">Seja bem-vindo(a) ao seu portal de notícias favorito</p>
+            <h1 class="title">Veja aqui as principais notícias <br> acerca do Senac, a sua <br> instituição favorita para se tornar um <br> bom profissional</h1>
+            <button class="landing-btn">VER NOTÍCIAS</button>
+        </div>
     </section>
 
     <!-- Notícias -->
     <section id="news">
         <div>
-            <?php
-    		$nC = new NewsController();
-    		$news = $nC->getLatestNews();
-
-    		foreach ($news as $value):
-    			$href = "/src/pages/new.php?id=" . $value['id'];
-                $mainImage = getPath($value['mainImage']);
-    		?>
-                <a href='<?php echo $href; ?>'>
-                    <div class='news'>
-                        <h2><?php echo $value['title']; ?></h2>
-                        <img src='<?php echo $mainImage; ?>' />
-                        <p><?php echo $value['shortDescription']; ?><p>
-                    </div>
-                </a>
-            <?php endforeach; ?>
+            <p>bom, depois passa as mudanças pro outro kk</p>
         </div>
     </section>
 
@@ -93,46 +73,47 @@ require_once(__DIR__ . '/src/php/functions/getPath.php');
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer id="footer-section">
         <img src="assets/img/Logo.svg" alt="Senac">
         <p>Senac, 2021<br>Todos os direitos reservados</p>
         <!-- Menus/Links do footer -->
         <ul>
+            
             <h4></h4>
-            <li>Unidades</li>
-            <li>Licitações</li>
-            <li>Notícias</li>
-            <li>Transparência</li>
-            <li>Fale conosco</li>
+            <li><a href="">Unidades</a></li>
+            <li><a href="">Licitações</a></li>
+            <li><a href="">Notícias</a></li>
+            <li><a href="">Transparência</a></li>
+            <li><a href="">Fale conosco</a></li>
         </ul>
         <ul>
             <h4></h4>
-            <li>Presenciais</li>
-            <li>EAD</li>
-            <li>SENAC Gratuidade</li>
-            <li>Resultados</li>
+            <li><a href="">Presenciais</a></li>
+            <li><a href="">EAD</a></li>
+            <li><a href="">SENAC Gratuidade</a></li>
+            <li><a href="">Resultados</a></li>
         </ul>
         <ul>
         <h4></h4>
-            <li>Salão de festas</li>
-            <li>Bibliotecas</li>
-            <li>Museu</li>
-            <li>Salão de beleza</li>
-            <li>Restaurantes</li>
-            <li>Feiras</li>
+            <li><a href="">Salão de festas</a></li>
+            <li><a href="">Bibliotecas</a></li>
+            <li><a href="">Museu</a></li>
+            <li><a href="">Salão de beleza</a></li>
+            <li><a href="">Restaurantes</a></li>
+            <li><a href="">Feiras</a></li>
         </ul>
         <ul>
             <h4></h4>
-            <li>Para você</li>
-            <li>Para empresas</li>
-            <li>Atendimento corporativo</li>
+            <li><a href="">Para você</a></li>
+            <li><a href="">Para empresas</a></li>
+            <li><a href="">Atendimento corporativo</a></li>
         </ul>
         <ul>
             <h4></h4>
-            <li>Jovem Aprendiz</li>
-            <li>Alimentos Seguros</li>
-            <li>SENAC Mais Verde</li>
-            <li>SENAC Gratuidade</li>
+            <li><a href="">Jovem Aprendiz</a></li>
+            <li><a href="">Alimentos Seguros</a></li>
+            <li><a href="">SENAC Mais Verde</a></li>
+            <li><a href="">SENAC Gratuidade</a></li>
         </ul>
         <!-- Redes sociais -->
         <div class="footer-socials">
