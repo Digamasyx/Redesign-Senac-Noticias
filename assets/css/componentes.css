@@ -1,0 +1,32 @@
+.header-navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: var(--bg-color);
+    backdrop-filter: blur(2px);
+    height: 10vh;
+}
+
+#nav-logo {
+    height: 2.5em;
+    cursor: pointer;
+}
+
+#navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+#navbar ul {
+    list-style: none;
+    display: flex;
+
+    font-family: var(--main-font);
+    font-weight: 700;
+    font-style: normal;
+}
+
+#navbar li {
+    margin-left: 2em;
+    transition: .6s;
+}
