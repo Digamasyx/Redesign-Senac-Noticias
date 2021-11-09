@@ -4,9 +4,8 @@ html{
     font-family: 'Poppins', sans-serif;
 }
 body{
-    background: black;
+    background: #0C090A;
 }
-
 .container{
     display: grid;
     grid-template-columns: 3fr 1fr;

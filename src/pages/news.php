@@ -18,7 +18,7 @@ if (isset($_GET['id'])){
 	<meta charset="utf-8" />
 	<title><?php echo $title; ?></title>
 	<link rel="stylesheet" href="../../assets/css/componentes.css">
-	<link rel="stylesheet" href="../../assets/css/generic.css">
+	<link rel="stylesheet" href="../../assets/css/news.css">
 </head>
 <body>
 	<div class="container"><!-- inicio container -->
