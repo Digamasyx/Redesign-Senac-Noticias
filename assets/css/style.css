@@ -18,11 +18,18 @@ html {
 
 .header-navbar {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 0.1em;
     align-items: center;
     background: var(--bg-color);
-    backdrop-filter: blur(2px);
     height: 10vh;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0.1em;
 }
 
 #nav-logo {
@@ -85,7 +92,6 @@ html {
 
     .mobile-menu {
         display: block;
-        margin-left: 40vh;
     }
 
     #navbar.active {
@@ -142,12 +148,24 @@ html {
 
 }
 
-section #newsletter {
-    color: red;
+#newsletter {
+    text-align: center;
+    margin-left: 1.5em;
+
+    width: 65vw;
+    height: 100vh;
+
+    color: #fff;
     font-family: var(--main-font);
     background: linear-gradient(90deg, #0F0F0F 0%, #202020 100%);
-    padding: 25em;
+    padding: 2em;
     border-radius: 1em;
-    width: 150px;
-    height: 150px;
+}
+
+#newsletter form input {
+    border: #202020 solid 2px;
+    background: #0F0F0F;
+    color: #fff;
+    width: 125px;
+    height: 65px;
 }
