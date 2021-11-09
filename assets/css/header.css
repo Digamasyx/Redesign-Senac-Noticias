@@ -30,3 +30,47 @@
     margin-left: 2em;
     transition: .6s;
 }
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu div{
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+}
+
+@media (max-width: 1024px) {
+    body {
+        overflow-x: hidden;
+    }
+    #navbar ul {
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        width: 32vw;
+        height: 92vh;
+        background: var(--bg-color);
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+    }
+
+    #navbar li {
+        margin-left: 0;
+        opacity: 0;
+    }
+
+    .mobile-menu {
+        display: block;
+        margin-left: 40vh;
+    }
+
+    #navbar.active {
+        transform: translateX(0);
+    }
+}
