@@ -24,10 +24,11 @@ if (isset($_GET['id'])){
 	<div class="container"><!-- inicio container -->
 		<!--header -->
 		<header class="header-navbar">
+			<h1>HEADER</h1>
 		</header>
 			<!--header -->
 		<main>
-			<div class='new caixaNoticias'>
+			<div class='caixaNoticias'>
 				<div class='parteCimaCaixaNoticias'>
 					<h1 class='tituloNoticia'>
 						AMD anuncia Meta como cliente e tem forte alta nas ações
@@ -102,6 +103,7 @@ if (isset($_GET['id'])){
 		</main>
 		<!--footer -->
 		<footer>
+			<h1>FOOTER</h1>
     	</footer>
 		<!--footer -->
 	</div><!-- fim container -->

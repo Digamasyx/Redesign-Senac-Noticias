@@ -110,3 +110,8 @@ main{
 .divisorias{
     margin-bottom: 2vh;
 }
+footer{
+    grid-area:footer ;
+    text-align: center;
+    background: yellow !important;
+}
