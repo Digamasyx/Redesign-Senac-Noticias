@@ -56,9 +56,7 @@ if (isset($_GET['id'])){
 						de acordo com a Mercury Research.
 					</h2>
 					<!--newsletter input-->
-					<hr class='divisorias'>
-
-					<hr class='divisorias'>
+					<?php require_once('../php/componentes/newsletterForm.php'); ?>
 					<!--newsletter input-->
 					<h2 class='textoPrincipalCaixaNoticia'>
 						Depois de garantir a Meta como cliente, 
