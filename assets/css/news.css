@@ -9,22 +9,19 @@ html{
 body{
     background: #0F0F0F;
 }
-.teste{
-    background: red;
-}
 main{
     padding: 0 1.5em;
 }
-.caixaNoticias{
+.main-container-noticias{
     display: flex;
     flex-direction: column;
     color: white;
     padding: 0.5vh;
 }
-.tituloNoticia{
+.noticias-cabecalho-titulo{
     font-size: 4em;
 }
-.descricaoNoticia{
+.noticias-cabecalho-descricao{
     font-size: 2.5em;
     margin-bottom: 3em;
 }
@@ -84,7 +81,7 @@ main{
     display: none;
 }
 /* insigth test fim*/
-.noticiaImg{
+.main-container-noticias-imagem{
     margin: 1.5em 0;
     margin-bottom: 3em;
     border-radius: 50px;
