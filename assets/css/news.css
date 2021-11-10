@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sarala&display=swap');
+@import url('header.css');
+
 html{
     font-family: 'Sarala', sans-serif;
 }
@@ -20,10 +22,10 @@ main{
     padding: 0.5vh;
 }
 .tituloNoticia{
-    font-size: 2.2em;
+    font-size: 4em;
 }
 .descricaoNoticia{
-    font-size: 0.9em;
+    font-size: 2.5em;
     margin-bottom: 3em;
 }
 /* insigth test*/
@@ -95,10 +97,10 @@ main{
     align-items: center;
 }
 .textoPrincipalCaixaNoticia{
-    font-size: 1em;
+    font-size: 3em;
     text-align: left;
+    line-height: 1.3em;
     font-weight: 1;
-    line-height: 3em;
     margin-bottom: 2vh;
 }
 .materia-news{
@@ -118,7 +120,7 @@ main{
     background-repeat: no-repeat;
 }
 .textoGenerico{
-    font-size: 0.8em;
+    font-size: 3em;
 }
 .inputNome{
     height: 3em;

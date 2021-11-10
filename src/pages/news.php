@@ -17,9 +17,9 @@ if (isset($_GET['id'])){
 <head>
 	<meta charset="utf-8" />
 	<title><?php echo $title; ?></title>
-	<link rel="stylesheet" href="/assets/css/header.css">
 	<link rel="stylesheet" href="/assets/css/contrast.css">
 	<script type="text/javascript" src="/assets/js/alto-contraste.js"></script>
+	<link rel="stylesheet" href="/assets/css/normalize.css">
 	<link rel="stylesheet" href="/assets/css/news.css">
 </head>
 <body class='none'>
