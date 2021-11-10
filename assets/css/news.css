@@ -7,6 +7,9 @@ html{
 body{
     background: #0F0F0F;
 }
+.teste{
+    background: red;
+}
 main{
     padding: 0 1.5em;
 }
@@ -74,10 +77,11 @@ main{
 }
 .btn-acess:focus{
     outline: 5px solid red;
-
 }
-
-/* insigth test*/
+#limpar-contraste{
+    display: none;
+}
+/* insigth test fim*/
 .noticiaImg{
     margin: 1.5em 0;
     margin-bottom: 3em;

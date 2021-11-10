@@ -18,11 +18,13 @@ if (isset($_GET['id'])){
 	<meta charset="utf-8" />
 	<title><?php echo $title; ?></title>
 	<link rel="stylesheet" href="/assets/css/header.css">
+	<link rel="stylesheet" href="/assets/css/contrast.css">
+	<script type="text/javascript" src="/assets/js/alto-contraste.js"></script>
 	<link rel="stylesheet" href="/assets/css/news.css">
 </head>
-<body>
+<body class='none'>
 	<?php require_once('../php/componentes/header.php')?>
-	<div class="container"><!-- inicio container -->
+	<div id='body-page' class="container"><!-- inicio container -->
 		<main>
 			<div class='caixaNoticias'>
 				<div class='parteCimaCaixaNoticias'>
@@ -53,6 +55,22 @@ if (isset($_GET['id'])){
 					<a href='#'class='btn-acess font-bolder'><div class='div-btn-acess'>L</div></a>
 					<a href='#'class='btn-acess font-smaller'><div class='div-btn-acess'>A-</div></a>
 					<a href='#'class='btn-acess font-bigger'><div class='div-btn-acess'>A+</div></a>
+					<a 
+						href="#altocontraste" 
+						id="altocontraste" 
+						accesskey="3" 
+						class='btn-acess div-btn-acess high-contrast' 
+						onclick="contrast()" 
+						onkeydown="window.toggleContrast()"> 
+						<div>H+</div>
+					</a>
+					<a 
+						href="#clean" 
+						id="limpar-contraste"  
+						class='btn-acess div-btn-acess' 
+						onclick="cleanContrast()"> 
+						<div>H-</div>
+					</a>
 				</div><!-- insigth test-->
 				<div class='parteBaixoCaixaNoticias'>
 					<h3 class='mainCall'><i></i></h3>
@@ -131,6 +149,5 @@ if (isset($_GET['id'])){
     	</footer>
 		<!--footer -->
 	</div><!-- fim container -->
-
 </body>
 </html>
