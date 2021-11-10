@@ -1,40 +1,40 @@
-.receberNoticias{
+.receber-noticias{
     padding: 2vh;
     margin-bottom: 2vh;
 }
-.receberDadosUsuario{
+.receber-dados-usuario{
     padding: 2vh;
     background-image: url('https://i.stack.imgur.com/1inrW.png');
     background-repeat: no-repeat;
 }
-.textoGenerico{
+.texto-generico{
     font-size: 0.8em;
 }
-.inputNome{
+.input-nome{
     height: 3em;
     width: 30em;
     display: block;
 }
-.inputEmail{
+.input-email{
     height: 3em;
     width: 30em;
     display: block;
     margin: 0.5vh 0 0.5vh;
 }
-.inputNome::placeholder{
+.input-nome::placeholder{
     font-size: 2em;
 }
-.inputEmail::placeholder{
+.input-email::placeholder{
     font-size: 2em;
 }
-.logoReceberNoticias{
+.logo-receber-noticias{
     position: absolute;
     width: 10em;
     float: left;
     margin-left: 28vh;
     margin-top: 10vh;
 }
-.botaoEnviar{
+.botao-enviar{
     font-size: 2em;
 }
 
