@@ -17,16 +17,12 @@ if (isset($_GET['id'])){
 <head>
 	<meta charset="utf-8" />
 	<title><?php echo $title; ?></title>
-	<link rel="stylesheet" href="../../assets/css/componentes.css">
-	<link rel="stylesheet" href="../../assets/css/news.css">
+	<link rel="stylesheet" href="/assets/css/header.css">
+	<link rel="stylesheet" href="/assets/css/news.css">
 </head>
 <body>
+	<?php require_once('../php/componentes/header.php')?>
 	<div class="container"><!-- inicio container -->
-		<!--header -->
-		<header class="header-navbar">
-			<h1>HEADER</h1>
-		</header>
-			<!--header -->
 		<main>
 			<div class='caixaNoticias'>
 				<div class='parteCimaCaixaNoticias'>
@@ -92,9 +88,6 @@ if (isset($_GET['id'])){
 						A Ampere Computing, uma startup fundada por ex-executivos da Intel, está buscando uma estratégia 
 						similar e este ano anunciou o serviço de nuvem da Oracle como cliente. (Com Reuters)
 					</h2>
-					<div class='adicionalNoticia'>
-						<iframe class='iframes'src="https://www.youtube.com/embed/LL0p56qXJKE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-					</div>
 					
 				</div>
 				<!-- <h1><?php echo $title; ?></h1>
