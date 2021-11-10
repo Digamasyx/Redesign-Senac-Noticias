@@ -24,8 +24,7 @@ if (isset($_GET['id'])){
 </head>
 <body class='none'>
 	<?php require_once('../php/componentes/header.php')?>
-		<main>
-			<div id='body-page' class="main-container"><!-- inicio main container -->
+		<main id='body-page' class="main-container">
 				<div class='main-container-noticias'>
 					<div class='main-container-noticias-cabecalho'><!-- inicio container noticias -->
 						<h1 class='cabecalho-noticias-titulo'>
@@ -142,7 +141,6 @@ if (isset($_GET['id'])){
 						<img class='social-media-img' src='/assets/testpics/youtube.png'>
 					</div><!-- insigth test-->
 				</div>
-			</div><!-- fim container -->
 		</main>	
 	<!--footer -->
 	<footer>
