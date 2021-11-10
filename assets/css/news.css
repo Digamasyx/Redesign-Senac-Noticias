@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sarala&display=swap');
 html{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Sarala', sans-serif;
 }
 body{
     background: #0F0F0F;
@@ -12,18 +13,74 @@ main{
 .caixaNoticias{
     display: flex;
     flex-direction: column;
-    border-top: 4px solid purple;
     color: white;
     padding: 0.5vh;
 }
 .tituloNoticia{
-    font-size: 1em;
+    font-size: 2.2em;
 }
 .descricaoNoticia{
-    font-size: 0.7em;
+    font-size: 0.9em;
+    margin-bottom: 3em;
 }
+/* insigth test*/
+.social-media{
+    display: flex;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    padding: 5em;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 2em;
+
+}
+.social-media-img{
+    width: 10%;
+    margin-left: 10%;
+}
+.caixa-de-acessibilidade{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 2em;
+    padding:3em 0;
+    margin-bottom: 3em;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+}
+.font-lighter{
+    font-family: serif;
+    font-size: 3em !important;
+}
+.img-acess{
+    width: 100%;
+}
+.btn-acess{
+    font-size: 3em;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+.light-mode{
+    width: 10%;
+}
+.div-btn-acess{
+    padding: 1em;
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
+}
+.btn-acess:focus{
+    outline: 5px solid red;
+
+}
+
+/* insigth test*/
 .noticiaImg{
     margin: 1.5em 0;
+    margin-bottom: 3em;
     border-radius: 50px;
     width: 100%;
     object-fit: cover;
@@ -36,7 +93,6 @@ main{
 .textoPrincipalCaixaNoticia{
     font-size: 1em;
     text-align: left;
-    font-family: 'Roboto', sans-serif;
     font-weight: 1;
     line-height: 3em;
     margin-bottom: 2vh;
@@ -98,6 +154,7 @@ main{
     height: 600px;
 }
 .divisorias{
+    width: 100%;
     margin-bottom: 2vh;
 }
 footer{

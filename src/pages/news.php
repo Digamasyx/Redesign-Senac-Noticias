@@ -34,9 +34,26 @@ if (isset($_GET['id'])){
 						de enfrentar rivais como Nvidia.
 					</p>
 				</div>
+				<div class='social-media'><!-- insigth test-->
+					<img style='margin-left: 0 !important;'class='social-media-img' src='/assets/testpics/facebook.png'>
+					<img class='social-media-img' src='/assets/testpics/instagram.png'>
+					<img class='social-media-img' src='/assets/testpics/linkedin.png'>
+					<img class='social-media-img' src='/assets/testpics/twitter.png'>
+					<img class='social-media-img' src='/assets/testpics/whatsapp.png'>
+					<img class='social-media-img' src='/assets/testpics/youtube.png'>
+				</div><!-- insigth test-->
+
 				<div class='imagemNoticia'>
 					<img class='noticiaImg' src="https://tm.ibxk.com.br/2021/11/08/08082730119015.jpg" alt="imagemGenerica">
 				</div>
+
+				<div class='caixa-de-acessibilidade'><!-- insigth test-->
+					<img class='light-mode' src='/assets/testpics/dark-mode.png'>
+					<a href='#'class='btn-acess font-lighter'><div class='div-btn-acess'>L</div></a>
+					<a href='#'class='btn-acess font-bolder'><div class='div-btn-acess'>L</div></a>
+					<a href='#'class='btn-acess font-smaller'><div class='div-btn-acess'>A-</div></a>
+					<a href='#'class='btn-acess font-bigger'><div class='div-btn-acess'>A+</div></a>
+				</div><!-- insigth test-->
 				<div class='parteBaixoCaixaNoticias'>
 					<h3 class='mainCall'><i></i></h3>
 					<h2 class='textoPrincipalCaixaNoticia'>
@@ -88,10 +105,24 @@ if (isset($_GET['id'])){
 						A Ampere Computing, uma startup fundada por ex-executivos da Intel, está buscando uma estratégia 
 						similar e este ano anunciou o serviço de nuvem da Oracle como cliente. (Com Reuters)
 					</h2>
-					
+					<iframe 
+						width="100%" height="500" src="https://www.youtube.com/embed/cIezMiOhW-0" 
+						title="YouTube video player" 
+						frameborder="0" 
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+						allowfullscreen>
+					</iframe>
 				</div>
 				<!-- <h1><?php echo $title; ?></h1>
 				<div class='content'><?php echo $content; ?></div> -->
+				<div class='social-media'><!-- insigth test-->
+					<img style='margin-left: 0 !important;'class='social-media-img' src='/assets/testpics/facebook.png'>
+					<img class='social-media-img' src='/assets/testpics/instagram.png'>
+					<img class='social-media-img' src='/assets/testpics/linkedin.png'>
+					<img class='social-media-img' src='/assets/testpics/twitter.png'>
+					<img class='social-media-img' src='/assets/testpics/whatsapp.png'>
+					<img class='social-media-img' src='/assets/testpics/youtube.png'>
+				</div><!-- insigth test-->
 			</div>
 		</main>
 		<!--footer -->
