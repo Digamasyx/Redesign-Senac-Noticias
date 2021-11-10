@@ -56,18 +56,7 @@ if (isset($_GET['id'])){
 						de acordo com a Mercury Research.
 					</h2>
 					<!--newsletter input-->
-					<hr class='divisorias'>
-						<div class="receberNoticias">
-							<img class='logoReceberNoticias'src='https://www.sp.senac.br/o/senac-theme/images/logo_senac_default.png'>
-							<h1 class='textoGenerico'>Receba notícias via e-email e fique por dentro das novidades!</h1>
-							<div class="receberDadosUsuario">
-								<input class="inputNome" placeholder='Digite seu nome aqui'>
-								<input class="inputEmail"placeholder='Digite seu email aqui'>
-								<button class='botaoEnviar'>Enviar</button>
-							</div>
-							
-						</div>
-					<hr class='divisorias'>
+					<?php require_once('../php/componentes/newsletterForm.php'); ?>
 					<!--newsletter input-->
 					<h2 class='textoPrincipalCaixaNoticia'>
 						Depois de garantir a Meta como cliente, 

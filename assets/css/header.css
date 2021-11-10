@@ -1,3 +1,5 @@
+
+
 .header-navbar {
     display: flex;
     justify-content: space-around;
@@ -8,6 +10,7 @@
 #navbar {
     display: flex;
     justify-content: space-between;
+    font-family: var(--main-font);
     align-items: center;
     width: 100%;
     padding: 0.1em;
@@ -61,6 +64,7 @@
     }
     .nav-list li {
         margin-left: 0;
+        margin-right: 2em;
         opacity: 0;
     }
     .mobile-menu {
