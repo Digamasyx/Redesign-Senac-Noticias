@@ -77,11 +77,3 @@ html {
     padding: 2em;
     border-radius: 1em;
 }
-
-#newsletter form input {
-    border: #202020 solid 2px;
-    background: #0F0F0F;
-    color: #fff;
-    width: 125px;
-    height: 65px;
-}

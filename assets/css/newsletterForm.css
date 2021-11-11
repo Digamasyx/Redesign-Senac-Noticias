@@ -1,32 +1,46 @@
+:root {
+    --bg-color: #0F0F0F;
+    --main-color: #202020;
+    --second-color: #0071CF;
+    --main-font: 'Poppins', sans-serif;
+}
+
 .receber-noticias{
     padding: 2vh;
     margin-bottom: 2vh;
 }
 .receber-dados-usuario{
     padding: 2vh;
-    background-image: url('https://i.stack.imgur.com/1inrW.png');
-    background-repeat: no-repeat;
+    background: linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(32,32,32,1) 100%);
+    border-radius: 15px;
 }
 .texto-generico{
-    font-size: 0.8em;
+    font-size: 1em;
+    color: #fff;
+    font-family: var(--main-font);
 }
 .input-nome{
     height: 3em;
-    width: 30em;
-    display: block;
+    width: 16em;
+    
+
+    border-radius: 15px;
 }
 .input-email{
     height: 3em;
-    width: 30em;
-    display: block;
+    width: 16em;
     margin: 0.5vh 0 0.5vh;
+
+    border-radius: 15px;
 }
-.input-nome::placeholder{
-    font-size: 2em;
+.input-nome::placeholder, .input-email::placeholder{
+    font-family: var(--main-font);
+    background-color: #0F0F0F;
+    border: solid #202020 2px;
+    color: #fff;
+    font-size: 1em;
 }
-.input-email::placeholder{
-    font-size: 2em;
-}
+
 .logo-receber-noticias{
     position: absolute;
     width: 10em;
@@ -40,4 +54,12 @@
 
 .divisorias{
     margin-bottom: 2vh;
+}
+
+@media (max-width: 1024px) {
+    .logo-receber-noticias {
+        display: flex;
+        flex-direction: column;
+
+    }
 }

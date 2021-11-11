@@ -1,6 +1,6 @@
 <hr class="divisorias">
     <div class="receber-noticias">
-        <img class='logo-receber-noticias'src='https://www.sp.senac.br/o/senac-theme/images/logo_senac_default.png'>
+        <img class='logo-receber-noticias'src='/assets/img/Logosemnome.svg'>
         <h1 class='texto-generico'>Receba notícias via e-email e fique por dentro das novidades!</h1>
         <div class="receber-dados-usuario">
             <input class="input-nome" placeholder='Digite seu nome aqui'>
