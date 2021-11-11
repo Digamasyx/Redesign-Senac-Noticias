@@ -1,0 +1,45 @@
+@import url('base.css');
+
+.receber-noticias{
+    padding: 2vh;
+    margin-bottom: 2vh;
+}
+.receber-dados-usuario{
+    padding: 2vh;
+    background-image: url('https://i.stack.imgur.com/1inrW.png');
+    background-repeat: no-repeat;
+}
+.texto-generico{
+    font-size: 0.8em;
+}
+.input-nome{
+    height: 3em;
+    width: 30em;
+    display: block;
+}
+.input-email{
+    height: 3em;
+    width: 30em;
+    display: block;
+    margin: 0.5vh 0 0.5vh;
+}
+.input-nome::placeholder{
+    font-size: 2em;
+}
+.input-email::placeholder{
+    font-size: 2em;
+}
+.logo-receber-noticias{
+    position: absolute;
+    width: 10em;
+    float: left;
+    margin-left: 28vh;
+    margin-top: 10vh;
+}
+.botao-enviar{
+    font-size: 2em;
+}
+
+.divisorias{
+    margin-bottom: 2vh;
+}
