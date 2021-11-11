@@ -18,12 +18,12 @@ if (isset($_GET['id'])){
 	<meta charset="utf-8" />
 	<title><?php echo $title; ?></title>
 	<link rel="stylesheet" href="/assets/css/contrast.css">
-	<script type="text/javascript" src="/assets/js/accessibility-functions.js"></script>
+	<script type="text/javascript" src="/assets/js/menu-acessibilidade.js"></script>
 	<link rel="stylesheet" href="/assets/css/normalize.css">
-	<link rel="stylesheet" href="/assets/css/now	news.css">
+	<link rel="stylesheet" href="/assets/css/news.css">
 </head>
 <body>
-	<?php require_once('../php/componentes/header.php')?>
+	<?php require_once(dirname(__DIR__) . '/php/componentes/header.php') ?>
 	<main id='body-page' class="main-container">
 		<div class='main-container-noticias'><!-- inicio container noticias -->
 			<div class='main-noticias-header'>
@@ -35,7 +35,7 @@ if (isset($_GET['id'])){
 					de enfrentar rivais como Nvidia.
 				</p>
 			</div>
-			<div class='midia-social'><!--midias sociais-->
+			<div id='midia-social' class='midia-social'><!--midias sociais-->
 				<img style='margin-left: 0 !important;'class='midia-social-img' src='/assets/testpics/facebook.png'>
 				<img class='midia-social-img' src='/assets/testpics/instagram.png'>
 				<img class='midia-social-img' src='/assets/testpics/linkedin.png'>
@@ -46,14 +46,28 @@ if (isset($_GET['id'])){
 			<div class='main-noticias-imagem'>
 				<img class='noticias-imagem' src="https://tm.ibxk.com.br/2021/11/08/08082730119015.jpg" alt="imagemGenerica">
 			</div>
-			<div class='caixa-de-acessibilidade'><!-- caixa de acessibilidade -->
-				<img class='acessibilidade-iluminacao' src='/assets/testpics/dark-mode.png'>
-				<a href='#fonte-magra'id='fonte-magra' class='botao-acessibilidade fonte-magra' onclick="thinFont()"><div class='div-botao-acessibilidade'>L</div></a>
-				<a href='#fonte-nao-magra'id='fonte-nao-magra'class='botao-acessibilidade fonte-nao-magra' onclick="noThinFont()"><div class='div-botao-acessibilidade'>L</div></a>
-				<a href='#fonte-negrito'id='fonte-negrito'class='botao-acessibilidade fonte-negrito'onclick="boldFont()"><div class='div-botao-acessibilidade'>L</div></a>
-				<a href='#negrito-desliga'id='negrito-desliga'class='botao-acessibilidade negrito-desliga'onclick="noBoldFont()"><div class='div-botao-acessibilidade'>L</div></a>
-				<a href='#'class='botao-acessibilidade fonte-menor'><div class='div-botao-acessibilidade'>A-</div></a>
-				<a href='#'class='botao-acessibilidade fonte-maior'><div class='div-botao-acessibilidade'>A+</div></a>
+			<div id='caixa-de-acessibilidade' class='caixa-de-acessibilidade'><!-- caixa de acessibilidade -->
+				<a href='#modo-iluminacao' id='modo-iluminacao' class='botao-acessibilidade' onclick="lightMode()">
+					<img class='acessibilidade-iluminacao' src='/assets/testpics/dark-mode.png'>
+				</a>
+				<a href='#fonte-magra'id='fonte-magra' class='botao-acessibilidade fonte-magra' onclick="thinFont()">
+					<div class='div-botao-acessibilidade'>L</div>
+				</a>
+				<a href='#fonte-nao-magra'id='fonte-nao-magra'class='botao-acessibilidade fonte-nao-magra' onclick="noThinFont()">
+					<div class='div-botao-acessibilidade'>L</div>
+				</a>
+				<a href='#fonte-negrito'id='fonte-negrito'class='botao-acessibilidade fonte-negrito'onclick="boldFont()">
+					<div class='div-botao-acessibilidade'>L</div>
+				</a>
+				<a href='#negrito-desliga'id='negrito-desliga'class='botao-acessibilidade negrito-desliga'onclick="noBoldFont()">
+					<div class='div-botao-acessibilidade'>L</div>
+				</a>
+				<a href='#font-menor'id='font-menor'class='botao-acessibilidade fonte-menor' onclick="fontSizeDecrease()">
+					<div class='div-botao-acessibilidade'>A-</div>
+				</a>
+				<a href='#font-maior'id='font-maior'class='botao-acessibilidade fonte-maior'onclick="fontSizeIncrease()">
+					<div class='div-botao-acessibilidade'>A+</div>
+				</a>
 				<a 
 					href="#altocontraste" 
 					id="altocontraste" 
@@ -105,20 +119,13 @@ if (isset($_GET['id'])){
 					A Ampere Computing, uma startup fundada por ex-executivos da Intel, está buscando uma estratégia 
 					similar e este ano anunciou o serviço de nuvem da Oracle como cliente. (Com Reuters)
 				</h2>
-				<iframe 
-					width="100%" height="500" src="https://www.youtube.com/embed/cIezMiOhW-0" 
-					title="YouTube video player" 
-					frameborder="0" 
-					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-					allowfullscreen>
-				</iframe>
 			</div>
 			<!-- <h1><?php echo $title; ?></h1>
 			<div class='content'><?php echo $content; ?></div> -->
 		</div><!-- fim container de noticias -->
 	</main>	
 	<!--footer -->
-	<?php require_once('../php/componentes/footer.php')?>
+	<?php require_once(dirname(__DIR__) . '/php/componentes/footer.php') ?>
 	<!--footer -->
 </body>
 </html>

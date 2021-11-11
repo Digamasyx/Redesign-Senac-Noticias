@@ -4,7 +4,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Sarala&display=swap');
 @import url('header.css');
 @import url('newsletterForm.css');
-
+#body-page{
+    color: white;
+}
 .main-container{
     padding: 0 1.5em;
     font-family: 'Sarala', sans-serif;
@@ -12,7 +14,6 @@
 .main-container-noticias{
     display: flex;
     flex-direction: column;
-    color: white;
     padding: 0.5vh;
 }
 .noticias-titulo{
@@ -67,7 +68,7 @@
     align-items: center !important;
 }
 .acessibilidade-iluminacao{
-    width: 10%;
+    width: 50%;
 }
 .botao-acessibilidade:focus{
     outline: 5px solid red;
