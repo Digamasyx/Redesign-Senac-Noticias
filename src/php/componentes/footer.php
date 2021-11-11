@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="/assets/css/footer.css">
 <footer id="footer-section">
         <img src="/assets/img/Logo.svg" alt="Senac">
         <p>Senac, 2021<br>Todos os direitos reservados</p>
