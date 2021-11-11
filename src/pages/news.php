@@ -16,11 +16,13 @@ if (isset($_GET['id'])){
 <html>
 <head>
 	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 	<title><?php echo $title; ?></title>
 	<link rel="stylesheet" href="/assets/css/contrast.css">
 	<script type="text/javascript" src="/assets/js/menu-acessibilidade.js"></script>
 	<link rel="stylesheet" href="/assets/css/normalize.css">
 	<link rel="stylesheet" href="/assets/css/news.css">
+	
 </head>
 <body>
 	<?php require_once(dirname(__DIR__) . '/php/componentes/header.php') ?>
@@ -47,8 +49,8 @@ if (isset($_GET['id'])){
 				<img class='noticias-imagem' src="https://tm.ibxk.com.br/2021/11/08/08082730119015.jpg" alt="imagemGenerica">
 			</div>
 			<div id='caixa-de-acessibilidade' class='caixa-de-acessibilidade'><!-- caixa de acessibilidade -->
-				<a href='#modo-iluminacao' id='modo-iluminacao' class='botao-acessibilidade' onclick="lightMode()">
-					<img class='acessibilidade-iluminacao' src='/assets/testpics/dark-mode.png'>
+				<a href='#modo-iluminacao' id='modo-iluminacao' class='botao-acessibilidade-luz' onclick="lightMode()">
+					<img id='acessibilidade-iluminacao'class='acessibilidade-iluminacao' src='/assets/testpics/dark-mode.png'>
 				</a>
 				<a href='#fonte-magra'id='fonte-magra' class='botao-acessibilidade fonte-magra' onclick="thinFont()">
 					<div class='div-botao-acessibilidade'>L</div>

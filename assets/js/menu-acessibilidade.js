@@ -54,18 +54,18 @@ function noBoldFont(){
 }
 function fontSizeDecrease(){
     var text = document.getElementById("texto-noticias");
-    if (text.style.fontSize == '4em'){
-        text.style.fontSize = '3em';
+    if (text.style.fontSize == '1.8em'){
+        text.style.fontSize = '1.2em';
     }else{
-        text.style.fontSize = '2em';
+        text.style.fontSize = '0.8em';
     }
 }
 function fontSizeIncrease(){
     var text = document.getElementById("texto-noticias");
-    if (text.style.fontSize == '2em'){
-        text.style.fontSize = '3em';
+    if (text.style.fontSize == '0.8em'){
+        text.style.fontSize = '1.2em';
     }else{
-        text.style.fontSize = '4em';
+        text.style.fontSize = '1.8em';
     }
 }
 function lightMode(){
@@ -73,6 +73,7 @@ function lightMode(){
     var accessMenu = document.getElementById("caixa-de-acessibilidade");
     var accessBtn = document.getElementsByClassName('botao-acessibilidade');
     var socialMediaMenu = document.getElementById('midia-social');
+    var imgNews = document.getElementById('acessibilidade-iluminacao');
     if (main.style.color == 'white'){
         for (var i = 0; i < accessBtn.length; i++) {
             accessBtn[i].style.color = 'black';}
@@ -82,6 +83,7 @@ function lightMode(){
         accessMenu.style.borderTop = '2px solid black';
         socialMediaMenu.style.borderTop = '2px solid black';
         socialMediaMenu.style.borderBottom = '2px solid black';
+        imgNews.style.border = '1px solid black';
     }else{
         for (var i = 0; i < accessBtn.length; i++) {
             accessBtn[i].style.color = 'white';}
