@@ -12,7 +12,7 @@
                 <a href="#">Home</a>
             </li>
             <li>
-                <a href="#news">Notícias</a>
+                <a href="/src/pages/news.php">Notícias</a>
             </li>
             <li>
                 <a href="#newsletter">Newsletter</a>

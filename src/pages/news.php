@@ -18,15 +18,15 @@ if (isset($_GET['id'])){
 	<meta charset="utf-8" />
 	<title><?php echo $title; ?></title>
 	<link rel="stylesheet" href="/assets/css/contrast.css">
-	<script type="text/javascript" src="/assets/js/alto-contraste.js"></script>
+	<script type="text/javascript" src="/assets/js/accessibility-functions.js"></script>
 	<link rel="stylesheet" href="/assets/css/normalize.css">
-	<link rel="stylesheet" href="/assets/css/news.css">
+	<link rel="stylesheet" href="/assets/css/now	news.css">
 </head>
 <body>
 	<?php require_once('../php/componentes/header.php')?>
 	<main id='body-page' class="main-container">
-		<div class='main-container-noticias'>
-			<div class='main-noticias-header'><!-- inicio container noticias -->
+		<div class='main-container-noticias'><!-- inicio container noticias -->
+			<div class='main-noticias-header'>
 				<h1 class='noticias-titulo'>
 					AMD anuncia Meta como cliente e tem forte alta nas ações
 				</h1>
@@ -34,7 +34,7 @@ if (isset($_GET['id'])){
 					A empresa também anunciou uma gama de novos chips com o objetivo 
 					de enfrentar rivais como Nvidia.
 				</p>
-			</div><!-- fim container noticias -->
+			</div>
 			<div class='midia-social'><!--midias sociais-->
 				<img style='margin-left: 0 !important;'class='midia-social-img' src='/assets/testpics/facebook.png'>
 				<img class='midia-social-img' src='/assets/testpics/instagram.png'>
@@ -46,10 +46,12 @@ if (isset($_GET['id'])){
 			<div class='main-noticias-imagem'>
 				<img class='noticias-imagem' src="https://tm.ibxk.com.br/2021/11/08/08082730119015.jpg" alt="imagemGenerica">
 			</div>
-			<div class='caixa-de-acessibilidade'><!-- acessibilidade -->
+			<div class='caixa-de-acessibilidade'><!-- caixa de acessibilidade -->
 				<img class='acessibilidade-iluminacao' src='/assets/testpics/dark-mode.png'>
-				<a href='#'class='botao-acessibilidade fonte-magra'><div class='div-botao-acessibilidade'>L</div></a>
-				<a href='#'class='botao-acessibilidade fonte-negrito'><div class='div-botao-acessibilidade'>L</div></a>
+				<a href='#fonte-magra'id='fonte-magra' class='botao-acessibilidade fonte-magra' onclick="thinFont()"><div class='div-botao-acessibilidade'>L</div></a>
+				<a href='#fonte-nao-magra'id='fonte-nao-magra'class='botao-acessibilidade fonte-nao-magra' onclick="noThinFont()"><div class='div-botao-acessibilidade'>L</div></a>
+				<a href='#fonte-negrito'id='fonte-negrito'class='botao-acessibilidade fonte-negrito'onclick="boldFont()"><div class='div-botao-acessibilidade'>L</div></a>
+				<a href='#negrito-desliga'id='negrito-desliga'class='botao-acessibilidade negrito-desliga'onclick="noBoldFont()"><div class='div-botao-acessibilidade'>L</div></a>
 				<a href='#'class='botao-acessibilidade fonte-menor'><div class='div-botao-acessibilidade'>A-</div></a>
 				<a href='#'class='botao-acessibilidade fonte-maior'><div class='div-botao-acessibilidade'>A+</div></a>
 				<a 
@@ -68,9 +70,9 @@ if (isset($_GET['id'])){
 					onclick="cleanContrast()"> 
 					<div>H-</div>
 				</a>
-			</div><!-- acessibilidade -->
+			</div><!-- fim caixa de acessibilidade -->
 			<div class='main-container-noticias-principal'>
-				<h2 class='noticias-principal-texto'>
+				<h2 id='texto-noticias' class='noticias-principal-texto'>
 					A AMD disse hoje (8) que fechou acordo com a Meta, anteriormente conhecida como Facebook,
 					para ser seu cliente de chips para centrais de processamento de dados. O anúncio fez as 
 					ações da empresa de semicondutores disparar mais de 11%.<br>
@@ -80,11 +82,7 @@ if (isset($_GET['id'])){
 					a AMD vem ganhando participação de mercado desde 2017, quando um plano de recuperação liderado 
 					pela presidente-executiva, Lisa Su, colocou a empresa em um curso para sua posição atual de ter
 					chips mais rápidos do que a rival.<br>A AMD agora tem quase um quarto do mercado de chips x86, 
-					de acordo com a Mercury Research.
-				</h2>
-				<!--newsletter input-->
-				<!--newsletter input-->
-				<h2 class='noticias-principal-texto'>
+					<br><br>
 					Depois de garantir a Meta como cliente, 
 					a AMD fez negócios com muitos dos maiores 
 					usuários de chips Intel. A companhia também 
@@ -117,7 +115,7 @@ if (isset($_GET['id'])){
 			</div>
 			<!-- <h1><?php echo $title; ?></h1>
 			<div class='content'><?php echo $content; ?></div> -->
-		</div>
+		</div><!-- fim container de noticias -->
 	</main>	
 	<!--footer -->
 	<?php require_once('../php/componentes/footer.php')?>

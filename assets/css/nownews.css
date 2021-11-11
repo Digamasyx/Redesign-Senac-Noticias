@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sarala:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sarala&display=swap');
 @import url('header.css');
 @import url('newsletterForm.css');
@@ -19,7 +20,7 @@
 }
 .noticias-descricao{
     font-size: 2.5em;
-    margin-bottom: 3em;
+    margin-bottom: 1em;
 }
 /* adicionais de pagina*/
 .midia-social{
@@ -49,7 +50,7 @@
     flex-direction: row;
     margin-top: 2em;
     padding:3em 0;
-    margin-bottom: 3em;
+    margin-bottom: 2em;
     border-top: 2px solid white;
     border-bottom: 2px solid white;
 }
@@ -73,7 +74,13 @@
 }
 .fonte-magra{
     font-family: serif;
-    font-size: 3em !important;
+}
+.fonte-nao-magra{
+    display: none;
+    font-family: serif !important;
+}
+.negrito-desliga{
+    display: none;
 }
 /* fim adicionais de pagina*/
 .main-noticias-imagem{
