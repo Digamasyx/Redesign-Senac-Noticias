@@ -4,7 +4,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background: var(--bg-color);
+    background: #0F0F0F;
     height: 10vh;
 }
 #navbar {
@@ -60,7 +60,68 @@
         margin-right: 0;
         width: 40vw;
         height: 92vh;
-        background: var(--bg-color);
+        background: #0F0F0F;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+    .nav-list li {
+        margin-left: 0;
+        opacity: 0;
+    }
+    .mobile-menu {
+        display: block;
+    }
+    .nav-list.active {
+        transform: translateX(0);
+    }
+    @keyframes navLinkFade {
+        from {
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    .mobile-menu.active .line1 {
+        transform: rotate(-45deg) translate(-8px, 8px);
+    }
+    .mobile-menu.active .line2 {
+        opacity: 0;
+    }
+    .mobile-menu.active .line3 {
+        transform: rotate(45deg) translate(-5px, -7px);
+    }
+}
+@media (min-width: 768px) {
+    header{
+        padding: 0 3em;
+    }
+}
+@media (min-width: 1024px) {
+    header{
+        padding: 0 5em;
+    }
+}
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+    #landing-text{
+        font-size: .5em;
+    }
+    .nav-list {
+        position: absolute;
+        top: 7vh;
+        right: 0;
+        margin-right: 0;
+        width: 100vw;
+        height: 92vh;
+        background: #0F0F0F;
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
