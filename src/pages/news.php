@@ -26,39 +26,37 @@ if (isset($_GET['id'])){
 	<?php require_once('../php/componentes/header.php')?>
 		<main id='body-page' class="main-container">
 				<div class='main-container-noticias'>
-					<div class='main-container-noticias-cabecalho'><!-- inicio container noticias -->
-						<h1 class='cabecalho-noticias-titulo'>
+					<div class='main-noticias-header'><!-- inicio container noticias -->
+						<h1 class='noticias-titulo'>
 							AMD anuncia Meta como cliente e tem forte alta nas ações
 						</h1>
-						<p class='cabecalho-noticias-descricao'>
+						<p class='noticias-descricao'>
 							A empresa também anunciou uma gama de novos chips com o objetivo 
 							de enfrentar rivais como Nvidia.
 						</p>
 					</div><!-- fim container noticias -->
-					<div class='social-media'><!-- insigth test-->
-						<img style='margin-left: 0 !important;'class='social-media-img' src='/assets/testpics/facebook.png'>
-						<img class='social-media-img' src='/assets/testpics/instagram.png'>
-						<img class='social-media-img' src='/assets/testpics/linkedin.png'>
-						<img class='social-media-img' src='/assets/testpics/twitter.png'>
-						<img class='social-media-img' src='/assets/testpics/whatsapp.png'>
-						<img class='social-media-img' src='/assets/testpics/youtube.png'>
-					</div><!-- insigth test-->
-
-					<div class='main-container-noticias-imagem'>
-						<img class='noticiaImg' src="https://tm.ibxk.com.br/2021/11/08/08082730119015.jpg" alt="imagemGenerica">
+					<div class='midia-social'><!--midias sociais-->
+						<img style='margin-left: 0 !important;'class='midia-social-img' src='/assets/testpics/facebook.png'>
+						<img class='midia-social-img' src='/assets/testpics/instagram.png'>
+						<img class='midia-social-img' src='/assets/testpics/linkedin.png'>
+						<img class='midia-social-img' src='/assets/testpics/twitter.png'>
+						<img class='midia-social-img' src='/assets/testpics/whatsapp.png'>
+						<img class='midia-social-img' src='/assets/testpics/youtube.png'>
+					</div><!--midias sociais-->
+					<div class='main-noticias-imagem'>
+						<img class='noticias-imagem' src="https://tm.ibxk.com.br/2021/11/08/08082730119015.jpg" alt="imagemGenerica">
 					</div>
-
-					<div class='caixa-de-acessibilidade'><!-- insigth test-->
-						<img class='light-mode' src='/assets/testpics/dark-mode.png'>
-						<a href='#'class='btn-acess font-lighter'><div class='div-btn-acess'>L</div></a>
-						<a href='#'class='btn-acess font-bolder'><div class='div-btn-acess'>L</div></a>
-						<a href='#'class='btn-acess font-smaller'><div class='div-btn-acess'>A-</div></a>
-						<a href='#'class='btn-acess font-bigger'><div class='div-btn-acess'>A+</div></a>
+					<div class='caixa-de-acessibilidade'><!-- acessibilidade -->
+						<img class='acessibilidade-iluminacao' src='/assets/testpics/dark-mode.png'>
+						<a href='#'class='botao-acessibilidade fonte-magra'><div class='div-botao-acessibilidade'>L</div></a>
+						<a href='#'class='botao-acessibilidade fonte-negrito'><div class='div-botao-acessibilidade'>L</div></a>
+						<a href='#'class='botao-acessibilidade fonte-menor'><div class='div-botao-acessibilidade'>A-</div></a>
+						<a href='#'class='botao-acessibilidade fonte-maior'><div class='div-botao-acessibilidade'>A+</div></a>
 						<a 
 							href="#altocontraste" 
 							id="altocontraste" 
 							accesskey="3" 
-							class='btn-acess div-btn-acess high-contrast' 
+							class='botao-acessibilidade div-botao-acessibilidade high-contrast' 
 							onclick="contrast()" 
 							onkeydown="window.toggleContrast()"> 
 							<div>H+</div>
@@ -66,14 +64,13 @@ if (isset($_GET['id'])){
 						<a 
 							href="#clean" 
 							id="limpar-contraste"  
-							class='btn-acess div-btn-acess' 
+							class='botao-acessibilidade div-botao-acessibilidade' 
 							onclick="cleanContrast()"> 
 							<div>H-</div>
 						</a>
-					</div><!-- insigth test-->
-					<div class='parteBaixoCaixaNoticias'>
-						<h3 class='mainCall'><i></i></h3>
-						<h2 class='textoPrincipalCaixaNoticia'>
+					</div><!-- acessibilidade -->
+					<div class='main-container-noticias-principal'>
+						<h2 class='noticias-principal-texto'>
 							A AMD disse hoje (8) que fechou acordo com a Meta, anteriormente conhecida como Facebook,
 							para ser seu cliente de chips para centrais de processamento de dados. O anúncio fez as 
 							ações da empresa de semicondutores disparar mais de 11%.<br>
@@ -86,20 +83,8 @@ if (isset($_GET['id'])){
 							de acordo com a Mercury Research.
 						</h2>
 						<!--newsletter input-->
-						<hr class='divisorias'>
-							<div class="receberNoticias">
-								<img class='logoReceberNoticias'src='https://www.sp.senac.br/o/senac-theme/images/logo_senac_default.png'>
-								<h1 class='textoGenerico'>Receba notícias via e-email e fique por dentro das novidades!</h1>
-								<div class="receberDadosUsuario">
-									<input class="inputNome" placeholder='Digite seu nome aqui'>
-									<input class="inputEmail"placeholder='Digite seu email aqui'>
-									<button class='botaoEnviar'>Enviar</button>
-								</div>
-								
-							</div>
-						<hr class='divisorias'>
 						<!--newsletter input-->
-						<h2 class='textoPrincipalCaixaNoticia'>
+						<h2 class='noticias-principal-texto'>
 							Depois de garantir a Meta como cliente, 
 							a AMD fez negócios com muitos dos maiores 
 							usuários de chips Intel. A companhia também 
@@ -132,14 +117,6 @@ if (isset($_GET['id'])){
 					</div>
 					<!-- <h1><?php echo $title; ?></h1>
 					<div class='content'><?php echo $content; ?></div> -->
-					<div class='social-media'><!-- insigth test-->
-						<img style='margin-left: 0 !important;'class='social-media-img' src='/assets/testpics/facebook.png'>
-						<img class='social-media-img' src='/assets/testpics/instagram.png'>
-						<img class='social-media-img' src='/assets/testpics/linkedin.png'>
-						<img class='social-media-img' src='/assets/testpics/twitter.png'>
-						<img class='social-media-img' src='/assets/testpics/whatsapp.png'>
-						<img class='social-media-img' src='/assets/testpics/youtube.png'>
-					</div><!-- insigth test-->
 				</div>
 		</main>	
 	<!--footer -->
