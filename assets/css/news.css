@@ -98,13 +98,6 @@ body{
     font-weight: 1;
     margin-bottom: 2vh;
 }
-.materia-news{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
 .iframes{
     width: 100%;
     height: 600px;
