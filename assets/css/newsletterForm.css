@@ -1,9 +1,4 @@
-:root {
-    --bg-color: #0F0F0F;
-    --main-color: #202020;
-    --second-color: #0071CF;
-    --main-font: 'Poppins', sans-serif;
-}
+@import url('base.css');
 
 .receber-noticias{
     padding: 2vh;

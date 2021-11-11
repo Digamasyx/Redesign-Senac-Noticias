@@ -1,7 +1,7 @@
 <!-- Header  -->
 <header class="header-navbar">
     <nav id="navbar">
-        <img src="assets/img/Logo.svg" alt="Logo" id="nav-logo">
+        <img src="/assets/img/Logo.svg" alt="Logo" id="nav-logo">
         <div class="mobile-menu">
             <div class="line1"></div>
             <div class="line2"></div>
@@ -12,7 +12,7 @@
                 <a href="#">Home</a>
             </li>
             <li>
-                <a href="#news">Notícias</a>
+                <a href="/src/pages/news.php">Notícias</a>
             </li>
             <li>
                 <a href="#newsletter">Newsletter</a>

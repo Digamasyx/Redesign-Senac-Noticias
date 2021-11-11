@@ -19,8 +19,8 @@ else
 			$shortDesc = strlen($_POST['shortDesc']) === 0 ? "Sem descrição... :(" : $_POST['shortDesc'];
 			$data = array(
 				$_POST['title'],
-				$shortDesc,
-				$_POST['content'],
+				nl2br($shortDesc),
+				nl2br($_POST['content']),
 				NULL
 			);
 

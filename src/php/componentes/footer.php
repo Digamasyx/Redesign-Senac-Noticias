@@ -1,5 +1,5 @@
 <footer id="footer-section">
-        <img src="assets/img/Logo.svg" alt="Senac">
+        <img src="/assets/img/Logo.svg" alt="Senac">
         <p>Senac, 2021<br>Todos os direitos reservados</p>
         <!-- Menus/Links do footer -->
         <ul>
@@ -45,22 +45,22 @@
             <ul>
                 <li>
                     <a href="">
-                        <img src="assets/img/YouTube Icon.svg" alt="YouTube">
+                        <img src="/assets/img/YouTube Icon.svg" alt="YouTube">
                     </a>
                 </li>
                 <li>
                     <a href="">
-                        <img src="assets/img/WhatsApp Icon.svg" alt="WhatsApp">
+                        <img src="/assets/img/WhatsApp Icon.svg" alt="WhatsApp">
                     </a>
                 </li>
                 <li>
                     <a href="">
-                        <img src="assets/img/Facebook Icon.svg" alt="Facebook">
+                        <img src="/assets/img/Facebook Icon.svg" alt="Facebook">
                     </a>
                 </li>
                 <li>
                     <a href="">
-                        <img src="assets/img/Instagram Icon.svg" alt="Instagram">
+                        <img src="/assets/img/Instagram Icon.svg" alt="Instagram">
                     </a>
                 </li>
             </ul>
