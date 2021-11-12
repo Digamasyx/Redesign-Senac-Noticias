@@ -33,6 +33,9 @@
 .contrast a{
     color: yellow !important;
 }
+.contrast a:hover{
+    text-decoration: underline yellow !important;
+}
 
 .contrast button,
 .contrast input[type=button],
