@@ -2,17 +2,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sarala:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sarala&display=swap');
+@import url('base.css');
 @import url('header.css');
 @import url('footer.css');
-@import url('newsletterForm.css');
 #body-page{
     color: white;
 }
 .main-container{
-    padding: 0 1.5em;
     font-family: 'Sarala', sans-serif;
 }
 .main-container-noticias{
+    padding: 0 1.5em;
     display: flex;
     flex-direction: column;
    /*  padding: 0.5vh; */
@@ -47,12 +47,13 @@
     width: 100%;
 }
 #btn-iluminacao{
-    width: 19%;
+    width: 5em;
     background: #0F0F0F;
     outline: none;
     text-decoration: none;
     border: none;
     cursor: pointer;
+    margin-right: -1em;
 }
 #limpar-contraste{
     display: none;
@@ -84,7 +85,7 @@
     align-items: center !important;
 }
 .acessibilidade-iluminacao{
-    width: 100%;
+    width: 50%;
 }
 .botao-acessibilidade:focus{
     border: 1px solid red !;
@@ -98,6 +99,10 @@
 }
 .negrito-desliga{
     display: none;
+}
+.link-externo{
+    font-weight: bold;
+    text-decoration: none;
 }
 /* fim adicionais de pagina*/
 .main-noticias-imagem{
@@ -118,7 +123,136 @@
     font-weight: 1;
     margin-bottom: 2vh;
 }
-@media (min-width: 1024px) {
+/* divisoria newsletter exemplo */
+.newsletter-container{
+    padding: 0.5em ;
+    align-items: center;
+    justify-content: center ;
+    flex-direction: column ;
+    background: rgb(4,57,111);
+    background: linear-gradient(96deg, rgba(4,57,111,0.8426558123249299) 19%, rgba(15,15,15,0.8846726190476191) 58%);
+    border-top: 0.5px solid rgba( 255, 255, 255, 1 ) ;
+    border-bottom: 0.5px solid rgba( 255, 255, 255, 1 ) ;
+}
+.newsletter-header{
+    padding: 0 2%;
+    display: flex;
+    flex-direction: row;
+    margin-left: 0.2em;
+}
+.logo-newsletter{
+    float: right;
+    width: 6em;
+    object-fit: contain;
+}
+.titulo-newsletter{
+    color: white !important;
+    text-align: left;
+    text-overflow: hidden;
+    font-size: 0.9em;
+}
+.receber-noticias{
+    padding: 0 1.4%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.receber-dados-usuario{
+    display: flex ;
+    flex-direction: column ;
+    align-items: flex-start ;
+    justify-content: center ;
+}
+.campo-input{
+    margin-top: 0.5em ;
+    margin-left: 0.3em ;
+    font-size: 0.8em ;
+    border-radius: 0.2em ;
+}
+.campo-input:focus{
+    outline: 2px solid #f78b1f  ;
+}
+.input-nome::placeholder, .input-email::placeholder{
+    font-family: 'Sarala', sans-serif;
+    color: black;
+    font-size: 1em;
+}
+.botao-enviar{
+    float: left;
+    margin-top: 0.5em ;
+    margin-left: 0.3em ;
+    border-radius: 0.2em ;
+    font-size: 0.8em ;
+    text-decoration: none ;
+    outline: none ;
+    background: #f78b1f ;
+    border: 1px solid #005594;
+    cursor: pointer;
+    color: white ;
+    padding: 0.5em 1.5em; 
+    text-align: center;
+    text-decoration: none ;
+}
+.botao-enviar:focus{
+    outline: 1px solid #005594;
+}
+.versao-desktop-newslttr{
+    display: none;
+}
+/* divisoria newsletter exemplo */
+@media (min-width: 600px){
+    #btn-iluminacao{
+        width: 7em;
+        margin-right: -2.5em;
+    }
+    /* seção newsletter teste*/
+    .newsletter-container{
+       padding: 1% !important;
+   }
+   .newsletter-header{
+       padding:0 11% ;
+   }
+   .titulo-newsletter{
+       display: none;
+   }
+   .logo-newsletter{
+       display: none;
+   }
+   .versao-desktop-newslttr{
+       display: inline;
+       display: flex;
+   }
+   .desktop-newslttr-img{
+      float: right;
+      width: 10em;
+   }
+   .desktop-newslttr-tt{
+       color: white !important;
+       font-size: 1em;
+       text-align: left;
+       width: 50%;
+       padding:0 2vh;
+   }
+   .receber-noticias{
+       flex-direction: row;
+       width: 50%;
+   }
+   .campo-input{
+       clear: right;
+       margin-left: 1% ;
+   }
+   .botao-enviar{
+       padding: 0.4em 1.5em; 
+       margin-left: 1%;
+   }
+   /*fim seção newsletter teste*/
+}
+@media (min-width: 1150px) {
+    #btn-iluminacao{
+        width: 5em !important;
+        margin-right: -1.5em;
+    }
     .main-noticias-header{
         margin: 0 10%;
         width: 90%;
@@ -128,13 +262,14 @@
         width: 55%;
     } 
     .noticias-titulo{
-        font-size: 5em;
+        font-size: 3em;
     }
     .noticias-descricao{
-        font-size: 3em;
+        font-size: 2em;
     }  
     .midia-social{
-        margin-bottom: 2em;
+        padding: 0;
+        margin-bottom: 1em;
         justify-content: flex-start;
     }
     .botao-social{
@@ -143,13 +278,13 @@
     }
     .compartilhar-noticia{
         display: block;
-        font-size: 2em;
+        font-size: 1.5em;
     }
     .midia-social-img{
         width: 100%;
     }
     .botao-acessibilidade{
-        font-size: 3em;
+        font-size: 2em;
     }
     #btn-iluminacao{
         width: 7%;
@@ -164,6 +299,49 @@
         -moz-box-shadow: 3px 2px 0px 0px rgba(0,0,0,0.59);   
     }
     .noticias-principal-texto{
-        font-size: 2.5em;
+        font-size: 1.5em;
     }
+    /* seção newsletter teste*/
+    .newsletter-container{
+        padding: 1% !important;
+    }
+    .newsletter-header{
+        padding:0 11% ;
+    }
+    .titulo-newsletter{
+        display: none;
+    }
+    .logo-newsletter{
+        display: none;
+    }
+    .versao-desktop-newslttr{
+        display: inline;
+        display: flex;
+    }
+    .desktop-newslttr-img{
+       float: right;
+       width: 16em;
+       margin-right: 7em;
+    }
+    .desktop-newslttr-tt{
+        color: white !important;
+        font-size: 1.5em;
+        width: auto;
+        padding:0 5.5em ;
+    }
+    .receber-noticias{
+        flex-direction: row;
+        margin:0 0 2em 6.8em;
+        
+    }
+    .campo-input{
+        clear: right;
+        margin-left: 1% ;
+    }
+    .botao-enviar{
+        padding: 0.4em 1.5em; 
+        margin-left: 1%;
+    }
+    /*fim seção newsletter teste*/
+    
 }

@@ -102,13 +102,19 @@ if (isset($_GET['id'])){
 						pela presidente-executiva, Lisa Su, colocou a empresa em um curso para sua posição atual de ter
 						chips mais rápidos do que a rival.
 						<br><br>
-						A AMD agora tem quase um quarto do mercado de chips x86, 
+						A AMD agora tem quase um quarto do mercado de chips x86,
 						<br><br>
 						Depois de garantir a Meta como cliente, 
 						a AMD fez negócios com muitos dos maiores 
 						usuários de chips Intel. A companhia também 
 						tem negócios com Google Cloud, 
 						Amazon Web Services e Azure, da Microsoft.
+						<br><br>
+						<a 	onmouseenter="underlineMouseEnter()" onmouseleave="underlineMouseLeave()"
+							href='https://forbes.com.br/forbeslife/2021/11/mocoto-tem-poder-transformador-diz-adriana-salay-premiada-por-projeto-social-com-o-chef-rodrigo-oliveira/
+							'class='link-externo ' id='link-externo'>LEIA TAMBÉM:“O Mocotó tem poder transformador”,
+							 diz Adriana Salay, premiada com o chef Rodrigo Oliveira
+						</a>
 						<br><br>
 						A AMD também anunciou planos de enfrentar rivais
 						além da Intel. A empresa 
@@ -131,6 +137,19 @@ if (isset($_GET['id'])){
 			<!-- <h1><?php echo $title; ?></h1>
 			<div class='content'><?php echo $content; ?></div> -->
 		</div><!-- fim container de noticias -->
+		<div class="newsletter-container">
+			<div class='newsletter-header'>
+				<h3 class='titulo-newsletter'>Receba notícias via e-email e fique por dentro das novidades!</h3>
+				<img class='logo-newsletter'src='/assets/img/senac-logo.png'>
+			</div>
+			<img class='versao-desktop-newslttr desktop-newslttr-img'src='/assets/img/senac-logo.png'>
+			<h3 class='versao-desktop-newslttr desktop-newslttr-tt'>Receba notícias via e-email e fique por dentro das novidades!</h3>
+			<div class="receber-noticias">
+				<input class="input-nome campo-input" placeholder='Digite seu nome aqui'>
+				<input class="input-email campo-input"placeholder='Digite seu email aqui'>
+				<button class='botao-enviar'>Enviar</button>
+			</div>	
+    	</div> 
 	</main>	
 	<!--footer -->
 	<?php require_once(dirname(__DIR__) . '/php/componentes/footer.php') ?>
