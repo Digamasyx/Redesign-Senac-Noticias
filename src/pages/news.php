@@ -48,7 +48,7 @@ if (isset($_GET['id'])){
 			</div>
 			<div class='caixa-noticias-desktop'><!-- caixa noticias desktop -->
 				<div class='main-noticias-imagem'>
-					<img class='noticias-imagem' src="https://tm.ibxk.com.br/2021/11/08/08082730119015.jpg" alt="imagemGenerica">
+					<img class='noticias-imagem' src="https://marketresearchtelecast.com/wp-content/uploads/2021/11/1636639503_AMD-processors-Meta-converts-Intel-server-platform-to-AMD-Epyc.jpg" alt="imagemGenerica">
 				</div>
 				<div id='caixa-de-acessibilidade' class='caixa-de-acessibilidade'><!-- caixa de acessibilidade -->
 					<button id='btn-iluminacao' class='botao-acessibilidade-luz' onclick="lightMode()">
@@ -92,13 +92,17 @@ if (isset($_GET['id'])){
 					<h2 id='texto-noticias' class='noticias-principal-texto'>
 						A AMD disse hoje (8) que fechou acordo com a Meta, anteriormente conhecida como Facebook,
 						para ser seu cliente de chips para centrais de processamento de dados. O anúncio fez as 
-						ações da empresa de semicondutores disparar mais de 11%.<br>
+						ações da empresa de semicondutores disparar mais de 11%.<br><br>
 						A empresa também anunciou uma gama de novos chips com o objetivo de enfrentar rivais 
 						como Nvidia nos mercados de supercomputação, bem como concorrentes menores, incluindo 
-						Ampere no mercado de computação em nuvem.Depois de anos atrás da Intel no mercado de chips, 
+						Ampere no mercado de computação em nuvem.
+						<br><br>
+						Depois de anos atrás da Intel no mercado de chips, 
 						a AMD vem ganhando participação de mercado desde 2017, quando um plano de recuperação liderado 
 						pela presidente-executiva, Lisa Su, colocou a empresa em um curso para sua posição atual de ter
-						chips mais rápidos do que a rival.<br>A AMD agora tem quase um quarto do mercado de chips x86, 
+						chips mais rápidos do que a rival.
+						<br><br>
+						A AMD agora tem quase um quarto do mercado de chips x86, 
 						<br><br>
 						Depois de garantir a Meta como cliente, 
 						a AMD fez negócios com muitos dos maiores 
