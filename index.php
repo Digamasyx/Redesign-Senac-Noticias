@@ -34,6 +34,7 @@
 
     <!-- Newsletter -->
     <?php require_once('./src/php/componentes/newsletterForm.php') ?>
+    <?php require_once('./src/php/componentes/map.php') ?>
 
     <!-- Footer -->
     <?php require_once('src/php/componentes/footer.php') ?>
