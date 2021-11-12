@@ -24,29 +24,39 @@
     margin-bottom: 1em;
 }
 /* adicionais de pagina*/
+.compartilhar-noticia{
+    display: none;
+}
 .midia-social{
     display: flex;
     border-top: 2px solid white;
     border-bottom: 2px solid white;
     padding: 1em;
     flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
     margin-bottom: 0.5em;
+    justify-content: space-around;
 }
 .midia-social-img{
-    width: 10%;
+    width: 50%;
     margin-left: 10%;
 }
 .img-acess{
     width: 100%;
+}
+#btn-iluminacao{
+    width: 19%;
+    background: #0F0F0F;
+    outline: none;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
 }
 #limpar-contraste{
     display: none;
 }
 .caixa-de-acessibilidade{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     flex-direction: row;
     margin-top: 0.5em;
@@ -56,11 +66,13 @@
     border-bottom: 2px solid white;
 }
 .botao-acessibilidade{
-    font-size: 1.6em;
-    margin-left: 0.2em;
-    text-align: center;
+    font-size: 1.3em;
     text-decoration: none;
     color: white;
+    background: #0F0F0F;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
 }
 .div-botao-acessibilidade{
     /* padding: 1em; */
@@ -68,14 +80,11 @@
     justify-content: center !important;
     align-items: center !important;
 }
-.botao-acessibilidade-luz{
-    width: 10%;
-}
 .acessibilidade-iluminacao{
     width: 100%;
 }
 .botao-acessibilidade:focus{
-    outline: 1px solid red;
+    border: 1px solid red !;
 }
 .fonte-magra{
     font-family: serif;
@@ -106,7 +115,52 @@
     font-weight: 1;
     margin-bottom: 2vh;
 }
-.iframes{
-    width: 100%;
-    height: 600px;
+@media (min-width: 1024px) {
+    .main-noticias-header{
+        margin: 0 10%;
+        width: 90%;
+    }
+    .caixa-noticias-desktop{
+        margin:0 10%;
+        width: 55%;
+    } 
+    .noticias-titulo{
+        font-size: 5em;
+    }
+    .noticias-descricao{
+        font-size: 3em;
+    }  
+    .midia-social{
+        margin-bottom: 2em;
+        justify-content: flex-start;
+    }
+    .botao-social{
+        width: 2%;
+        margin:2em 2em;
+    }
+    .compartilhar-noticia{
+        display: block;
+        font-size: 2em;
+    }
+    .midia-social-img{
+        width: 100%;
+    }
+    .botao-acessibilidade{
+        font-size: 3em;
+    }
+    #btn-iluminacao{
+        width: 7%;
+    }
+    .main-noticias-imagem{
+        margin-bottom: 4%; 
+    }
+    .noticias-imagem{
+        border-radius: 2%;
+        box-shadow: 3px 2px 0px 0px rgba(0,0,0,0.59);
+        -webkit-box-shadow: 3px 2px 0px 0px rgba(0,0,0,0.59);
+        -moz-box-shadow: 3px 2px 0px 0px rgba(0,0,0,0.59);   
+    }
+    .noticias-principal-texto{
+        font-size: 2.5em;
+    }
 }
