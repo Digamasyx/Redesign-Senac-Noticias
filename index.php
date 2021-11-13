@@ -1,3 +1,8 @@
+<?php
+require_once(__DIR__ . '/src/php/classes/NewsController.php');
+require_once(__DIR__ . '/src/php/functions/getPath.php');
+?>
+
 <!DOCTYPE html>
 <html lang="pt">
 <head>
@@ -13,7 +18,7 @@
 </head>
 <body>
     <!-- Header  -->
-    <?php require_once('src/php/components/header.php') ?>
+    <?php require_once('src/php/components/header.html') ?>
 
     <!-- Landing-page -->
     <section class="first-section">
@@ -25,75 +30,15 @@
     </section>
 
     <!-- Notícias -->
-    <section id="news">
-        <div id="news-blocks">
-            <div class="news-tile">
-                <img src="https://via.placeholder.com/150" />
-                <div class="news-text">
-                    <h3>Título</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget neque quis eros aliquam viverra id eu elit.
-                    </p>
-                </div>
-            </div>
-            
-            <div class="news-tile">
-                <img src="https://via.placeholder.com/150" />
-                <div class="news-text">
-                    <h3>Título</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget neque quis eros aliquam viverra id eu elit.
-                    </p>
-                </div>
-            </div>
-            
-            <div class="news-tile">
-                <img src="https://via.placeholder.com/150" />
-                <div class="news-text">
-                    <h3>Título</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget neque quis eros aliquam viverra id eu elit.
-                    </p>
-                </div>
-            </div>
-            
-            <div class="news-tile">
-                <img src="https://via.placeholder.com/150" />
-                <div class="news-text">
-                    <h3>Título</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget neque quis eros aliquam viverra id eu elit.
-                    </p>
-                </div>
-            </div>
-            
-            <div class="news-tile bottom-tile">
-                <img src="https://via.placeholder.com/150" />
-                <div class="news-text">
-                    <h3>Título</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget neque quis eros aliquam viverra id eu elit.
-                    </p>
-                </div>
-            </div>
-            
-            <div class="news-tile bottom-tile">
-                <img src="https://via.placeholder.com/150" />
-                <div class="news-text">
-                    <h3>Título</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget neque quis eros aliquam viverra id eu elit.
-                    </p>
-                </div> 
-            </div>
-        </div>
-    </section>
+    <?php require_once('./src/php/components/newsGrid.php') ?>
 
     <!-- Newsletter -->
-    <?php require_once('./src/php/components/newsletterForm.php') ?>
-    <?php require_once('./src/php/components/map.php') ?>
+    <?php require_once('./src/php/components/newsletterForm.html') ?>
+
+    <!-- Mapa -->
+    <?php require_once('./src/php/components/map.html') ?>
 
     <!-- Footer -->
-    <?php require_once('src/php/components/footer.php') ?>
+    <?php require_once('src/php/components/footer.html') ?>
 </body>
 </html>

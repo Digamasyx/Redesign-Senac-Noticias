@@ -21,7 +21,7 @@ if (isset($_GET['id'])) {
 	
 </head>
 <body>
-	<?php require_once(dirname(__DIR__) . '/php/components/header.php') ?>
+	<?php require_once(dirname(__DIR__) . '/php/components/header.html') ?>
 	<main id='body-page' class="main-container">
 		<div class='main-container-noticias'><!-- inicio container noticias -->
 			<div class='main-noticias-header'>
@@ -148,7 +148,7 @@ if (isset($_GET['id'])) {
     	</div> 
 	</main>	
 	<!--footer -->
-	<?php require_once(dirname(__DIR__) . '/php/components/footer.php') ?>
+	<?php require_once(dirname(__DIR__) . '/php/components/footer.html') ?>
 	<!--footer -->
 </body>
 </html>
