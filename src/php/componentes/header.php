@@ -7,7 +7,7 @@
             <div class="line2"></div>            
             <div class="line3"></div>        
         </div>
-           
+
         <ul class="nav-list">            
             <li class="nav-item">                
             <a href="/">Home</a>            

@@ -5,18 +5,23 @@
 @import url('base.css');
 @import url('header.css');
 @import url('footer.css');
-#body-page{
+@import url('map.css');
+
+#body-page {
     color: white;
 }
-.main-container{
+
+.main-container {
     font-family: 'Sarala', sans-serif;
 }
-.main-container-noticias{
+
+.main-container-noticias {
     padding: 0 1.5em;
     display: flex;
     flex-direction: column;
    /*  padding: 0.5vh; */
 }
+
 .noticias-titulo{
     font-size: 1.8em;
     text-align: left;
@@ -249,6 +254,10 @@
    /*fim seção newsletter teste*/
 }
 @media (min-width: 1150px) {
+    .main-container-noticias{
+        justify-content: center !important;
+        align-items: center;
+    }
     #btn-iluminacao{
         width: 5em !important;
         margin-right: -1.5em;

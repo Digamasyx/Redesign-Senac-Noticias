@@ -1,5 +1,6 @@
 @import url('header.css');
-/* @import url('newsletterForm.css'); */
+@import url('newsletterForm.css');
+@import url('map.css');
 
 /* = Landing-page ================ */
 
@@ -49,17 +50,3 @@
     }
 
 }
-
-/* #newsletter {
-    text-align: center;
-    margin-left: 2.5em;
-
-    width: 65vw;
-    height: 100vh;
-
-    color: #fff;
-    font-family: var(--main-font);
-    background: linear-gradient(90deg, #0F0F0F 0%, #202020 100%);
-    padding: 2em;
-    border-radius: 1em;
-} */
