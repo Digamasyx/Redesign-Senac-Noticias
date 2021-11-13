@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-    <link rel="stylesheet" href="assets/css/header.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" href="assets/css/newsletterForm.css">
     
     <link rel="icon" href="assets/img/Logosemnome.svg">
@@ -28,8 +26,66 @@
 
     <!-- Notícias -->
     <section id="news">
-        <div>
-            <p>bom, depois passa as mudanças pro outro kk</p>
+        <div id="news-blocks">
+            <div class="news-tile">
+                <img src="https://via.placeholder.com/150" />
+                <div class="news-text">
+                    <h3>Título</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget neque quis eros aliquam viverra id eu elit.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="news-tile">
+                <img src="https://via.placeholder.com/150" />
+                <div class="news-text">
+                    <h3>Título</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget neque quis eros aliquam viverra id eu elit.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="news-tile">
+                <img src="https://via.placeholder.com/150" />
+                <div class="news-text">
+                    <h3>Título</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget neque quis eros aliquam viverra id eu elit.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="news-tile">
+                <img src="https://via.placeholder.com/150" />
+                <div class="news-text">
+                    <h3>Título</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget neque quis eros aliquam viverra id eu elit.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="news-tile bottom-tile">
+                <img src="https://via.placeholder.com/150" />
+                <div class="news-text">
+                    <h3>Título</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget neque quis eros aliquam viverra id eu elit.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="news-tile bottom-tile">
+                <img src="https://via.placeholder.com/150" />
+                <div class="news-text">
+                    <h3>Título</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget neque quis eros aliquam viverra id eu elit.
+                    </p>
+                </div> 
+            </div>
         </div>
     </section>
 
