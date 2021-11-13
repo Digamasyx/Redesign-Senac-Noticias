@@ -1,0 +1,61 @@
+@import url('base.css');
+
+html {
+    font-family: var(--main-font);
+    color: #fff;
+}
+
+.footer-all {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: center;
+}
+
+.senac-direitos {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+}
+
+ul {
+    text-align: left;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+li {
+    list-style: none;
+    margin-top: 8px;
+}
+
+.footer-socials {
+    display: flex;
+    text-align: center;
+    margin: 2em;
+    padding: 0 9em 0 9em;
+}
+
+.footer-socials span{
+    flex: auto;
+}
+
+
+@media (max-width: 1024px) {
+    html {
+        text-align: center;
+    }
+    ul {
+        padding: 0;
+    }
+    .footer-socials {
+        display: flex;
+        justify-content: space-between;
+        margin: 2em;
+    }
+    .footer-socials span{
+        flex: 1;
+    }
+}

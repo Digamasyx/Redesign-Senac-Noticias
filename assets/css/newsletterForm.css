@@ -1,43 +1,66 @@
-.receberNoticias{
-    padding: 2vh;
-    margin-bottom: 2vh;
+#newsletter {
+    border-bottom: 1px solid #fff5;
+    padding: 5em 5em 300px 5em;
 }
-.receberDadosUsuario{
-    padding: 2vh;
-    background-image: url('https://i.stack.imgur.com/1inrW.png');
-    background-repeat: no-repeat;
+#newsletter h2 {
+    margin-bottom: 40px; 
+    width: 70%;
+
+    color: white;
+    line-height: 1.7em;
+    font-family: "Poppins";
+    font-size: 45px;
 }
-.textoGenerico{
-    font-size: 0.8em;
+#newsletter > div {
+    display: grid;
+    grid-template-columns: 2fr 1px 1fr;
+    grid-template-rows: 1fr;
+    
+    border-radius: 20px;
+    padding-left: 30px;
+    height: 400px;
+    
+    background: linear-gradient(to right, transparent, #333a);
 }
-.inputNome{
-    height: 3em;
-    width: 30em;
+#newsletter > div div:nth-of-type(1) {
+    padding: 3em;
+}
+#newsletter > div div:nth-of-type(1) input {
     display: block;
+    
+    margin-bottom: 1.5em;
+    border: 2px solid #222;
+    border-radius: 10px;
+    padding: 1em;
+    width: 70%;
+    
+    background: #111;
+    color: white;
+    font-family: arial;
+    font-size: 25px;
 }
-.inputEmail{
-    height: 3em;
-    width: 30em;
-    display: block;
-    margin: 0.5vh 0 0.5vh;
+#newsletter > div div:nth-of-type(1) button {
+    border: none;
+    border-radius: 10px;
+    padding: 0.3em 1.2em;
+
+    background: dodgerblue;
+    color: white;
+    font-family: "Poppins";
+    font-size: 30px;
+    font-weight: bold;
 }
-.inputNome::placeholder{
-    font-size: 2em;
+#newsletter > div div:nth-of-type(1) button:hover {
+    cursor: pointer;
+    background: #2689eb;
 }
-.inputEmail::placeholder{
-    font-size: 2em;
-}
-.logoReceberNoticias{
-    position: absolute;
-    width: 10em;
-    float: left;
-    margin-left: 28vh;
-    margin-top: 10vh;
-}
-.botaoEnviar{
-    font-size: 2em;
+#newsletter > div div:nth-of-type(1) button:active {
+    background: #2c84db;
 }
 
-.divisorias{
-    margin-bottom: 2vh;
+#newsletter > div div:nth-of-type(2) {
+    background: repeating-linear-gradient(to bottom, #fffa 0% 5%, transparent 5% 15%, #fffa 15% 20%);
+}
+#newsletter > div img {
+    margin: auto;
 }
