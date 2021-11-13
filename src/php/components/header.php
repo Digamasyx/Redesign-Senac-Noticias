@@ -19,7 +19,7 @@
             <a href="/#newsletter">Newsletter</a>            
             </li>            
             <li class="nav-item">                
-            <a href="/#">Nos Encontre</a>            
+            <a href="/#map">Nos Encontre</a>            
             </li>            
             <li class="nav-item">                
             <a href="/#footer-section">Serviços</a>            

@@ -1,4 +1,4 @@
-<div class="mapouter">
+<div id="map" class="mapouter">
 	<div class="gmap_canvas">
 		<iframe
 			width="500"

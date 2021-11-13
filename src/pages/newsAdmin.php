@@ -18,7 +18,7 @@ if (!$check) header("Location: ../../index.php");
 switch ($mode) 
 {
 	case 'Add':
-		$handler = "../php/handlers/handleAddNew.php";
+		$handler = "../php/handlers/handleAddNews.php";
 		break;
 	case 'Edit':
 		if (isset($_POST['id']))
@@ -26,7 +26,7 @@ switch ($mode)
 			try
 			{
 				$nC = new NewsController();
-				$new = $nC->getNew($_POST['id']);
+				$news = $nC->getNews($_POST['id']);
 
 				if (empty($new))
 				{
@@ -36,10 +36,10 @@ switch ($mode)
 				}
 				else
 				{
-					$title = $new['title'];
-					$shortDesc = $new['shortDescription'];
-					$content = $new['content'];
-					$originalPath = $new['mainImage'];
+					$title = $news['title'];
+					$shortDesc = $news['shortDescription'];
+					$content = $news['content'];
+					$originalPath = $news['mainImage'];
 				}
 			}
 			catch (PDOException $e)
@@ -48,7 +48,7 @@ switch ($mode)
 			}
 
 			if ($notFounded) $handler = "newsAdmin.php?{$add}";
-			else $handler = "../php/handlers/handleEditNew.php?originalPath={$originalPath}&id={$_POST['id']}";
+			else $handler = "../php/handlers/handleEditNews.php?originalPath={$originalPath}&id={$_POST['id']}";
 		}
 		else $handler = "newsAdmin.php?{$add}";
 		break;

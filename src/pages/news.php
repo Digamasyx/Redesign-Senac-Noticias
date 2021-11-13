@@ -1,23 +1,19 @@
 <?php
 require_once(dirname(__DIR__) . '/php/classes/NewsController.php');
 
-if (isset($_GET['id'])){
+if (isset($_GET['id'])) {
 	$nC = new NewsController();
-	$new = $nC->getNew($_GET['id']);
-	
-	$id = $new['id'];
-	$title = $new['title'];
-	$shortDesc = $new['shortDescription'];
-	$mainImage = $new['mainImage'];
-	$content = $new['content'];
+	$news = $nC->getNews($_GET['id']);
 }
+
+//if (!isset($news)) header("Location: ../../index.php");
 ?>
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-	<title><?php echo $title; ?></title>
+	<title><?php echo $news['title']; ?></title>
 	<link rel="stylesheet" href="/assets/css/contrast.css">
 	<script type="text/javascript" src="/assets/js/menu-acessibilidade.js"></script>
 	<link rel="stylesheet" href="/assets/css/normalize.css">
@@ -25,7 +21,7 @@ if (isset($_GET['id'])){
 	
 </head>
 <body>
-	<?php require_once(dirname(__DIR__) . '/php/componentes/header.php') ?>
+	<?php require_once(dirname(__DIR__) . '/php/components/header.php') ?>
 	<main id='body-page' class="main-container">
 		<div class='main-container-noticias'><!-- inicio container noticias -->
 			<div class='main-noticias-header'>
@@ -134,8 +130,8 @@ if (isset($_GET['id'])){
 					</h2>
 				</div>
 			</div><!-- caixa noticias desktop final -->
-			<!-- <h1><?php echo $title; ?></h1>
-			<div class='content'><?php echo $content; ?></div> -->
+			<!-- <h1><?php echo $news["title"]; ?></h1>
+			<div class='content'><?php echo $news["content"]; ?></div> -->
 		</div><!-- fim container de noticias -->
 		<div class="newsletter-container">
 			<div class='newsletter-header'>
@@ -152,7 +148,7 @@ if (isset($_GET['id'])){
     	</div> 
 	</main>	
 	<!--footer -->
-	<?php require_once(dirname(__DIR__) . '/php/componentes/footer.php') ?>
+	<?php require_once(dirname(__DIR__) . '/php/components/footer.php') ?>
 	<!--footer -->
 </body>
 </html>

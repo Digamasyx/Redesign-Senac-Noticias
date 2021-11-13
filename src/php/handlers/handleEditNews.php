@@ -24,11 +24,11 @@ else
 				NULL
 			);
 
-			$result = $nC->updateNew($_GET['id'], $data);
+			$result = $nC->updateNews($_GET['id'], $data);
 		}
 		else if ($_POST['action'] === "Remove")
 		{
-			$result = $nC->deleteNew($_GET['id']);
+			$result = $nC->deleteNews($_GET['id']);
 
 			unlink($dir);
 		}
