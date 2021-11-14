@@ -33,11 +33,6 @@
 	background-color: #444;
 }
 
-.news-tile img{
-	object-fit: contain;
-	background: transparent;
-}
-
 .news-text {
 	background: linear-gradient(180deg, rgba(0, 0, 0, .5), transparent);
 	padding: 5px;
