@@ -1,7 +1,6 @@
 <section id="news">
     <div id="news-blocks">
-        <div class="news-tile">
-            <img src="https://via.placeholder.com/150" />
+        <div class="news-tile" style="background-image: url('https://via.placeholder.com/280x720');">
             <div class="news-text">
                 <h3>Título</h3>
                 <p>
@@ -10,8 +9,7 @@
             </div>
         </div>
         
-        <div class="news-tile">
-            <img src="https://via.placeholder.com/150" />
+        <div class="news-tile" style="background-image: url('https://via.placeholder.com/280x720');">
             <div class="news-text">
                 <h3>Título</h3>
                 <p>
@@ -20,8 +18,7 @@
             </div>
         </div>
         
-        <div class="news-tile">
-            <img src="https://via.placeholder.com/150" />
+        <div class="news-tile" style="background-image: url('https://via.placeholder.com/280x720');">
             <div class="news-text">
                 <h3>Título</h3>
                 <p>
@@ -30,8 +27,7 @@
             </div>
         </div>
         
-        <div class="news-tile">
-            <img src="https://via.placeholder.com/150" />
+        <div class="news-tile" style="background-image: url('https://via.placeholder.com/280x720');">
             <div class="news-text">
                 <h3>Título</h3>
                 <p>
@@ -40,8 +36,7 @@
             </div>
         </div>
         
-        <div class="news-tile bottom-tile">
-            <img src="https://via.placeholder.com/150" />
+        <div class="news-tile bottom-tile" style="background-image: url('https://via.placeholder.com/720x280');">
             <div class="news-text">
                 <h3>Título</h3>
                 <p>
@@ -50,8 +45,7 @@
             </div>
         </div>
         
-        <div class="news-tile bottom-tile">
-            <img src="https://via.placeholder.com/150" />
+        <div class="news-tile bottom-tile" style="background-image: url('https://via.placeholder.com/720x280');">
             <div class="news-text">
                 <h3>Título</h3>
                 <p>

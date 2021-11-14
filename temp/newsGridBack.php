@@ -9,9 +9,10 @@
             $mainImage = getPath($value['mainImage']);
         ?>
             <a href="<?php echo $href; ?>">
-                <div class="news-tile <?php echo $key >= 4 ? 'bottom-tile' : ''; ?>">
-                    <img src="<?php echo $mainImage; ?>" alt="<?php echo $value['title']; ?>" />
-
+                <div 
+                    class="news-tile <?php echo $key >= 4 ? 'bottom-tile' : ''; ?>" 
+                    style="background-image: url('<?php echo $mainImage; ?>');"
+                >
                     <div class="news-text">
                         <h3><?php echo $value['title']; ?></h3>
                         <p><?php echo $value['shortDescription']; ?></p>
