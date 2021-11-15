@@ -102,7 +102,7 @@ function lightMode(){
     var accessBtn = document.getElementsByClassName('botao-acessibilidade');
     var socialMediaMenu = document.getElementById('midia-social');
     var linkExterno = document.getElementById('link-externo');
-    if (main.style.color == 'white'){
+    if (main.style.color == ''){
         for (var i = 0; i < accessBtn.length; i++) {
             accessBtn[i].style.color = 'black';
             accessBtn[i].style.background = 'white';}
@@ -114,7 +114,20 @@ function lightMode(){
         socialMediaMenu.style.borderBottom = '2px solid black';
         linkExterno.style.color = 'black';
         luzBtn.style.background = 'white';
-    }else{
+    }else if (main.style.color == 'white'){
+        for (var i = 0; i < accessBtn.length; i++) {
+            accessBtn[i].style.color = 'black';
+            accessBtn[i].style.background = 'white';}
+        main.style.background = 'white';
+        main.style.color = 'black';
+        accessMenu.style.borderBottom = '2px solid black'; 
+        accessMenu.style.borderTop = '2px solid black';
+        socialMediaMenu.style.borderTop = '2px solid black' ;
+        socialMediaMenu.style.borderBottom = '2px solid black';
+        linkExterno.style.color = 'black';
+        luzBtn.style.background = 'white';
+    }
+    else{
         for (var i = 0; i < accessBtn.length; i++) {
             accessBtn[i].style.color = 'white';
             accessBtn[i].style.background = '#0F0F0F';
