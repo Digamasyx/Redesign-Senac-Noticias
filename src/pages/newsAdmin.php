@@ -70,7 +70,7 @@ switch ($mode)
     <?php require_once(dirname(__DIR__) . '/php/components/header.html'); ?>
 
 	<main>
-		<form id="newForm" action="<?php echo $handler; ?>" enctype="multipart/form-data" method="POST">
+		<form id="newsForm" action="<?php echo $handler; ?>" enctype="multipart/form-data" method="POST">
 			<?php
 			if (isset($_GET['internalError']) && $_GET['internalError'])
 			{
