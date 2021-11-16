@@ -5,15 +5,19 @@ class NewsController extends DatabaseConfig
 {
 	public function __construct()
 	{
+		date_default_timezone_set('America/Sao_Paulo');
+
 		parent::__construct();
 	}
 
 	public function insertNews($data)
 	{
-		$sql = 'INSERT INTO news (title, shortDescription, content, mainImage) VALUES (?, ?, ?, ?)';
+		$sql = 'INSERT INTO news (title, shortDescription, content, mainImage, date) VALUES (?, ?, ?, ?, ?)';
 		$statement = $this->dbh->prepare($sql);
 
 		foreach ($data as $key => $value) $statement->bindValue($key + 1, $value, PDO::PARAM_STR);
+
+		$statement->bindValue(sizeof($data) + 1, date('d/m/Y'), PDO::PARAM_STR);
 
 		return $statement->execute();
 	}

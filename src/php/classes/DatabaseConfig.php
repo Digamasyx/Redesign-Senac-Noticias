@@ -17,7 +17,8 @@ class DatabaseConfig
 			title VARCHAR(255) NOT NULL,
 			shortDescription VARCHAR(255) DEFAULT 'Sem descrição...',
 			content LONGTEXT NOT NULL,
-			mainImage VARCHAR(255)
+			mainImage VARCHAR(255),
+			date VARCHAR(10) NOT NULL
 		)");
 	}
 }
