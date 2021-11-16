@@ -22,7 +22,7 @@ else
 	try
 	{
 		$nC = new NewsController();
-		$result = $nC->insertNew($data);
+		$result = $nC->insertNews($data);
 
 		move_uploaded_file($_FILES['mainImg']['tmp_name'], $dir . $fileName);
 	}

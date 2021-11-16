@@ -1,0 +1,67 @@
+#news {
+	display: grid;
+	grid-template-areas:
+		"hr    hr     hr"
+		"content  content content";
+	grid-template-columns: 1fr 8fr 1fr;
+	grid-template-rows: 170px 720px;
+	border-top: 1px solid #fff5;
+	padding-bottom: 90px;
+	margin: 1em;
+}
+
+#news-blocks {
+	grid-area: content;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 2fr 1fr;
+	gap: 50px 80px;
+}
+
+.news-tile {
+	display: flex;
+	flex-direction: column;
+	padding: 2em;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: #333;
+	justify-content: flex-end;
+}
+
+.news-tile:hover {
+	cursor: pointer;
+	background-color: #444;
+}
+
+.news-text {
+	background: linear-gradient(180deg, rgba(0, 0, 0, .5), transparent);
+	padding: 5px;
+}
+
+.news-text h3 {
+	margin-top: auto;
+	margin-bottom: 0.3em;
+	color: white;
+	font-family: "Poppins";
+	font-size: 15px;
+}
+
+.news-text p {
+	color: white;
+	font-family: arial;
+	font-size: 12px;
+}
+
+.bottom-tile {
+	grid-column-end: span 2;
+}
+
+.bottom-tile .news-text {
+	background: linear-gradient(90deg, rgba(0, 0, 0, .5), transparent);
+	padding: 5px;
+}
+
+.bottom-tile .news-text p {
+	width: 40%;
+	margin-bottom: auto;
+}

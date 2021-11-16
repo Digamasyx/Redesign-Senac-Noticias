@@ -8,7 +8,7 @@ class NewsController extends DatabaseConfig
 		parent::__construct();
 	}
 
-	public function insertNew($data)
+	public function insertNews($data)
 	{
 		$sql = 'INSERT INTO news (title, shortDescription, content, mainImage) VALUES (?, ?, ?, ?)';
 		$statement = $this->dbh->prepare($sql);
@@ -18,7 +18,7 @@ class NewsController extends DatabaseConfig
 		return $statement->execute();
 	}
 
-	public function updateNew($id, $data)
+	public function updateNews($id, $data)
 	{
 		$sql = 'UPDATE news 
 			SET title = IFNULL(?, title), 
@@ -38,7 +38,7 @@ class NewsController extends DatabaseConfig
 		return $result ? $statement->rowCount() : 0;
 	}
 
-	public function deleteNew($id)
+	public function deleteNews($id)
 	{
 		$sql = 'DELETE FROM news WHERE id = ?';
 		$statement = $this->dbh->prepare($sql);
@@ -50,7 +50,7 @@ class NewsController extends DatabaseConfig
 		return $result ? $statement->rowCount() : 0;
 	}
 
-	public function getNew($id)
+	public function getNews($id)
 	{
 		$sql = 'SELECT * FROM news WHERE id = ?';
 		$statement = $this->dbh->prepare($sql);
@@ -61,9 +61,18 @@ class NewsController extends DatabaseConfig
 		return $statement->fetch(PDO::FETCH_ASSOC);
 	}
 
+	public function getAllNews()
+	{
+		$sql = 'SELECT * FROM news ORDER BY id DESC';
+		$statement = $this->dbh->prepare($sql);
+		$statement->execute();
+		
+		return $statement->fetchAll(PDO::FETCH_ASSOC);
+	}
+
 	public function getLatestNews()
 	{
-		$sql = 'SELECT * FROM news ORDER BY id DESC LIMIT 10';
+		$sql = 'SELECT * FROM news ORDER BY id DESC LIMIT 6';
 		$statement = $this->dbh->prepare($sql);
 		$statement->execute();
 		

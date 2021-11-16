@@ -1,23 +1,20 @@
 <?php
 require_once(dirname(__DIR__) . '/php/classes/NewsController.php');
+require_once(dirname(__DIR__) . '/php/functions/getPath.php');
 
-if (isset($_GET['id'])){
+if (isset($_GET['id'])) {
 	$nC = new NewsController();
-	$new = $nC->getNew($_GET['id']);
-	
-	$id = $new['id'];
-	$title = $new['title'];
-	$shortDesc = $new['shortDescription'];
-	$mainImage = $new['mainImage'];
-	$content = $new['content'];
+	$news = $nC->getNews($_GET['id']);
 }
+
+//if (!isset($news)) header("Location: ../../index.php");
 ?>
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-	<title><?php echo $title; ?></title>
+	<title><?php echo $news['title']; ?></title>
 	<link rel="stylesheet" href="/assets/css/contrast.css">
 	<script type="text/javascript" src="/assets/js/menu-acessibilidade.js"></script>
 	<link rel="stylesheet" href="/assets/css/normalize.css">
@@ -25,7 +22,8 @@ if (isset($_GET['id'])){
 	
 </head>
 <body>
-	<?php require_once(dirname(__DIR__) . '/php/componentes/header.php') ?>
+	<?php require_once(dirname(__DIR__) . '/php/components/header.html') ?>
+
 	<main id='body-page' class="main-container">
 		<div class='main-container-noticias'><!-- inicio container noticias -->
 			<div class='main-noticias-header'>
@@ -50,44 +48,7 @@ if (isset($_GET['id'])){
 				<div class='main-noticias-imagem'>
 					<img class='noticias-imagem' src="https://marketresearchtelecast.com/wp-content/uploads/2021/11/1636639503_AMD-processors-Meta-converts-Intel-server-platform-to-AMD-Epyc.jpg" alt="imagemGenerica">
 				</div>
-				<div id='caixa-de-acessibilidade' class='caixa-de-acessibilidade'><!-- caixa de acessibilidade -->
-					<button id='btn-iluminacao' class='botao-acessibilidade-luz' onclick="lightMode()">
-						<img class='acessibilidade-iluminacao' src='/assets/testpics/dark-mode.png'>
-					</button>
-					<button href='#fonte-magra'id='fonte-magra' class='botao-acessibilidade fonte-magra' onclick="thinFont()">
-						<div class='div-botao-acessibilidade'>L</div>
-					</button>
-					<button href='#fonte-nao-magra'id='fonte-nao-magra'class='botao-acessibilidade fonte-nao-magra' onclick="noThinFont()">
-						<div class='div-botao-acessibilidade'>L</div>
-					</button>
-					<button href='#fonte-negrito'id='fonte-negrito'class='botao-acessibilidade fonte-negrito'onclick="boldFont()">
-						<div class='div-botao-acessibilidade'>L</div>
-					</button>
-					<button href='#negrito-desliga'id='negrito-desliga'class='botao-acessibilidade negrito-desliga'onclick="noBoldFont()">
-						<div class='div-botao-acessibilidade'>L</div>
-					</button>
-					<button href='#font-menor'id='font-menor'class='botao-acessibilidade fonte-menor' onclick="fontSizeDecrease()">
-						<div class='div-botao-acessibilidade'>A-</div>
-					</button>
-					<button href='#font-maior'id='font-maior'class='botao-acessibilidade fonte-maior'onclick="fontSizeIncrease()">
-						<div class='div-botao-acessibilidade'>A+</div>
-					</button>
-					<button 
-						href="#altocontraste" 
-						id="altocontraste" 
-						accesskey="3" 
-						class='botao-acessibilidade div-botao-acessibilidade high-contrast' 
-						onclick="contrast()">
-						<div>H+</div>
-					</button>
-					<button 
-						href="#clean" 
-						id="limpar-contraste"  
-						class='botao-acessibilidade div-botao-acessibilidade' 
-						onclick="cleanContrast()"> 
-						<div>H-</div>
-					</button>
-				</div><!-- fim caixa de acessibilidade -->
+				<?php require_once(dirname(__DIR__) . '/php/components/accessibility.html'); ?>
 				<div class='main-container-noticias-principal'>
 					<h2 id='texto-noticias' class='noticias-principal-texto'>
 						A AMD disse hoje (8) que fechou acordo com a Meta, anteriormente conhecida como Facebook,
@@ -134,8 +95,6 @@ if (isset($_GET['id'])){
 					</h2>
 				</div>
 			</div><!-- caixa noticias desktop final -->
-			<!-- <h1><?php echo $title; ?></h1>
-			<div class='content'><?php echo $content; ?></div> -->
 		</div><!-- fim container de noticias -->
 		<div class="newsletter-container">
 			<div class='newsletter-header'>
@@ -151,8 +110,9 @@ if (isset($_GET['id'])){
 			</div>	
     	</div> 
 	</main>	
+
 	<!--footer -->
-	<?php require_once(dirname(__DIR__) . '/php/componentes/footer.php') ?>
+	<?php require_once(dirname(__DIR__) . '/php/components/footer.html') ?>
 	<!--footer -->
 </body>
 </html>

@@ -1,66 +1,118 @@
 #newsletter {
     border-bottom: 1px solid #fff5;
-    padding: 5em 5em 300px 5em;
+    border-top: 1px solid #fff5;
+    padding: 2em 5em 2em 5em;
 }
+
 #newsletter h2 {
     margin-bottom: 40px; 
     width: 70%;
-
     color: white;
     line-height: 1.7em;
     font-family: "Poppins";
-    font-size: 45px;
+    font-size: 2.5em;
 }
-#newsletter > div {
+
+#newsletter-box {
     display: grid;
     grid-template-columns: 2fr 1px 1fr;
     grid-template-rows: 1fr;
-    
     border-radius: 20px;
     padding-left: 30px;
     height: 400px;
-    
     background: linear-gradient(to right, transparent, #333a);
 }
-#newsletter > div div:nth-of-type(1) {
+
+#newsletter-form {
     padding: 3em;
 }
-#newsletter > div div:nth-of-type(1) input {
+
+#newsletter-form input {
     display: block;
-    
     margin-bottom: 1.5em;
     border: 2px solid #222;
     border-radius: 10px;
     padding: 1em;
     width: 70%;
-    
     background: #111;
     color: white;
     font-family: arial;
     font-size: 25px;
 }
-#newsletter > div div:nth-of-type(1) button {
+
+#newsletter-form button {
     border: none;
     border-radius: 10px;
     padding: 0.3em 1.2em;
-
     background: dodgerblue;
     color: white;
     font-family: "Poppins";
     font-size: 30px;
     font-weight: bold;
 }
-#newsletter > div div:nth-of-type(1) button:hover {
+
+#newsletter-form button:hover {
     cursor: pointer;
     background: #2689eb;
 }
-#newsletter > div div:nth-of-type(1) button:active {
+
+#newsletter-form button:active {
     background: #2c84db;
 }
 
-#newsletter > div div:nth-of-type(2) {
+#newsletter-divider {
     background: repeating-linear-gradient(to bottom, #fffa 0% 5%, transparent 5% 15%, #fffa 15% 20%);
 }
-#newsletter > div img {
+
+#newsletter-box img {
     margin: auto;
+}
+
+@media(max-width: 950px) {
+    #newsletter {
+        width: 100%;
+        padding: 2em 1em 2em 1em;
+    }
+
+    #newsletter h2 {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    #newsletter-box {
+        width: 85%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #newsletter-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #newsletter-form input,
+    #newsletter-form button {
+        width: 100%;
+        justify-self: center;
+    }
+
+    #newsletter-divider,
+    #newsletter-box img{
+        display: none;
+    }
+}
+
+@media(max-width: 950px) {
+    #newsletter {
+        padding: 1em 0;
+    }
+
+    #newsletter-box {
+        padding: 0 1em;
+    }
 }

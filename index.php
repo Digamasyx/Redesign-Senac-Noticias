@@ -1,12 +1,15 @@
+<?php
+require_once(__DIR__ . '/src/php/classes/NewsController.php');
+require_once(__DIR__ . '/src/php/functions/getPath.php');
+?>
+
 <!DOCTYPE html>
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-    <link rel="stylesheet" href="assets/css/header.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" href="assets/css/newsletterForm.css">
     
     <link rel="icon" href="assets/img/Logosemnome.svg">
@@ -15,29 +18,29 @@
 </head>
 <body>
     <!-- Header  -->
-    <?php require_once('src/php/componentes/header.php') ?>
+    <?php require_once('src/php/components/header.html') ?>
+    
+    <main>
+        <!-- Landing-page -->
+        <section class="first-section">
+            <div id="landing-text">
+                <p class="top-text">Seja bem-vindo(a) ao seu portal de notícias favorito</p>
+                <h1 class="title">Veja aqui as principais notícias <br> acerca do Senac, a sua <br> instituição favorita para se tornar um <br> bom profissional</h1>
+                <button class="landing-btn" onclick="document.location = '#news'">VER NOTÍCIAS</button>
+            </div>
+        </section>
 
-    <!-- Landing-page -->
-    <section class="first-section">
-        <div id="landing-text">
-            <p class="top-text">Seja bem-vindo(a) ao seu portal de notícias favorito</p>
-            <h1 class="title">Veja aqui as principais notícias <br> acerca do Senac, a sua <br> instituição favorita para se tornar um <br> bom profissional</h1>
-            <button class="landing-btn">VER NOTÍCIAS</button>
-        </div>
-    </section>
+        <!-- Notícias -->
+        <?php require_once('./src/php/components/newsGrid.php') ?>
 
-    <!-- Notícias -->
-    <section id="news">
-        <div>
-            <p>bom, depois passa as mudanças pro outro kk</p>
-        </div>
-    </section>
+        <!-- Newsletter -->
+        <?php require_once('./src/php/components/newsletterForm.html') ?>
 
-    <!-- Newsletter -->
-    <?php require_once('./src/php/componentes/newsletterForm.php') ?>
-    <?php require_once('./src/php/componentes/map.php') ?>
+        <!-- Mapa -->
+        <?php require_once('./src/php/components/map.html') ?>
+    </main>
 
     <!-- Footer -->
-    <?php require_once('src/php/componentes/footer.php') ?>
+    <?php require_once('src/php/components/footer.html') ?>
 </body>
 </html>
