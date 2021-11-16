@@ -1,0 +1,38 @@
+<div id='caixa-de-acessibilidade' class='caixa-de-acessibilidade'><!-- caixa de acessibilidade -->
+    <button id='btn-iluminacao' class='botao-acessibilidade-luz' onclick="lightMode()">
+        <img class='acessibilidade-iluminacao' src='/assets/testpics/dark-mode.png'>
+    </button>
+    <button href='#fonte-magra'id='fonte-magra' class='botao-acessibilidade fonte-magra' onclick="thinFont()">
+        <div class='div-botao-acessibilidade'>L</div>
+    </button>
+    <button href='#fonte-nao-magra'id='fonte-nao-magra'class='botao-acessibilidade fonte-nao-magra' onclick="noThinFont()">
+        <div class='div-botao-acessibilidade'>L</div>
+    </button>
+    <button href='#fonte-negrito'id='fonte-negrito'class='botao-acessibilidade fonte-negrito'onclick="boldFont()">
+        <div class='div-botao-acessibilidade'>L</div>
+    </button>
+    <button href='#negrito-desliga'id='negrito-desliga'class='botao-acessibilidade negrito-desliga'onclick="noBoldFont()">
+        <div class='div-botao-acessibilidade'>L</div>
+    </button>
+    <button href='#font-menor'id='font-menor'class='botao-acessibilidade fonte-menor' onclick="fontSizeDecrease()">
+        <div class='div-botao-acessibilidade'>A-</div>
+    </button>
+    <button href='#font-maior'id='font-maior'class='botao-acessibilidade fonte-maior'onclick="fontSizeIncrease()">
+        <div class='div-botao-acessibilidade'>A+</div>
+    </button>
+    <button 
+        href="#altocontraste" 
+        id="altocontraste" 
+        accesskey="3" 
+        class='botao-acessibilidade div-botao-acessibilidade high-contrast' 
+        onclick="contrast()">
+        <div>H+</div>
+    </button>
+    <button 
+        href="#clean" 
+        id="limpar-contraste"  
+        class='botao-acessibilidade div-botao-acessibilidade' 
+        onclick="cleanContrast()"> 
+        <div>H-</div>
+    </button>
+</div>

@@ -19,24 +19,26 @@ require_once(__DIR__ . '/src/php/functions/getPath.php');
 <body>
     <!-- Header  -->
     <?php require_once('src/php/components/header.html') ?>
+    
+    <main>
+        <!-- Landing-page -->
+        <section class="first-section">
+            <div id="landing-text">
+                <p class="top-text">Seja bem-vindo(a) ao seu portal de notícias favorito</p>
+                <h1 class="title">Veja aqui as principais notícias <br> acerca do Senac, a sua <br> instituição favorita para se tornar um <br> bom profissional</h1>
+                <button class="landing-btn" onclick="document.location = '#news'">VER NOTÍCIAS</button>
+            </div>
+        </section>
 
-    <!-- Landing-page -->
-    <section class="first-section">
-        <div id="landing-text">
-            <p class="top-text">Seja bem-vindo(a) ao seu portal de notícias favorito</p>
-            <h1 class="title">Veja aqui as principais notícias <br> acerca do Senac, a sua <br> instituição favorita para se tornar um <br> bom profissional</h1>
-            <button class="landing-btn" onclick="document.location = '#news'">VER NOTÍCIAS</button>
-        </div>
-    </section>
+        <!-- Notícias -->
+        <?php require_once('./src/php/components/newsGrid.php') ?>
 
-    <!-- Notícias -->
-    <?php require_once('./src/php/components/newsGrid.php') ?>
+        <!-- Newsletter -->
+        <?php require_once('./src/php/components/newsletterForm.html') ?>
 
-    <!-- Newsletter -->
-    <?php require_once('./src/php/components/newsletterForm.html') ?>
-
-    <!-- Mapa -->
-    <?php require_once('./src/php/components/map.html') ?>
+        <!-- Mapa -->
+        <?php require_once('./src/php/components/map.html') ?>
+    </main>
 
     <!-- Footer -->
     <?php require_once('src/php/components/footer.html') ?>
