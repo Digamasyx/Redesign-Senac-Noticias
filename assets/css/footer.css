@@ -1,0 +1,90 @@
+@import url('base.css');
+
+html {
+    font-family: var(--main-font);
+    color: #fff;
+}
+
+.footer-all {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: center;
+    border-top: 1px solid #fff5;
+}
+
+.senac-direitos {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+    align-items: center;
+    width: 100%;
+}
+
+.senac-servicos {
+    display: flex;
+    justify-content: space-between;
+}
+
+ul {
+    text-align: left;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+li {
+    list-style: none;
+    margin-top: 8px;
+}
+
+.footer-socials {
+    display: flex;
+    text-align: center;
+    margin: 2em;
+    padding: 0 9em 0 9em;
+}
+
+.footer-socials span{
+    flex: auto;
+}
+
+
+@media (max-width: 1024px) {
+    html {
+        text-align: center;
+    }
+
+    .footer-all {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 2em;
+        gap: 1em;
+        flex-wrap: wrap;
+        align-items: left;
+        justify-items: left;
+    }
+
+    ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-socials {
+        display: flex;
+        justify-content: space-between;
+        margin: 2em;
+        padding: 0;
+    }
+
+    .footer-socials span{
+        flex: 1;
+        align-self: center;
+    }
+}
+
+@media (max-width: 500px) {
+
+}

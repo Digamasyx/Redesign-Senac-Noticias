@@ -1,0 +1,55 @@
+@import url('scrollbar.css');
+@import url('header.css');
+@import url('newsGrid.css');
+@import url('newsletterForm.css');
+@import url('map.css');
+@import url('footer.css');
+
+/* = Landing-page ================ */
+
+.first-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    align-items: left;
+
+    width: 100%;
+    height: 100vh;
+    background-image: url(/assets/section-0image.svg);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: #fff;
+}
+
+#landing-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    align-items: left;
+    margin-left: 7em;
+
+    font-size: 14px;
+    font-family: var(--main-font);
+    margin-bottom: 100px;
+}
+
+.landing-btn {
+    width: 150px;
+    height: 48px;
+
+    border: none;
+    background: #0071CF;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 12px;
+}
+
+@media (min-width: 1024px) {
+    #landing-text p, #landing-text h1 {
+        font-size: 2.5em;
+    }
+
+}
