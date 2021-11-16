@@ -27,6 +27,7 @@ a {
     text-decoration: none;
     color: #fff;
 }
+
 li {
     list-style: none;
     margin-top: 8px;
@@ -48,15 +49,37 @@ li {
     html {
         text-align: center;
     }
+
+    .footer-all {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 2em;
+        gap: 1em;
+        flex-wrap: wrap;
+        align-items: left;
+        justify-items: left;
+    }
+
     ul {
         padding: 0;
+        margin: 0;
     }
+
     .footer-socials {
         display: flex;
         justify-content: space-between;
         margin: 2em;
+        padding: 0;
     }
+
     .footer-socials span{
         flex: 1;
+        align-self: center;
+    }
+}
+
+@media (max-width: 420px) {
+    .footer-all {
+        flex-direction: column;
     }
 }
