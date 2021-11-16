@@ -12,13 +12,16 @@
             <a href='#' class='botao-social'><img class='midia-social-img' src='/assets/testpics/youtube.png'></a>
         </div><!--midias sociais-->
     </div>
+    
     <div class='caixa-noticias-desktop'><!-- caixa noticias desktop -->
         <div class='main-noticias-imagem'>
             <img class='noticias-imagem' src="<?php echo getPath($news["mainImage"]); ?>" alt="<?php echo $news["title"]; ?>" />
         </div>
+
         <?php require_once(dirname(__DIR__) . '/php/components/accessibility.html'); ?>
+
         <div class='main-container-noticias-principal'>
-            <h2 id='texto-noticias' class='noticias-principal-texto'><?php echo $news["content"]; ?>/h2>
+            <h2 id='texto-noticias' class='noticias-principal-texto'><?php echo $news["content"]; ?></h2>
         </div>
     </div>
 </div>
