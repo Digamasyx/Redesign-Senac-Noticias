@@ -5,8 +5,7 @@
 @import url('scrollbar.css');
 @import url('header.css');
 @import url('footer.css');
-@import url('map.css');
-
+@import url('newsletterForm.css');
 #body-page {
     color: white;
 }
@@ -310,47 +309,5 @@
     .noticias-principal-texto{
         font-size: 1.5em;
     }
-    /* seção newsletter teste*/
-    .newsletter-container{
-        padding: 1% !important;
-    }
-    .newsletter-header{
-        padding:0 11% ;
-    }
-    .titulo-newsletter{
-        display: none;
-    }
-    .logo-newsletter{
-        display: none;
-    }
-    .versao-desktop-newslttr{
-        display: inline;
-        display: flex;
-    }
-    .desktop-newslttr-img{
-       float: right;
-       width: 16em;
-       margin-right: 7em;
-    }
-    .desktop-newslttr-tt{
-        color: white !important;
-        font-size: 1.5em;
-        width: auto;
-        padding:0 5.5em ;
-    }
-    .receber-noticias{
-        flex-direction: row;
-        margin:0 0 2em 6.8em;
-        
-    }
-    .campo-input{
-        clear: right;
-        margin-left: 1% ;
-    }
-    .botao-enviar{
-        padding: 0.4em 1.5em; 
-        margin-left: 1%;
-    }
-    /*fim seção newsletter teste*/
-    
+ 
 }
