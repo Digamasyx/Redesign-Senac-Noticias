@@ -17,6 +17,15 @@ html {
     display: flex;
     flex-direction: column;
     margin-top: 2em;
+    align-items: center;
+    width: 100%;
+}
+
+.senac-servicos {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
 }
 
 ul {
@@ -52,17 +61,13 @@ li {
 
     .footer-all {
         display: flex;
+        flex-direction: column;
         justify-content: space-evenly;
         padding: 2em;
         gap: 1em;
         flex-wrap: wrap;
         align-items: left;
         justify-items: left;
-    }
-
-    ul {
-        padding: 0;
-        margin: 0;
     }
 
     .footer-socials {
@@ -78,8 +83,8 @@ li {
     }
 }
 
-@media (max-width: 420px) {
-    .footer-all {
+@media (max-width: 500px) {
+    .senac-servicos {
         flex-direction: column;
     }
 }
