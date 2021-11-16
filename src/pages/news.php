@@ -19,6 +19,7 @@ if (isset($_GET['id'])) {
 	<script type="text/javascript" src="/assets/js/menu-acessibilidade.js"></script>
 	<link rel="stylesheet" href="/assets/css/normalize.css">
 	<link rel="stylesheet" href="/assets/css/news.css">
+	<link rel="stylesheet" href="assets/css/newsletterForm.css">
 	
 </head>
 <body>
@@ -96,19 +97,7 @@ if (isset($_GET['id'])) {
 				</div>
 			</div><!-- caixa noticias desktop final -->
 		</div><!-- fim container de noticias -->
-		<div class="newsletter-container">
-			<div class='newsletter-header'>
-				<h3 class='titulo-newsletter'>Receba notícias via e-email e fique por dentro das novidades!</h3>
-				<img class='logo-newsletter'src='/assets/img/senac-logo.png'>
-			</div>
-			<img class='versao-desktop-newslttr desktop-newslttr-img'src='/assets/img/senac-logo.png'>
-			<h3 class='versao-desktop-newslttr desktop-newslttr-tt'>Receba notícias via e-email e fique por dentro das novidades!</h3>
-			<div class="receber-noticias">
-				<input class="input-nome campo-input" placeholder='Digite seu nome aqui'>
-				<input class="input-email campo-input"placeholder='Digite seu email aqui'>
-				<button class='botao-enviar'>Enviar</button>
-			</div>	
-    	</div> 
+		<?php require_once(dirname(__DIR__) . '/php/components/newsletterForm.html') ?>
 	</main>	
 
 	<!--footer -->
