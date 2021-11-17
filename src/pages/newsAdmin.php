@@ -44,6 +44,7 @@ if (!$check) header("Location: ../../index.php");
 		?>
 
 		<button class="btn-registrar">Registrar uma notícia</button>
+
 		<div class="container">
 			<div class="imagem-noticia"></div>
 			<div class="texto-noticia">
@@ -56,7 +57,7 @@ if (!$check) header("Location: ../../index.php");
 			</div>
 		</div>
 
-		<!--<div class="noticias-container">
+		<<div class="noticias-container">
 			<h2>Inserir uma noticia</h2>
 			<form>
 				<label for="titulo-noticia"></label>
@@ -67,7 +68,7 @@ if (!$check) header("Location: ../../index.php");
 				<input type="file">
 				<button>Registrar</button>
 			</form>
-		</div>-->
+		</div>
 	</main>
 
 	<?php require_once(dirname(__DIR__) . '\php\components\footer.html')?>

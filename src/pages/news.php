@@ -24,10 +24,13 @@ if (!isset($news)) header("Location: ../../index.php");
 	<link rel="stylesheet" href="/assets/css/normalize.css">
 	<link rel="stylesheet" href="/assets/css/news.css">
 	<link rel="stylesheet" href="assets/css/newsletterForm.css">
-	
 </head>
 <body>
 	<?php require_once(dirname(__DIR__) . '/php/components/header.html') ?>
+
+	<?php if ($check): ?>
+		<a id="admin-link" href="/src/pages/newsAdmin.php?id=<?php echo $_GET['id'];?>">Admin</a>
+	<?php endif; ?>
 
 	<main id='body-page' class="main-container">
 		<div class='main-container-noticias'>
@@ -57,12 +60,8 @@ if (!isset($news)) header("Location: ../../index.php");
 				</div>
 			</div>
 		</div>
-		
-		<?php require_once(dirname(__DIR__) . '/php/components/newsletterForm.html') ?>
 
-		<?php if ($check): ?>
-			<a href="/src/pages/newsAdmin.php?id=<?php echo $_GET['id'];?>">Admin</a>
-		<?php endif; ?>
+		<?php require_once(dirname(__DIR__) . '/php/components/newsletterForm.html') ?>
 	</main>	
 
 	<!--footer -->
