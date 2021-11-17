@@ -6,7 +6,7 @@ class NewsController extends DatabaseConfig
 	public function __construct()
 	{
 		date_default_timezone_set('America/Sao_Paulo');
-
+		
 		parent::__construct();
 	}
 
@@ -51,7 +51,7 @@ class NewsController extends DatabaseConfig
 
 		$result = $statement->execute();
 
-		return $result ? $statement->rowCount() : 0;
+		return $result;
 	}
 
 	public function getNews($id)

@@ -1,3 +1,7 @@
 @import url('scrollbar.css');
 @import url('header.css');
 @import url('footer.css');
+
+.hide {
+    display:  none;
+}
