@@ -8,7 +8,8 @@
     /* grid-template-rows: 170px 720px; */    grid-template-rows: 2fr 10fr;
     border-top: 1px solid #fff5;
     padding: 2em 1em;
-    /* margin: 1em; */}
+    /* margin: 1em; */
+}
 #news-blocks {
     box-sizing: border-box;
     grid-area: content;

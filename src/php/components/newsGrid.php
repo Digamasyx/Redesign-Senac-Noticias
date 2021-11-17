@@ -1,4 +1,6 @@
 <section id="news">
+    <img src="/assets/img/Logosemnome.svg" />
+    
     <div id="news-blocks">
         <?php
         $nC = new NewsController();
