@@ -88,3 +88,13 @@ li {
         flex-direction: column;
     }
 }
+
+@media (min-width: 1025px) {
+    .senac-direitos {
+        width: 30%;
+    }
+    .senac-servicos {
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+    }
+}
