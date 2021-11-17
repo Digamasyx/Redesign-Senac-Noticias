@@ -9,7 +9,7 @@
         <a class='noticia-caixa' href='<?php echo $href; ?>'>
             <div class='main-noticias'>
                 <div class='noticias-imagem'>
-                    <img class='img-noticia' src='<?php echo $value['mainImage']; ?>'/>
+                    <img class='img-noticia' src='<?php echo getPath($value['mainImage']); ?>'/>
                 </div>
                 <div class='noticias-cabecalho'>
                     <h2 class='noticia-titulo'>‘<?php echo $value['title']; ?></h2>
