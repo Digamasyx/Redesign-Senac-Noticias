@@ -14,6 +14,7 @@ require_once(__DIR__ . '/src/php/functions/getPath.php');
     
     <link rel="icon" href="assets/img/Logosemnome.svg">
     <script type="text/javascript" src="assets/js/NLAction.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>SENAC Notícias</title>
 </head>
 <body>

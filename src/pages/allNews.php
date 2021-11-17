@@ -10,6 +10,7 @@ require_once(dirname(__DIR__) . '/php/functions/getPath.php');
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     <link rel="icon" href="assets/img/Logosemnome.svg">
+    <script type="text/javascript" src="/assets/js/menu-acessibilidade.js"></script>
     <link rel="stylesheet" href="/assets/css/allNews.css">
     <title>SENAC | Ver notícias</title>
 </head>
@@ -17,12 +18,13 @@ require_once(dirname(__DIR__) . '/php/functions/getPath.php');
     <!-- Header  -->
     <?php require_once(dirname(__DIR__) . '/php/components/header.html'); ?>
 
-    <main>
-        <!-- News List -->
-        <?php require_once(dirname(__DIR__) . '/php/components/newsList.php'); ?>   
+    <main class='main'>
+        <?php require_once(dirname(__DIR__) . '/php/components/newsList.php'); ?>
     </main>
 
     <!-- Footer -->
     <?php require_once(dirname(__DIR__) . '/php/components/footer.html'); ?>
+    <!-- News List movido do main para o footer -->
+    <!-- <?php require_once(dirname(__DIR__) . '/php/components/newsList.php'); ?> -->
 </body>
 </html>

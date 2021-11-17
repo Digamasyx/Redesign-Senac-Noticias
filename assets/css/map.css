@@ -2,17 +2,20 @@
 	position: relative;
 	margin: 1em auto;
 	text-align: right;
-	height: 500px;
-	width: 1000px;
+	height: 100%;
+	width: 95%;
 }
 
 .gmap_canvas {
 	overflow: hidden;
 	background: none !important;
-	height: 500px;
-	width: 1000px;
+	height: 100%;
 }
 
 #gmap_canvas {
-	width:1000px;
+	width: 100%;
+}
+
+.mapouter * {
+	border-radius: 10px;
 }

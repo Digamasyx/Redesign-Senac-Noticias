@@ -1,22 +1,25 @@
 <section id="news">
+    <img src="/assets/img/Logosemnome.svg" />
+    
     <div id="news-blocks">
         <?php
-        $top = 'https://via.placeholder.com/280x720';
-        $bottom = 'https://via.placeholder.com/720x280';
+        $nC = new NewsController();
+        $news = $nC->getLatestNews();
 
-        for ($i = 0; $i < 6; $i++):
+        foreach ($news as $key => $value):
+            $href = "/src/pages/news.php?id=" . $value['id'];
+            $mainImage = getPath($value['mainImage']);
         ?>
-            <div 
-                class="news-tile <?php echo $i >= 4 ? 'bottom-tile' : ''; ?>" 
-                style="background-image: url('<?php echo $i < 4 ? $top : $bottom; ?>');"
+            <a 
+                href="<?php echo $href; ?>"
+                class="news-tile <?php echo $key >= 4 ? 'bottom-tile' : ''; ?>" 
+                style="background-image: url('<?php echo $mainImage; ?>');"
             >
                 <div class="news-text">
-                    <h3>Título</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget neque quis eros aliquam viverra id eu elit.
-                    </p>
+                    <h3><?php echo $value['title']; ?></h3>
+                    <p><?php echo $value['shortDescription']; ?></p>
                 </div>
-            </div>
-        <?php endfor; ?>
+            </a>
+        <?php endforeach; ?>
     </div>
 </section>

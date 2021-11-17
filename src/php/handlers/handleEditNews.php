@@ -1,20 +1,22 @@
 <?php
 require_once(dirname(__DIR__) . '/classes/NewsController.php');
+session_start();
 
-if ($_SERVER["REQUEST_METHOD"] !== "POST") header("Location: ../../../index.php");
+$check = isset($_SESSION['admin']);
+
+if (!$check) header("Location: ../../../index.php");
 else
 {
 	$result = false;
 	$dir = "../../../" . $_GET['originalPath'];
-	$add = "email=admin@senac.com&name=secretoEdit";
 	
 	try
 	{
 		$nC = new NewsController();
 
-		if ($_POST['action'] === "Edit")
+		if ($_GET['action'] === "Edit")
 		{
-			if (!empty($_FILES['mainImg']['name'])) move_uploaded_file($_FILES['mainImg']['tmp_name'], $dir);
+			move_uploaded_file($_FILES['mainImg']['tmp_name'], $dir);
 
 			$shortDesc = strlen($_POST['shortDesc']) === 0 ? "Sem descrição... :(" : $_POST['shortDesc'];
 			$data = array(
@@ -26,7 +28,7 @@ else
 
 			$result = $nC->updateNews($_GET['id'], $data);
 		}
-		else if ($_POST['action'] === "Remove")
+		else if ($_GET['action'] === "Remove")
 		{
 			$result = $nC->deleteNews($_GET['id']);
 
@@ -35,14 +37,14 @@ else
 	}
 	catch (PDOException $e)
 	{
-		header("Location: ../../pages/newsAdmin.php?internalError=true&{$add}");
+		header("Location: ../../pages/newsAdmin.php?internalError=true");
 	}
 
-	if ($result) header("Location: ../../pages/newsAdmin.php?success=true&{$add}");
+	if ($result) header("Location: ../../pages/newsAdmin.php?success=true");
 	else 
 	{
-		if (!empty($_FILES['mainImg']['name']) && $_POST['action'] == 'Edit') header("Location: ../../pages/newsAdmin.php?success=true&{$add}");
-		else header("Location: ../../pages/newsAdmin.php?noChanges=true&{$add}");
+		if (!empty($_FILES['mainImg']['name']) && $_GET['action'] == 'Edit') header("Location: ../../pages/newsAdmin.php?success=true");
+		else header("Location: ../../pages/newsAdmin.php?noChanges=true");
 	}
 }
 ?>

@@ -26,6 +26,7 @@ html {
     justify-content: space-between;
     width: 100%;
     flex-wrap: wrap;
+    padding: 0 1em;
 }
 
 ul {
