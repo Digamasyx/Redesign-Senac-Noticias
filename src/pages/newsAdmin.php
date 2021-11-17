@@ -82,5 +82,14 @@ if (!$check) header("Location: ../../index.php");
 	</main>
 
 	<?php require_once(dirname(__DIR__) . '\php\components\footer.html')?>
+
+	<?php if (isset($_GET['id'])): ?>
+		<script>
+			activateEdit(<?php echo $_GET['id']; ?>);
+		</script>
+	<?php 
+	$_GET['id'] = null;
+	endif; 
+	?>
 </body>
 </html>
