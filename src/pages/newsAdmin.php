@@ -15,44 +15,6 @@ $originalPath = "";
 
 if (!$check) header("Location: ../../index.php");
 
-switch ($mode) 
-{
-	case 'Add':
-		$handler = "../php/handlers/handleAddNews.php";
-		break;
-	case 'Edit':
-		if (isset($_POST['id']))
-		{
-			try
-			{
-				$nC = new NewsController();
-				$news = $nC->getNews($_POST['id']);
-
-				if (empty($new))
-				{
-					$notFounded = true;
-					$id = $_POST['id'];
-					$_POST['id'] = NULL;
-				}
-				else
-				{
-					$title = $news['title'];
-					$shortDesc = $news['shortDescription'];
-					$content = $news['content'];
-					$originalPath = $news['mainImage'];
-				}
-			}
-			catch (PDOException $e)
-			{
-				header("Location: pages/newsAdmin.php?internalError=true&{$add}");
-			}
-
-			if ($notFounded) $handler = "newsAdmin.php?{$add}";
-			else $handler = "../php/handlers/handleEditNews.php?originalPath={$originalPath}&id={$_POST['id']}";
-		}
-		else $handler = "newsAdmin.php?{$add}";
-		break;
-}
 ?>
 
 <!DOCTYPE html>
