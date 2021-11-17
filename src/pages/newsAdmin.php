@@ -1,135 +1,76 @@
 <?php
 require_once(dirname(__DIR__) . '/php/classes/NewsController.php');
+session_start();
 
-$check = $_GET['email'] === "admin@senac.com" 
-	&& ($_GET['name'] === "secretoAdd" || $_GET['name'] === "secretoEdit");
-$mode = str_replace("secreto", '', $_GET['name']);
-$add = "email=admin@senac.com&name=secreto{$mode}";
-$handler = "";
-$title = "";
-$shortDesc = "";
-$content = "";
-$notFounded = false;
-$id = NULL;
-$originalPath = "";
+$check = isset($_SESSION['admin']);
 
 if (!$check) header("Location: ../../index.php");
-
-switch ($mode) 
-{
-	case 'Add':
-		$handler = "../php/handlers/handleAddNews.php";
-		break;
-	case 'Edit':
-		if (isset($_POST['id']))
-		{
-			try
-			{
-				$nC = new NewsController();
-				$news = $nC->getNews($_POST['id']);
-
-				if (empty($new))
-				{
-					$notFounded = true;
-					$id = $_POST['id'];
-					$_POST['id'] = NULL;
-				}
-				else
-				{
-					$title = $news['title'];
-					$shortDesc = $news['shortDescription'];
-					$content = $news['content'];
-					$originalPath = $news['mainImage'];
-				}
-			}
-			catch (PDOException $e)
-			{
-				header("Location: pages/newsAdmin.php?internalError=true&{$add}");
-			}
-
-			if ($notFounded) $handler = "newsAdmin.php?{$add}";
-			else $handler = "../php/handlers/handleEditNews.php?originalPath={$originalPath}&id={$_POST['id']}";
-		}
-		else $handler = "newsAdmin.php?{$add}";
-		break;
-}
 ?>
 
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-    <link rel="icon" href="assets/img/Logosemnome.svg">
-    <link rel="stylesheet" href="/assets/css/newsAdmin.css">
-	<title>Administrar notícias</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/assets/css/newsAdmin.css">
+	<link rel="shortcut icon" href="/assets/img/logosemnome.svg" type="image/x-icon">
+	<title>Registrar noticias</title>
 </head>
 <body>
-	<!-- Header  -->
-    <?php require_once(dirname(__DIR__) . '/php/components/header.html'); ?>
-
+	<?php require_once(dirname(__DIR__) . '\php\components\header.html')?>
+	
 	<main>
-		<form id="newsForm" action="<?php echo $handler; ?>" enctype="multipart/form-data" method="POST">
-			<?php
-			if (isset($_GET['internalError']) && $_GET['internalError'])
-			{
+		<?php
+		if (isset($_GET['internalError']) && $_GET['internalError'])
+		{
 			echo "<div style='color: red;'>
-				<h2>Ops... Algo deu errado!</h2>
-				<p>Ocorreu um erro no servidor. Tente novamente mais tarde.</p>
-			</div>";
-			}
-			else if (isset($_GET['success']) && $_GET['success'])
-			{
+					<h2>Ops... Algo deu errado!</h2>
+					<p>Ocorreu um erro no servidor. Tente novamente mais tarde.</p>
+				</div>";
+		}
+		else if (isset($_GET['success']) && $_GET['success'])
+		{
 			echo "<div style='color: LawnGreen;'>
-				<h2>Alterações bem sucedidas!</h2>
-			</div>";
-			}
-			else if (isset($_GET['noChanges']) && $_GET['noChanges'])
-			{
+					<h2>Alterações bem sucedidas!</h2>
+				</div>";
+		}
+		else if (isset($_GET['noChanges']) && $_GET['noChanges'])
+		{
 			echo "<div style='color: black;'>
-				<h2>Não houve alterações!</h2>
-			</div>";
-			}
-			else if ($notFounded)
-			{
-			echo "<div style='color: red;'>
-				<h2>Ops... Algo deu errado!</h2>
-				<p>Não encontramos nenhuma notícia com o id \"{$id}\".</p>
-			</div>";
-			}
-			?>
-			<?php if ($mode === "Add" || isset($_POST['id'])): ?>
-				<label for="title">Título:</label><br />
-				<input type="text" id="title" name="title" value="<?php echo $title; ?>" required /> <br />
-				<label for="shortDesc">Descrição curta:</label> <br />
-				<textarea id="shortDesc" name="shortDesc" rows="10"><?php echo $shortDesc; ?></textarea> <br />
-				<label for="shortDesc">Notícia:</label> <br />
-				<textarea id="content" name="content" rows="15" required><?php echo $content; ?></textarea> <br />
-				<label for="mainImg">Imagem:</label> <br />
-				<input type="file" id="mainImg" name="mainImg" <?php echo $mode === "Add" ? 'required' : '' ?> /> <br />
-			
-				<?php if ($mode === "Edit"): ?>
-					<label>Ação:</label> 
-					<select name="action" id="action">
-						<option value="Edit">Editar</option>
-						<option value="Remove">Remover</option>
-					</select>
-				<?php endif; ?>
-			<?php endif; ?>
-			<?php if ($mode === "Edit" && !isset($_POST['id'])): ?>
-				<input type="hidden" name="name" value="<?php echo $_GET['name']; ?>" />
-				<input type="hidden" name="email" value="<?php echo $_GET['email']; ?>" />
+					<h2>Não houve alterações!</h2>
+				</div>";
+		}
+		?>
 
-				<label for="id">Id:</label> <br />
-				<input type="number" id="id" name="id" min="0" required /> <br />
-			<?php endif; ?>
+		<button class="btn-registrar">Registrar uma notícia</button>
+		<div class="container">
+			<div class="imagem-noticia"></div>
+			<div class="texto-noticia">
+				<h4>Título da noticia</h4>
+				<p>Descrição encurtada</p>
+			</div>
+			<div class="btn-noticias">
+				<button class="btn-editar">Editar</button>
+				<button class="btn-apagar">Apagar</button>
+			</div>
+		</div>
 
-			<button type="submit">Executar</button>
-		</form>
+		<!--<div class="noticias-container">
+			<h2>Inserir uma noticia</h2>
+			<form>
+				<label for="titulo-noticia"></label>
+				<input type="text" name="titulo-noticia">
+				
+				<textarea name="descricao-noticia" id="" cols="30" rows="10"></textarea>
+				<label for="imagem-noticia"></label>
+				<input type="file">
+				<button>Registrar</button>
+			</form>
+		</div>-->
 	</main>
 
-	<!-- Footer -->
-    <?php require_once(dirname(__DIR__) . '/php/components/footer.html'); ?>
+	<?php require_once(dirname(__DIR__) . '\php\components\footer.html')?>
 </body>
+<script src="/assets/js/modal-registrar-noticia.js"></script>
 </html>

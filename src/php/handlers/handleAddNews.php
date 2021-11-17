@@ -5,7 +5,6 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") header("Location: ../../../index.php"
 else
 {
 	$result = false;
-	$add = "email=admin@senac.com&name=secretoAdd";
 	$extension = pathinfo($_FILES['mainImg']['name'], PATHINFO_EXTENSION);
 	$fileName = 'New_' . date("Y.m.d-H.i.s") . '.' . $extension;
 	$dir = "../../../assets/img/news/";
@@ -28,10 +27,10 @@ else
 	}
 	catch (PDOException $e)
 	{
-		header("Location: ../../pages/newsAdmin.php?internalError=true&{$add}");
+		header("Location: ../../pages/newsAdmin.php?internalError=true");
 	}
 
-	if ($result) header("Location: ../../pages/newsAdmin.php?success=true&{$add}");
-	else header("Location: ../../pages/newsAdmin.php?internalError=true&{$add}");
+	if ($result) header("Location: ../../pages/newsAdmin.php?success=true");
+	else header("Location: ../../pages/newsAdmin.php?internalError=true");
 }
 ?>
