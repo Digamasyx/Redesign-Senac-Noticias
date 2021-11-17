@@ -6,7 +6,7 @@ else
 {
 	$result = false;
 	$extension = pathinfo($_FILES['mainImg']['name'], PATHINFO_EXTENSION);
-	$fileName = 'New_' . date("Y.m.d-H.i.s") . '.' . $extension;
+	$fileName = 'News_' . date("Y.m.d-H.i.s") . '.' . $extension;
 	$dir = "../../../assets/img/news/";
 	$htmlPath = "assets/img/news/" . $fileName;
 
@@ -22,7 +22,7 @@ else
 	{
 		$nC = new NewsController();
 		$result = $nC->insertNews($data);
-
+		
 		move_uploaded_file($_FILES['mainImg']['tmp_name'], $dir . $fileName);
 	}
 	catch (PDOException $e)
