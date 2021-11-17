@@ -8,7 +8,7 @@ if (!$check) header("Location: ../../../index.php");
 else
 {
 	$result = false;
-	$dir =  "../../../" . $_GET['originalPath'];
+	$dir = "../../../" . $_GET['originalPath'];
 	
 	try
 	{
