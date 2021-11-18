@@ -20,8 +20,8 @@ function activateEdit(id)
     $.post('/src/php/functions/getNewsData.php', { id: id }, function (output)
     {
         document.getElementById('title').value = output['title'];
-        document.getElementById('shortDesc').innerHTML = output['shortDescription'];
-        document.getElementById('content').innerHTML = output['content'];
+        document.getElementById('shortDesc').innerHTML = br2nl(output['shortDescription']);
+        document.getElementById('content').innerHTML = br2nl(output['content']);
         form.setAttribute('action', `/src/php/handlers/handleEditNews.php?id=${id}&action=Edit&originalPath=${output['mainImage']}`);
     }, 'json');
 
@@ -37,4 +37,9 @@ function deleteAction(id)
     {
         document.location = `/src/php/handlers/handleEditNews.php?id=${id}&action=Remove&originalPath=${output['mainImage']}`;
     });
+}
+
+function br2nl(text)
+{
+    return text.replace('<br />', /(?:\r\n|\r|\n)/g);
 }
