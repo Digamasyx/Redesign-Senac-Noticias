@@ -24,7 +24,7 @@ $news = $dbh->getAllNews();
 	<title>Administrar notícias</title>
 </head>
 <body>
-	<?php require_once(dirname(__DIR__) . '\php\components\header.html')?>
+	<?php require_once(dirname(__DIR__) . '\php\components\header.php')?>
 
 	<?php if (isset($_GET['internalError']) || isset($_GET['success']) || isset($_GET['noChanges'])): ?>
 		<div id="admin-log">

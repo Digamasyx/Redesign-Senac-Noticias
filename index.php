@@ -19,7 +19,7 @@ require_once(__DIR__ . '/src/php/functions/getPath.php');
 </head>
 <body>
     <!-- Header  -->
-    <?php require_once('src/php/components/header.html') ?>
+    <?php require_once('src/php/components/header.php') ?>
     
     <main>
         <!-- Landing-page -->

@@ -26,7 +26,7 @@ if (!isset($news)) header("Location: ../../index.php");
 	<link rel="stylesheet" href="assets/css/newsletterForm.css">
 </head>
 <body>
-	<?php require_once(dirname(__DIR__) . '/php/components/header.html') ?>
+	<?php require_once(dirname(__DIR__) . '/php/components/header.php') ?>
 
 	<?php if ($check): ?>
 		<a id="admin-link" href="/src/pages/newsAdmin.php?id=<?php echo $_GET['id'];?>">Admin</a>

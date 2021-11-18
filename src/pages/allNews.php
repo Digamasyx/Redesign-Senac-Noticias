@@ -16,7 +16,7 @@ require_once(dirname(__DIR__) . '/php/functions/getPath.php');
 </head>
 <body>
     <!-- Header  -->
-    <?php require_once(dirname(__DIR__) . '/php/components/header.html'); ?>
+    <?php require_once(dirname(__DIR__) . '/php/components/header.php'); ?>
 
     <main class='main'>
         <?php require_once(dirname(__DIR__) . '/php/components/newsList.php'); ?>

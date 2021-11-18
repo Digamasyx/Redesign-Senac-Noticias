@@ -1,3 +1,9 @@
+<?php
+session_start();
+
+$check = isset($_SESSION['admin']);
+?>
+
 <!-- Header  -->
 <header class="header-navbar">    
     <nav id="navbar">        
@@ -10,20 +16,25 @@
 
         <ul class="nav-list">            
             <li class="nav-item">                
-            <a href="/">Home</a>            
+                <a href="/">Home</a>            
             </li>   
             <li class="nav-item">                
-            <a href="/src/pages/allNews.php">Notícias</a>            
+                <a href="/src/pages/allNews.php">Notícias</a>            
             </li>   
             <li class="nav-item">                
-            <a href="/#newsletter">Newsletter</a>            
+                <a href="/#newsletter">Newsletter</a>            
             </li>            
             <li class="nav-item">                
-            <a href="/#map">Nos Encontre</a>            
+                <a href="/#map">Nos Encontre</a>            
             </li>            
             <li class="nav-item">                
-            <a href="/#footer-section">Serviços</a>            
+                <a href="/#footer-section">Serviços</a>            
             </li>        
+            <?php if ($check): ?>
+                <li class="nav-item">                
+                <a href="/src/pages/newsAdmin.php">Admin</a>            
+            </li>        
+            <?php endif; ?>
         </ul>    
     </nav>
 </header>
