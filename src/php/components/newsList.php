@@ -4,7 +4,7 @@
     $news = $dbh->getAllNews();
 
     foreach ($news as $value):
-        $href = "/src/news/pages/new.php?id=" . $value['id'];
+        $href = "/src/news/pages/news.php?id=" . $value['id'];
     ?>
         <a class='noticia-caixa' href='<?php echo $href; ?>'>
             <div class='main-noticias'>
