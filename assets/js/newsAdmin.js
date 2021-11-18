@@ -41,5 +41,5 @@ function deleteAction(id)
 
 function br2nl(text)
 {
-    return text.replace('<br />', '\n');
+    return text.replaceAll('<br />', '\n');
 }
