@@ -56,6 +56,34 @@ $news = $dbh->getAllNews();
 		<div class="container-edit">
 			<button class="btn-registrar" onclick="activateRegister()">Registrar uma notícia</button>
 
+			<div id="noticias-container" class="noticias-container hide">
+				<h2 id="form-title">Insira uma notícia</h2>
+
+				<form id="form" enctype="multipart/form-data" method="POST">
+					<div>
+						<label for="title">Título:</label>
+						<input type="text" id="title" name="title" required /> 
+					</div>
+
+					<div>
+						<label for="shortDesc">Descrição curta:</label> 
+						<textarea id="shortDesc" name="shortDesc" rows="10"></textarea> 
+					</div>
+
+					<div>
+						<label for="content">Notícia:</label> 
+						<textarea id="content" name="content" rows="15" required></textarea>
+					</div>
+
+					<div>
+						<label for="mainImg">Imagem:</label> 
+						<input type="file" id="mainImg" name="mainImg"/> 
+					</div>
+					<button>Pronto!</button>
+					
+				</form>
+			</div>
+
 			<?php foreach ($news as $value): ?>
 				<div class="main-noticias">
 					<div class="noticias-imagem">
@@ -77,33 +105,7 @@ $news = $dbh->getAllNews();
 			<?php endforeach; ?>
 		</div>
 
-		<div id="noticias-container" class="noticias-container hide">
-			<h2 id="form-title">Insira uma notícia</h2>
-
-			<form id="form" enctype="multipart/form-data" method="POST">
-				<div>
-					<label for="title">Título:</label>
-					<input type="text" id="title" name="title" required /> 
-				</div>
-
-				<div>
-					<label for="shortDesc">Descrição curta:</label> 
-					<textarea id="shortDesc" name="shortDesc" rows="10"></textarea> 
-				</div>
-
-				<div>
-					<label for="content">Notícia:</label> 
-					<textarea id="content" name="content" rows="15" required></textarea> 
-
-				</div>
-
-				<div>
-					<label for="mainImg">Imagem:</label> 
-					<input type="file" id="mainImg" name="mainImg"/> 
-				</div>
-				<button>Pronto!</button>
-			</form>
-		</div>
+		
 	</main>
 
 	<?php require_once(dirname(__DIR__) . '\php\components\footer.html')?>
