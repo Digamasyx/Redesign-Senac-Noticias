@@ -134,8 +134,8 @@
         transition: all .5s ;
     }
     .noticias-cabecalho{
-        max-width: 22em;
-        padding: 2em;
+        width: 22em;
+        max-width: 30em;
         transition: all .5s;
     }
     .noticia-titulo{

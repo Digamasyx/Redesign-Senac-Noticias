@@ -60,10 +60,8 @@ if (!isset($news)) header("Location: ../../index.php");
 				</div>
 			</div>
 		</div>
-
-		<?php require_once(dirname(__DIR__) . '/php/components/newsletterForm.html') ?>
 	</main>	
-
+	<?php require_once(dirname(__DIR__) . '/php/components/newsletterForm.html') ?>
 	<!--footer -->
 	<?php require_once(dirname(__DIR__) . '/php/components/footer.html') ?>
 	<!--footer -->

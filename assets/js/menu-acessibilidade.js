@@ -4,6 +4,7 @@ function contrast(){
     var socialBox = document.getElementById('midia-social');
     var contrastBtn = document.getElementById("altocontraste");
     var cleanBtn= document.getElementById("limpar-contraste");
+    document.getElementById('body-page').classList.remove("light-mode");
     accessBox.classList.add('caixa-de-acessibilidade-2');
     accessBox.classList.remove('caixa-de-acessibilidade-2');
     accessBox.classList.toggle('caixa-de-acessibilidade-2');
@@ -96,52 +97,18 @@ function fontSizeIncrease(){
     
 }
 function lightMode(){
-    var main = document.getElementById("body-page");
-    var accessMenu = document.getElementById("caixa-de-acessibilidade");
-    var luzBtn = document.getElementById("btn-iluminacao");
-    var accessBtn = document.getElementsByClassName('botao-acessibilidade');
-    var socialMediaMenu = document.getElementById('midia-social');
-    var linkExterno = document.getElementById('link-externo');
-    if (main.style.color == ''){
-        for (var i = 0; i < accessBtn.length; i++) {
-            accessBtn[i].style.color = 'black';
-            accessBtn[i].style.background = 'white';}
-        main.style.background = 'white';
-        main.style.color = 'black';
-        accessMenu.style.borderBottom = '2px solid black'; 
-        accessMenu.style.borderTop = '2px solid black';
-        socialMediaMenu.style.borderTop = '2px solid black' ;
-        socialMediaMenu.style.borderBottom = '2px solid black';
-        linkExterno.style.color = 'black';
-        luzBtn.style.background = 'white';
-    }else if (main.style.color == 'white'){
-        for (var i = 0; i < accessBtn.length; i++) {
-            accessBtn[i].style.color = 'black';
-            accessBtn[i].style.background = 'white';}
-        main.style.background = 'white';
-        main.style.color = 'black';
-        accessMenu.style.borderBottom = '2px solid black'; 
-        accessMenu.style.borderTop = '2px solid black';
-        socialMediaMenu.style.borderTop = '2px solid black' ;
-        socialMediaMenu.style.borderBottom = '2px solid black';
-        linkExterno.style.color = 'black';
-        luzBtn.style.background = 'white';
-    }
-    else{
-        for (var i = 0; i < accessBtn.length; i++) {
-            accessBtn[i].style.color = 'white';
-            accessBtn[i].style.background = '#0F0F0F';
-        }
-        main.style.background = '';
-        main.style.color = 'white';
-        accessMenu.style.color = 'white';
-        accessMenu.style.borderBottom = '2px solid white'; 
-        accessMenu.style.borderTop = '2px solid white';
-        socialMediaMenu.style.borderTop = '2px solid white';
-        socialMediaMenu.style.borderBottom = '2px solid white';
-        linkExterno.style.color = 'white';
-        luzBtn.style.background = '#0F0F0F'; 
-    }
+    var contrast = document.getElementById("body-page");
+    var accessBox = document.getElementById('caixa-de-acessibilidade');
+    var socialBox = document.getElementById('midia-social');
+    var contrastBtn = document.getElementById("altocontraste");
+    var cleanBtn= document.getElementById("limpar-contraste");
+    accessBox.classList.remove('caixa-de-acessibilidade-2');
+    socialBox.classList.remove('midia-social-2');
+    contrast.classList.remove('contrast');
+    contrastBtn.style.display = 'block';
+    cleanBtn.style.display = 'none';
+    document.getElementById('body-page').classList.toggle("light-mode");
+    
 }
 function underlineMouseEnter(){
     const linkExterno = document.getElementById('link-externo');
