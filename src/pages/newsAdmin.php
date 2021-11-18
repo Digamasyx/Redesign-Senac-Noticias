@@ -45,39 +45,43 @@ if (!$check) header("Location: ../../index.php");
 				</div>";
 		}
 		?>
+		<div class="container-edit">
+			<button class="btn-registrar" onclick="activateRegister()">Registrar uma notícia</button>
 
-		<button class="btn-registrar" onclick="activateRegister()">Registrar uma notícia</button>
-
-		<div class="container">
-			<img class="imagem-noticia" src="https://via.placeholder.com/150"></img>
-			<div class="texto-noticia">
-				<h4>Título da noticia</h4>
-				<p>Descrição encurtada</p>
+			<div class="main-noticias">
+				<div class="noticias-imagem">
+					<img class="imagem-noticia" src="https://via.placeholder.com/150" />
+				</div>
+				<div class="noticias-cabecalho">
+					<h4 class='noticia-titulo'>Título da noticia</h4>
+					<p class='noticia-descricao'>Descrição encurtada</p>
+					<p class='leia-mais'>Leia mais...</p>
+				</div>
+				<div class="btn-noticias">
+					<button class="btn-editar" onclick="activateEdit(1)">Editar</button>
+					<button class="btn-apagar" onclick="deleteAction(1)">Apagar</button>
+				</div>
 			</div>
-			<div class="btn-noticias">
-				<button class="btn-editar" onclick="activateEdit(1)">Editar</button>
-				<button class="btn-apagar" onclick="deleteAction(1)">Apagar</button>
+
+			<div id="noticias-container" class="noticias-container hide">
+				<h2 id="form-title"></h2>
+
+				<form id="form" enctype="multipart/form-data" method="POST">
+					<label for="title">Título:</label>
+					<input type="text" id="title" name="title" required /> 
+
+					<label for="shortDesc">Descrição curta:</label> 
+					<textarea id="shortDesc" name="shortDesc" rows="10"></textarea> 
+
+					<label for="content">Notícia:</label> 
+					<textarea id="content" name="content" rows="15" required></textarea> 
+
+					<label for="mainImg">Imagem:</label> 
+					<input type="file" id="mainImg" name="mainImg"/> 
+
+					<button>Pronto!</button>
+				</form>
 			</div>
-		</div>
-
-		<div id="noticias-container" class="noticias-container hide">
-			<h2 id="form-title"></h2>
-
-			<form id="form" enctype="multipart/form-data" method="POST">
-				<label for="title">Título:</label>
-				<input type="text" id="title" name="title" required /> 
-
-				<label for="shortDesc">Descrição curta:</label> 
-				<textarea id="shortDesc" name="shortDesc" rows="10"></textarea> 
-
-				<label for="content">Notícia:</label> 
-				<textarea id="content" name="content" rows="15" required></textarea> 
-
-				<label for="mainImg">Imagem:</label> 
-				<input type="file" id="mainImg" name="mainImg"/> 
-
-				<button>Pronto!</button>
-			</form>
 		</div>
 	</main>
 
