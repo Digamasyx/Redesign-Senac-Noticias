@@ -36,7 +36,7 @@ function deleteAction(id)
     $.post('/src/php/functions/getNewsData.php', { id: id }, function (output)
     {
         document.location = `/src/php/handlers/handleEditNews.php?id=${id}&action=Remove&originalPath=${output['mainImage']}`;
-    });
+    }, 'json');
 }
 
 function br2nl(text)
