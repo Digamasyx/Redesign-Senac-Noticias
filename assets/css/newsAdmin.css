@@ -78,13 +78,10 @@ main {
     font-size: 16px;
     word-wrap: break-word;
 }
-.leia-mais{
-    text-align: right;
-}
-.leia-mais a{
+.noticia-titulo a{
     color: black;
 }
-.leia-mais a:hover{
+.noticia-titulo a:hover{
     color: #0071CF;
 } 
 .main-noticias:hover > .noticias-imagem img{

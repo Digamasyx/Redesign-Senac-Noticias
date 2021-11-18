@@ -1,5 +1,5 @@
 <?php
-require_once(__DIR__ . '/startSession.php');
+session_start();
 
 $_SESSION['admin'] = 'true';
 ?>

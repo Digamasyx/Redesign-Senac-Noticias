@@ -63,9 +63,10 @@ $news = $dbh->getAllNews();
 					</div>
 
 					<div class="noticias-cabecalho">
-						<h4 class='noticia-titulo'><?php echo $value['title']; ?></h4>
+						<h4 class='noticia-titulo'>
+							<a href='<?php echo "/src/pages/news.php?id={$value['id']}"; ?>'><?php echo $value['title']; ?></a>
+						</h4>
 						<p class='noticia-descricao'><?php echo $value['shortDescription']; ?></p>
-						<p class='leia-mais'><a href='<?php echo "/src/pages/news.php?id={$value['id']}"; ?>'>Leia mais...</a></p>
 					</div>
 
 					<div class="btn-noticias">

@@ -33,7 +33,10 @@ $check = isset($_SESSION['admin']);
             <?php if ($check): ?>
                 <li class="nav-item">                
                     <a href="/src/pages/newsAdmin.php">Admin</a>            
-                </li>        
+                </li>
+                <li class="nav-item">                
+                    <a href="/src/php/handlers/exit.php">Sair</a>            
+                </li>                
             <?php endif; ?>
         </ul>    
     </nav>
