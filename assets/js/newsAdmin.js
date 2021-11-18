@@ -8,7 +8,7 @@ function activateRegister()
     form.setAttribute('action', '/src/php/handlers/handleAddNews.php');
     form.reset();
     document.getElementById('mainImg').setAttribute('required', 'required');
-    formDiv.classList.remove('hide');
+    formDiv.classList.toggle('hide');
 }
 
 function activateEdit(id)
