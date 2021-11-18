@@ -2,6 +2,125 @@
 @import url('header.css');
 @import url('footer.css');
 
-.hide {
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.container-edit {
+    display: flex;
+    width: 75%;
+    flex-direction: column;
+}
+
+.btn-registrar {
+    width: 250px;
+    height: 50px;
+    left: 323px;
+    top: 164px;
+
+    background: #000000;
+    color: white;
+}
+
+.main-noticias{
+    border: 1px solid#000000;
+    display: flex;
+    flex-direction: row;
+    background:#FFFFFF;
+    color: black;
+    
+    min-height: 300px;
+    margin-top: 3em;
+    margin-bottom:1em;
+}
+.noticias-imagem{
+    width: 26em;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+.imagem-noticia{
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: all .5s;
+}
+.noticias-cabecalho{
+    width: 90%;
+    text-align: start;
+    padding-left: 1em;
+    transition: all .5s;
+}
+.noticia-titulo{
+    font-weight: 700;
+    font-size: 24px;
+}
+.noticia-descricao{
+    font-weight: 400;
+    font-size: 16px;
+}
+.leia-mais{
+    text-align: right;
+}
+.main-noticias:hover{
+    color: #0071CF ;
+} 
+.main-noticias:hover > .noticias-imagem img{
+    transform: scale(1.2);
+}
+
+.btn-noticias {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    padding: 0 0.5em;
+}
+
+.btn-editar {
+    width: 100px;
+    height: 40px;
+    left: 986px;
+    top: 350px;
+
+    background: #000000;
+    color: white;
+    border-radius: 15px;
+}
+
+.btn-apagar {
+    width: 100px;
+    height: 40px;
+    left: 986px;
+    top: 409px;
+
+    background: white;
+    border: 1px solid #000000;
+    color: black;
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+
+/* .hide {
     display:  none;
+} */
+
+@media (max-width: 768px)  {
+    .main-noticias{
+        flex-direction: column;
+        
+    }
+    .noticias-imagem {
+        width: 100%;
+        max-height: 100%;
+        margin: 0;
+    }
+
+    .btn-noticias {
+        flex-direction: row;
+        padding: 0.5em 0;
+    }
+
 }
