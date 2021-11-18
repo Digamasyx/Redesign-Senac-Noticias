@@ -12,7 +12,7 @@
                     <img class='img-noticia' src='<?php echo getPath($value['mainImage']); ?>'/>
                 </div>
                 <div class='noticias-cabecalho'>
-                    <h2 class='noticia-titulo'>‘<?php echo $value['title']; ?></h2>
+                    <h2 class='noticia-titulo'><?php echo $value['title']; ?></h2>
                     <p class='noticia-descricao'><?php echo $value['shortDescription']; ?><p>
                     <p class='leia-mais'>Leia mais...&rarr;</p>
                 </div>
