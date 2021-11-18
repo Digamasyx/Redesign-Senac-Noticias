@@ -6,10 +6,13 @@ session_start();
 $check = isset($_SESSION['admin']);
 
 if (!$check) header("Location: ../../index.php");
+
+$dbh = new NewsController();
+$news = $dbh->getAllNews();
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,66 +25,83 @@ if (!$check) header("Location: ../../index.php");
 </head>
 <body>
 	<?php require_once(dirname(__DIR__) . '\php\components\header.html')?>
-	
+
+	<?php if (isset($_GET['internalError']) || isset($_GET['success']) || isset($_GET['noChanges'])): ?>
+		<div id="admin-log">
+			<?php
+			if (isset($_GET['internalError']) && $_GET['internalError'])
+			{
+				echo "<div style='color: red;'>
+						<h2>Ops... Algo deu errado!</h2>
+						<p>Ocorreu um erro no servidor. Tente novamente mais tarde.</p>
+					</div>";
+			}
+			else if (isset($_GET['success']) && $_GET['success'])
+			{
+				echo "<div style='color: LawnGreen;'>
+						<h2>Alterações bem sucedidas!</h2>
+					</div>";
+			}
+			else if (isset($_GET['noChanges']) && $_GET['noChanges'])
+			{
+				echo "<div style='color: black;'>
+						<h2>Não houve alterações!</h2>
+					</div>";
+			}
+			?>
+		</div>
+	<?php endif; ?>
+
 	<main>
-		<?php
-		if (isset($_GET['internalError']) && $_GET['internalError'])
-		{
-			echo "<div style='color: red;'>
-					<h2>Ops... Algo deu errado!</h2>
-					<p>Ocorreu um erro no servidor. Tente novamente mais tarde.</p>
-				</div>";
-		}
-		else if (isset($_GET['success']) && $_GET['success'])
-		{
-			echo "<div style='color: LawnGreen;'>
-					<h2>Alterações bem sucedidas!</h2>
-				</div>";
-		}
-		else if (isset($_GET['noChanges']) && $_GET['noChanges'])
-		{
-			echo "<div style='color: black;'>
-					<h2>Não houve alterações!</h2>
-				</div>";
-		}
-		?>
 		<div class="container-edit">
 			<button class="btn-registrar" onclick="activateRegister()">Registrar uma notícia</button>
 
-			<div class="main-noticias">
-				<div class="noticias-imagem">
-					<img class="imagem-noticia" src="https://via.placeholder.com/150" />
-				</div>
-				<div class="noticias-cabecalho">
-					<h4 class='noticia-titulo'>Título da noticia</h4>
-					<p class='noticia-descricao'>Descrição encurtada</p>
-					<p class='leia-mais'>Leia mais...</p>
-				</div>
-				<div class="btn-noticias">
-					<button class="btn-editar" onclick="activateEdit(1)">Editar</button>
-					<button class="btn-apagar" onclick="deleteAction(1)">Apagar</button>
-				</div>
-			</div>
+			<?php foreach ($news as $value): ?>
+				<div class="main-noticias">
+					<div class="noticias-imagem">
+						<img class="imagem-noticia" src="<?php echo getPath($value['mainImage']); ?>" />
+					</div>
 
-			<div id="noticias-container" class="noticias-container hide">
-				<h2 id="form-title"></h2>
+					<div class="noticias-cabecalho">
+						<h4 class='noticia-titulo'><?php echo $value['title']; ?></h4>
+						<p class='noticia-descricao'><?php echo $value['shortDescription']; ?></p>
+						<p class='leia-mais'><a href='<?php echo "/src/pages/news.php?id={$value['id']}"; ?>'>Leia mais...</a></p>
+					</div>
 
-				<form id="form" enctype="multipart/form-data" method="POST">
+					<div class="btn-noticias">
+						<button class="btn-editar" onclick="activateEdit(<?php echo $value['id'] ?>)">Editar</button>
+						<button class="btn-apagar" onclick="deleteAction(<?php echo $value['id'] ?>)">Apagar</button>
+					</div>
+				</div>
+			<?php endforeach; ?>
+		</div>
+
+		<div id="noticias-container" class="noticias-container hide">
+			<h2 id="form-title">Insira uma notícia</h2>
+
+			<form id="form" enctype="multipart/form-data" method="POST">
+				<div>
 					<label for="title">Título:</label>
 					<input type="text" id="title" name="title" required /> 
+				</div>
 
+				<div>
 					<label for="shortDesc">Descrição curta:</label> 
 					<textarea id="shortDesc" name="shortDesc" rows="10"></textarea> 
+				</div>
 
+				<div>
 					<label for="content">Notícia:</label> 
 					<textarea id="content" name="content" rows="15" required></textarea> 
 
+				</div>
+
+				<div>
 					<label for="mainImg">Imagem:</label> 
 					<input type="file" id="mainImg" name="mainImg"/> 
-
-					<button>Pronto!</button>
-				</form>
-			</div>
+				</div>
+				<button>Pronto!</button>
+			</form>
 		</div>
 	</main>
 
