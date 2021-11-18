@@ -71,10 +71,12 @@ main {
 .noticia-titulo{
     font-weight: 700;
     font-size: 24px;
+    word-wrap: break-word;
 }
 .noticia-descricao{
     font-weight: 400;
     font-size: 16px;
+    word-wrap: break-word;
 }
 .leia-mais{
     text-align: right;

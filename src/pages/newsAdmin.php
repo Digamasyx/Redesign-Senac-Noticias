@@ -1,7 +1,7 @@
 <?php
 require_once(dirname(__DIR__) . '/php/classes/NewsController.php');
 require_once(dirname(__DIR__) . '/php/functions/getPath.php');
-session_start();
+require_once(dirname(__DIR__) . '/php/functions/startSession.php');
 
 $check = isset($_SESSION['admin']);
 

@@ -23,7 +23,7 @@
 }
 .noticias-imagem{
     width: 100%;
-    height: 8em;
+    height: 50%;
 }
 .noticias-imagem img{
     width: 100%;
@@ -40,10 +40,12 @@
 .noticia-titulo{
     font-weight: 700;
     font-size: 1em;
+    word-wrap: break-word;
 }
 .noticia-descricao{
     font-weight: 400;
     font-size: 0.7em;
+    word-wrap: break-word;
 }
 .leia-mais{
     text-align: right;

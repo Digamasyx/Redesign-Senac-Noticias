@@ -1,6 +1,7 @@
 <?php
 require_once(dirname(__DIR__) . '/php/classes/NewsController.php');
 require_once(dirname(__DIR__) . '/php/functions/getPath.php');
+require_once(dirname(__DIR__) . '/php/functions/startSession.php');
 ?>
 
 <!DOCTYPE html>

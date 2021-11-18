@@ -1,6 +1,6 @@
 <?php
 require_once(dirname(__DIR__) . '/classes/NewsController.php');
-session_start();
+require_once(dirname(__DIR__) . '/functions/startSession.php');
 
 $check = isset($_SESSION['admin']);
 
