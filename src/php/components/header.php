@@ -32,8 +32,8 @@ $check = isset($_SESSION['admin']);
             </li>        
             <?php if ($check): ?>
                 <li class="nav-item">                
-                <a href="/src/pages/newsAdmin.php">Admin</a>            
-            </li>        
+                    <a href="/src/pages/newsAdmin.php">Admin</a>            
+                </li>        
             <?php endif; ?>
         </ul>    
     </nav>
