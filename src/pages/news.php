@@ -29,7 +29,7 @@ if (!isset($news)) header("Location: ../../index.php");
 	<?php require_once(dirname(__DIR__) . '/php/components/header.php') ?>
 
 	<?php if ($check): ?>
-		<a id="admin-link" href="/src/pages/newsAdmin.php?id=<?php echo $_GET['id'];?>">Admin</a>
+		<a id="admin-link" href="/src/pages/newsAdmin.php?id=<?php echo $_GET['id'];?>">Editar</a>
 	<?php endif; ?>
 
 	<main id='body-page' class="main-container">
