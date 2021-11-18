@@ -77,3 +77,7 @@
     border-top: 2px solid white !important;
     border-bottom: 2px solid white !important;
 }
+
+.contrast .botao-acessibilidade-luz{
+    background: black !important;
+}

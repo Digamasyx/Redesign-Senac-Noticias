@@ -1,0 +1,29 @@
+.light-mode{
+    background: white;
+}
+.light-mode,
+.light-mode h1,
+.light-mode h2,
+.light-mode h3,
+.light-mode h4,
+.light-mode h5,
+.light-mode h6,
+.light-mode p,
+.light-mode a{
+    color: black;
+}
+.light-mode .botao-acessibilidade{
+    background: white;
+    color: black;
+}
+.light-mode .botao-acessibilidade-luz{
+    background: white !important;
+}
+.light-mode .caixa-de-acessibilidade{
+    border-top: 0.5px solid rgba( 0, 0, 0, 1 ) ;
+    border-bottom: 0.5px solid rgba( 0, 0, 0, 1 ) ;
+}
+.light-mode .midia-social{
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
