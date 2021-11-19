@@ -10,6 +10,10 @@
     padding: 2em 1em;
     /* margin: 1em; */
 }
+#news-logo {
+    max-height: 50%;
+    margin: 0 auto;
+}
 #news-blocks {
     box-sizing: border-box;
     grid-area: content;
