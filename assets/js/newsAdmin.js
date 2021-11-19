@@ -6,7 +6,9 @@ function activateRegister()
     formTitle.innerText = 'Inserir notícia';
 
     form.setAttribute('action', '/src/php/handlers/handleAddNews.php');
-    form.reset();
+    document.getElementById('title').value = '';
+    document.getElementById('shortDesc').innerHTML = '';
+    document.getElementById('content').innerHTML = '';
     document.getElementById('mainImg').setAttribute('required', 'required');
     formDiv.classList.toggle('hide');
 }
