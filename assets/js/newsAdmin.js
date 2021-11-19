@@ -24,6 +24,7 @@ function activateEdit(id)
         document.getElementById('title').value = output['title'];
         document.getElementById('shortDesc').innerHTML = br2nl(output['shortDescription']);
         document.getElementById('content').innerHTML = br2nl(output['content']);
+        
         form.setAttribute('action', `/src/php/handlers/handleEditNews.php?id=${id}&action=Edit&originalPath=${output['mainImage']}`);
     }, 'json');
 
@@ -43,5 +44,5 @@ function deleteAction(id)
 
 function br2nl(text)
 {
-    return text.replaceAll('<br />', '\n');
+    return text.replaceAll('<br />', '');
 }
