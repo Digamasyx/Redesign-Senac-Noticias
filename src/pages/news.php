@@ -4,6 +4,9 @@ require_once(dirname(__DIR__) . '/php/functions/getPath.php');
 require_once(dirname(__DIR__) . '/php/functions/startSession.php');
 
 $check = isset($_SESSION['admin']);
+$protocol = explode('/', $_SERVER["SERVER_PROTOCOL"])[0];
+$protocol = strtolower($protocol) . "://";
+$url = $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 
 if (isset($_GET['id'])) 
 {
@@ -40,12 +43,35 @@ if (!isset($news)) header("Location: ../../index.php");
 				<p class='noticias-descricao'><?php echo $news["shortDescription"]; ?></p>
 				<div id='midia-social' class='midia-social'><!--midias sociais-->
 					<h3 class='compartilhar-noticia'>Compartilhe esta publicação:</h3>
-					<a href='#' class='botao-social'><img style='margin-left: 0 !important;'class='midia-social-img' src='/assets/testpics/facebook.png'></a>
-					<a href='#' class='botao-social'><img class='midia-social-img' src='/assets/testpics/instagram.png'></a>
-					<a href='#' class='botao-social'><img class='midia-social-img' src='/assets/testpics/linkedin.png'></a>
-					<a href='#' class='botao-social'><img class='midia-social-img' src='/assets/testpics/twitter.png'></a>
-					<a href='#' class='botao-social'><img class='midia-social-img' src='/assets/testpics/whatsapp.png'></a>
-					<a href='#' class='botao-social'><img class='midia-social-img' src='/assets/testpics/youtube.png'></a>
+
+					<a 
+						href="http://www.facebook.com/sharer.php?u=<?php echo $url; ?>" 
+						class='botao-social'
+						target="_blank"
+					>
+						<img style='margin-left: 0 !important;'class='midia-social-img' src='/assets/testpics/facebook.png' alt="Facebook" />
+					</a>
+					<a
+						href='http://www.linkedin.com/shareArticle?mini=true&amp;url=<?php echo $url; ?>' 
+						class='botao-social'
+						target="_blank"
+					>
+						<img class='midia-social-img' src='/assets/testpics/linkedin.png' alt="Linkedin" />
+					</a>
+					<a 
+						href="http://twitter.com/share?url=<?php echo $url;?>&text=<?php echo urlencode($news['shortDescription']); ?>&hashtags=SenacNoticias"
+						class='botao-social'
+						target="_blank"
+					>
+						<img class='midia-social-img' src='/assets/testpics/twitter.png' alt="Twitter" />
+					</a>
+					<a 
+						href='https://api.whatsapp.com/send/?phone&text=<?php echo $url; ?>&app_absent=0' 
+						class='botao-social'
+						target="_blank"
+					>
+						<img class='midia-social-img' src='/assets/testpics/whatsapp.png' alt="Whatsapp" />
+					</a>
 				</div><!--midias sociais-->
 			</div>
 			
