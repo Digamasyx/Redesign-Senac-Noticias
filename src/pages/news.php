@@ -43,7 +43,7 @@ if (!isset($news)) header("Location: ../../index.php");
 				<p class='noticias-descricao'><?php echo $news["shortDescription"]; ?></p>
 				<div id='midia-social' class='midia-social'><!--midias sociais-->
 					<h3 class='compartilhar-noticia'>Compartilhe esta publicação:</h3>
-
+					
 					<a 
 						href="http://www.facebook.com/sharer.php?u=<?php echo $url; ?>" 
 						class='botao-social'
@@ -66,7 +66,7 @@ if (!isset($news)) header("Location: ../../index.php");
 						<img class='midia-social-img' src='/assets/testpics/twitter.png' alt="Twitter" />
 					</a>
 					<a 
-						href='https://api.whatsapp.com/send/?phone&text=<?php echo $url; ?>&app_absent=0' 
+						href='https://api.whatsapp.com/send/?phone&text=<?php echo urlencode($news["shortDescription"] . "\n" . $url); ?>&app_absent=0' 
 						class='botao-social'
 						target="_blank"
 					>
