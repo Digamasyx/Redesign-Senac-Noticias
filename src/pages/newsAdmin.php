@@ -68,7 +68,7 @@ $news = $dbh->getAllNews();
 
 					<div>
 						<label for="shortDesc">Descrição curta:</label> 
-						<textarea id="shortDesc" name="shortDesc" rows="10"></textarea> 
+						<textarea id="shortDesc" name="shortDesc" rows="10" maxlength="255"></textarea> 
 					</div>
 
 					<div>
