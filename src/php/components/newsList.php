@@ -13,7 +13,7 @@
                 </div>
                 <div class='noticias-cabecalho'>
                     <h2 class='noticia-titulo'><?php echo $value['title']; ?></h2>
-                    <p class='noticia-descricao'><?php echo $value['shortDescription']; ?><p>
+                    <p class='noticia-descricao'><?php echo substr($value['shortDescription'], 0, 100) . "..."; ?><p>
                     <p class='leia-mais'>Leia mais...&rarr;</p>
                 </div>
             </div>
