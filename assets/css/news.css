@@ -42,6 +42,7 @@
     flex-direction: row;
     margin-bottom: 0.5em;
     justify-content: space-around;
+    align-items: center;
 }
 .midia-social-img{
     width: 50%;
