@@ -19,6 +19,7 @@ $news = $dbh->getAllNews();
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="/assets/css/newsAdmin.css">
 	<link rel="shortcut icon" href="/assets/img/logosemnome.svg" type="image/x-icon">
+	<link rel="icon" href="/assets/img/Logosemnome.svg">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="/assets/js/newsAdmin.js"></script>
 	<title>Administrar notícias</title>

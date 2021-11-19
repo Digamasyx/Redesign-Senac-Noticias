@@ -21,6 +21,7 @@ if (!isset($news)) header("Location: ../../index.php");
 	<title><?php echo $news['title']; ?></title>
 	<link rel="stylesheet" href="/assets/css/contrast.css">
 	<script type="text/javascript" src="/assets/js/menu-acessibilidade.js"></script>
+	<link rel="icon" href="/assets/img/Logosemnome.svg">
 	<link rel="stylesheet" href="/assets/css/normalize.css">
 	<link rel="stylesheet" href="/assets/css/news.css">
 	<link rel="stylesheet" href="assets/css/newsletterForm.css">
