@@ -28,7 +28,7 @@ if (!isset($news)) header("Location: ../../index.php");
 	<link rel="stylesheet" href="/assets/css/normalize.css">
 	<link rel="stylesheet" href="/assets/css/news.css">
 	<link rel="stylesheet" href="/assets/css/newsletterForm.css">
-	<script type="text/javascript" src="assets/js/NLAction.js"></script>
+	<script type="text/javascript" src="/assets/js/NLAction.js"></script>
 </head>
 <body>
 	<?php require_once(dirname(__DIR__) . '/php/components/header.php') ?>
