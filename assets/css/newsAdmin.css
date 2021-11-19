@@ -35,6 +35,8 @@ main {
     border: none;
     background: #000000;
     color: #ffffff;
+    border: 1px solid white;
+    border-radius: 10px;
 }
 
 .btn-registrar:hover {
