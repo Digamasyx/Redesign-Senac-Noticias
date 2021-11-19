@@ -9,6 +9,10 @@
 @import url('lightmode.css');
 @import url('menu-acessibilidade.css');
 
+img {
+    border-radius: 10px;
+}
+
 #body-page {
     color: white;
 }

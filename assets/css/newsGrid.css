@@ -58,7 +58,6 @@
     grid-column-end: span 2;
 }
 .bottom-tile .news-text p {
-    width: 40%;
     margin-bottom: auto;
 }
 @media (max-width: 900px) {
