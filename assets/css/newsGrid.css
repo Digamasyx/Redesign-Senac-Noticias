@@ -33,6 +33,7 @@
     background-size: cover;
     box-sizing: border-box;
     justify-content: flex-end;
+    border-radius: 5px;
 }
 .news-tile:hover {
     cursor: pointer;
