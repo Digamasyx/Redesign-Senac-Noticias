@@ -1,5 +1,11 @@
 <?php
-session_start();
+require_once(__DIR__ . "/getPath.php");
+$password = file_get_contents(getPath("password.txt"));
 
-$_SESSION['admin'] = 'true';
+if ($password !== false && $_REQUEST['password'] === $password)
+{
+    session_start();
+
+    $_SESSION['admin'] = 'true';
+}
 ?>
