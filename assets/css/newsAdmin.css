@@ -60,14 +60,13 @@ main {
     margin-top: 3em;
     margin-bottom:1em;
     border-radius: 10px;
+    overflow: hidden;
 }
 .noticias-imagem{
     width: 26em;
     display: flex;
     align-items: center;
     overflow: hidden;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
 }
 .imagem-noticia{
     width: 100%;
@@ -102,8 +101,6 @@ main {
 } 
 .main-noticias:hover > .noticias-imagem img{
     transform: scale(1.2);
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
 }
 
 .btn-noticias {
