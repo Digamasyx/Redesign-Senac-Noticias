@@ -9,6 +9,7 @@
         foreach ($news as $key => $value):
             $href = "/src/pages/news.php?id=" . $value['id'];
             $mainImage = getPath($value['mainImage']);
+            $add = strlen($value['shortDescription']) > 100 ?  "..." : "";
         ?>
             <a 
                 href="<?php echo $href; ?>"
@@ -17,7 +18,7 @@
             >
                 <div class="news-text">
                     <h3><?php echo $value['title']; ?></h3>
-                    <p><?php echo substr($value['shortDescription'], 0, 100) . "..."; ?></p>
+                    <p><?php echo substr($value['shortDescription'], 0, 100) . $add; ?></p>
                 </div>
             </a>
         <?php endforeach; ?>

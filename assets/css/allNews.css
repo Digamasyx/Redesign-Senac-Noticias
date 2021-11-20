@@ -51,10 +51,6 @@
     font-size: 0.7em;
     word-wrap: break-word;
 }
-.leia-mais{
-    text-align: right;
-    font-size: 0.7em;
-}
 @media (min-width: 490px){
     .main-noticias{
         min-width: 30em;
