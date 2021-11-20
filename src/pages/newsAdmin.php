@@ -19,13 +19,13 @@ $news = $dbh->getAllNews();
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="/assets/css/newsAdmin.css">
 	<link rel="shortcut icon" href="/assets/img/logosemnome.svg" type="image/x-icon">
-	<link rel="icon" href="/assets/img/Logosemnome.svg">
+        <link rel="icon" href="/assets/img/Logosemnome.svg">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="/assets/js/newsAdmin.js"></script>
 	<title>Administrar notícias</title>
 </head>
 <body>
-	<?php require_once(dirname(__DIR__) . '\php\components\header.php')?>
+	<?php require_once(dirname(__DIR__) . '/php/components/header.php')?>
 
 	<?php if (isset($_GET['internalError']) || isset($_GET['success']) || isset($_GET['noChanges'])): ?>
 		<div id="admin-log">
@@ -109,15 +109,18 @@ $news = $dbh->getAllNews();
 		
 	</main>
 
-	<?php require_once(dirname(__DIR__) . '\php\components\footer.html')?>
+	<?php require_once(dirname(__DIR__) . '/php/components/footer.html')?>
 
-	<?php if (isset($_GET['id'])): ?>
-		<script>
-			activateEdit(<?php echo $_GET['id']; ?>);
-		</script>
-	<?php 
-	$_GET['id'] = null;
-	endif; 
-	?>
+	<?php if (isset($_GET['id']) && isset($_GET['action'])): ?>
+		<?php if ($_GET['action'] === 'edit'): ?>
+			<script>
+				activateEdit(<?php echo $_GET['id']; ?>);
+			</script>
+		<?php elseif ($_GET['action'] === 'remove'): ?>
+			<script>
+				deleteAction(<?php echo $_GET['id']; ?>);
+			</script>
+		<?php endif; ?>
+	<?php endif; ?>
 </body>
 </html>

@@ -38,7 +38,8 @@ if (!isset($news)) header("Location: ../../index.php");
 		<div class='main-container-noticias'>
 			<div class='main-noticias-header'>
 				<?php if ($check): ?>
-					<a id="admin-link" href="/src/pages/newsAdmin.php?id=<?php echo $_GET['id'];?>">Editar</a>
+					<a id="admin-edit" href="/src/pages/newsAdmin.php?id=<?php echo $_GET['id'];?>&action=edit">Editar</a>
+					<a id="admin-remove" href="/src/pages/newsAdmin.php?id=<?php echo $_GET['id'];?>&action=remove">Remover</a>
 				<?php endif; ?>
 				
 				<h1 class='noticias-titulo'><?php echo $news["title"]; ?></h1>
