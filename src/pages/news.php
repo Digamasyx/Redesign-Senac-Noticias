@@ -34,13 +34,13 @@ if (!isset($news)) header("Location: ../../index.php");
 <body>
 	<?php require_once(dirname(__DIR__) . '/php/components/header.php') ?>
 
-	<?php if ($check): ?>
-		<a id="admin-link" href="/src/pages/newsAdmin.php?id=<?php echo $_GET['id'];?>">Editar</a>
-	<?php endif; ?>
-
 	<main id='body-page' class="main-container">
 		<div class='main-container-noticias'>
 			<div class='main-noticias-header'>
+				<?php if ($check): ?>
+					<a id="admin-link" href="/src/pages/newsAdmin.php?id=<?php echo $_GET['id'];?>">Editar</a>
+				<?php endif; ?>
+				
 				<h1 class='noticias-titulo'><?php echo $news["title"]; ?></h1>
 				<p class='noticias-descricao'><?php echo $news["shortDescription"]; ?></p>
 				<div id='midia-social' class='midia-social'><!--midias sociais-->

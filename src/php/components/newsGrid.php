@@ -1,5 +1,5 @@
 <section id="news">
-    <img src="/assets/img/Logosemnome.svg" />
+    <img id="news-logo" src="/assets/img/Logosemnome.svg" />
     
     <div id="news-blocks">
         <?php
@@ -17,7 +17,7 @@
             >
                 <div class="news-text">
                     <h3><?php echo $value['title']; ?></h3>
-                    <p><?php echo $value['shortDescription']; ?></p>
+                    <p><?php echo substr($value['shortDescription'], 0, 100) . "..."; ?></p>
                 </div>
             </a>
         <?php endforeach; ?>

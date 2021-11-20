@@ -10,6 +10,10 @@
     padding: 2em 1em;
     /* margin: 1em; */
 }
+#news-logo {
+    max-height: 50%;
+    margin: 0 auto;
+}
 #news-blocks {
     box-sizing: border-box;
     grid-area: content;
@@ -29,6 +33,7 @@
     background-size: cover;
     box-sizing: border-box;
     justify-content: flex-end;
+    border-radius: 5px;
 }
 .news-tile:hover {
     cursor: pointer;
@@ -54,7 +59,6 @@
     grid-column-end: span 2;
 }
 .bottom-tile .news-text p {
-    width: 40%;
     margin-bottom: auto;
 }
 @media (max-width: 900px) {

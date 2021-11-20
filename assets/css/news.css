@@ -9,6 +9,10 @@
 @import url('lightmode.css');
 @import url('menu-acessibilidade.css');
 
+img {
+    border-radius: 10px;
+}
+
 #body-page {
     color: white;
 }
@@ -42,6 +46,7 @@
     flex-direction: row;
     margin-bottom: 0.5em;
     justify-content: space-around;
+    align-items: center;
 }
 .midia-social-img{
     width: 50%;
@@ -156,9 +161,7 @@
     background:rgb(0, 110, 255);
     text-align: center;
     border-radius: 10px;
-    margin: 0 auto;
-    padding: 1em;
-    font-size: 1em;
+    padding: .5em 2em;
 }
 
 /* divisoria newsletter exemplo */
