@@ -175,6 +175,7 @@ main {
     
     display: flex;
     flex-direction: column;
+    border-radius: 5px;
 }
 
 #form {
@@ -192,6 +193,7 @@ main {
     border: none;
     margin: 0 auto;
     width: 100%;
+    border-radius: 5px;
 }
 
 .form-div label {
@@ -208,6 +210,7 @@ main {
     background-color: black;
     font-weight: 700;
     margin: 2em;
+    border-radius: 5px;
 }
 
 @media (min-width: 1024px) {
