@@ -12,7 +12,7 @@
 }
 #news-logo {
     max-height: 50%;
-    margin: 0 auto;
+    margin: auto;
 }
 #news-blocks {
     box-sizing: border-box;
