@@ -9,7 +9,7 @@
 @import url('lightmode.css');
 @import url('menu-acessibilidade.css');
 
-img {
+img:not(.midia-social-img) {
     border-radius: 10px;
 }
 
