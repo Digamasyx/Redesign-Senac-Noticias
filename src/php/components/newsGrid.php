@@ -16,7 +16,7 @@
                 class="news-tile <?php echo $key >= 4 ? 'bottom-tile' : ''; ?>" 
                 style="background-image: url('<?php echo $mainImage; ?>');"
             >
-                <div id='news-text' class="news-text">
+                <div class="news-text">
                     <h3 class='news-text-title'><?php echo $value['title']; ?></h3>
                     <p><?php echo substr($value['shortDescription'], 0, 100) . $add; ?></p>
                 </div>
