@@ -22,7 +22,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 6fr 2fr;
-    gap: 50px 80px;
+    gap: 3.12em 5em;
 }
 .news-tile {
     text-align: left;
@@ -50,7 +50,7 @@
     margin-bottom: 0.3em;
     color: white;
     font-family: "Poppins";
-    font-size: 15px;
+    font-size: .9em;
 }
 .news-text p {
     color: white;
@@ -62,6 +62,11 @@
 }
 .bottom-tile .news-text p {
     margin-bottom: auto;
+}
+@media (max-width: 1040px) {
+    #news-blocks {
+        gap: 1.5em 2.5em;
+    }
 }
 @media (max-width: 930px) {
     #news-blocks {
