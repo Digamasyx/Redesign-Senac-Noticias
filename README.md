@@ -8,4 +8,4 @@ O SENAC Notícias, como o nome já diz, é um site de notícias voltado ao Senac
 
 O site usa HTML, CSS, JavaScript, PHP e SQL (MySQL) e conta com responsividade e outros padrões de acessibilidade (como alto contraste e fontes ajustáveis).
 
-Você pode ver o site funcionando clicando <a href="http://senac-noticias.atwebpages.com/">aqui</a>.
+Você pode ver o site funcionando clicando <a href="http://senac-noticias.atwebpages.com/" target="_blank">aqui</a>.
