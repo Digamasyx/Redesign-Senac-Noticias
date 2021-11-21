@@ -102,9 +102,6 @@
         font-weight: 400;
         font-size: 0.7em;
     }
-    .main-noticias{
-        margin-left: 2em;
-    }
     .main-noticias:hover{
         color: #0071CF ;
     } 
