@@ -63,7 +63,7 @@
 .bottom-tile .news-text p {
     margin-bottom: auto;
 }
-@media (max-width: 900px) {
+@media (max-width: 930px) {
     #news-blocks {
         grid-template-columns: 1fr 1fr;
     }
