@@ -1,5 +1,8 @@
 <?php
-session_start();
+if ($_REQUEST['password'] === "SUASENHA")
+{
+    session_start();
 
-$_SESSION['admin'] = 'true';
+    $_SESSION['admin'] = 'true';
+}
 ?>

@@ -4,6 +4,9 @@ require_once(dirname(__DIR__) . '/php/functions/getPath.php');
 require_once(dirname(__DIR__) . '/php/functions/startSession.php');
 
 $check = isset($_SESSION['admin']);
+$protocol = explode('/', $_SERVER["SERVER_PROTOCOL"])[0];
+$protocol = strtolower($protocol) . "://";
+$url = $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 
 if (isset($_GET['id'])) 
 {
@@ -21,30 +24,57 @@ if (!isset($news)) header("Location: ../../index.php");
 	<title><?php echo $news['title']; ?></title>
 	<link rel="stylesheet" href="/assets/css/contrast.css">
 	<script type="text/javascript" src="/assets/js/menu-acessibilidade.js"></script>
+	<link rel="icon" href="/assets/img/Logosemnome.svg">
 	<link rel="stylesheet" href="/assets/css/normalize.css">
 	<link rel="stylesheet" href="/assets/css/news.css">
-	<link rel="stylesheet" href="assets/css/newsletterForm.css">
+	<link rel="stylesheet" href="/assets/css/newsletterForm.css">
+	<script type="text/javascript" src="/assets/js/NLAction.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
 	<?php require_once(dirname(__DIR__) . '/php/components/header.php') ?>
 
-	<?php if ($check): ?>
-		<a id="admin-link" href="/src/pages/newsAdmin.php?id=<?php echo $_GET['id'];?>">Editar</a>
-	<?php endif; ?>
-
 	<main id='body-page' class="main-container">
 		<div class='main-container-noticias'>
 			<div class='main-noticias-header'>
+				<?php if ($check): ?>
+					<a id="admin-edit" href="/src/pages/newsAdmin.php?id=<?php echo $_GET['id'];?>&action=edit">Editar</a>
+					<a id="admin-remove" href="/src/pages/newsAdmin.php?id=<?php echo $_GET['id'];?>&action=remove">Remover</a>
+				<?php endif; ?>
+				
 				<h1 class='noticias-titulo'><?php echo $news["title"]; ?></h1>
 				<p class='noticias-descricao'><?php echo $news["shortDescription"]; ?></p>
 				<div id='midia-social' class='midia-social'><!--midias sociais-->
 					<h3 class='compartilhar-noticia'>Compartilhe esta publicação:</h3>
-					<a href='#' class='botao-social'><img style='margin-left: 0 !important;'class='midia-social-img' src='/assets/testpics/facebook.png'></a>
-					<a href='#' class='botao-social'><img class='midia-social-img' src='/assets/testpics/instagram.png'></a>
-					<a href='#' class='botao-social'><img class='midia-social-img' src='/assets/testpics/linkedin.png'></a>
-					<a href='#' class='botao-social'><img class='midia-social-img' src='/assets/testpics/twitter.png'></a>
-					<a href='#' class='botao-social'><img class='midia-social-img' src='/assets/testpics/whatsapp.png'></a>
-					<a href='#' class='botao-social'><img class='midia-social-img' src='/assets/testpics/youtube.png'></a>
+					
+					<a 
+						href="http://www.facebook.com/sharer.php?u=<?php echo $url; ?>" 
+						class='botao-social'
+						target="_blank"
+					>
+						<img style='margin-left: 0 !important;'class='midia-social-img' src='/assets/testpics/facebook.png' alt="Facebook" />
+					</a>
+					<a
+						href='http://www.linkedin.com/shareArticle?mini=true&amp;url=<?php echo $url; ?>' 
+						class='botao-social'
+						target="_blank"
+					>
+						<img class='midia-social-img' src='/assets/testpics/linkedin.png' alt="Linkedin" />
+					</a>
+					<a 
+						href="http://twitter.com/share?url=<?php echo $url;?>&text=<?php echo urlencode($news['shortDescription']); ?>&hashtags=SenacNoticias"
+						class='botao-social'
+						target="_blank"
+					>
+						<img class='midia-social-img' src='/assets/testpics/twitter.png' alt="Twitter" />
+					</a>
+					<a 
+						href='https://api.whatsapp.com/send/?phone&text=<?php echo urlencode($news["shortDescription"] . "\n" . $url); ?>&app_absent=0' 
+						class='botao-social'
+						target="_blank"
+					>
+						<img class='midia-social-img' src='/assets/testpics/whatsapp.png' alt="Whatsapp" />
+					</a>
 				</div><!--midias sociais-->
 			</div>
 			

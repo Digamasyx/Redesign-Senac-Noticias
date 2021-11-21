@@ -20,10 +20,14 @@
     max-width: 20em;
     min-width: 15em;
     margin-bottom:1em;
+    border-radius: 10px;
+    overflow: hidden;
 }
 .noticias-imagem{
     width: 100%;
     height: 50%;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
 }
 .noticias-imagem img{
     width: 100%;
@@ -47,10 +51,6 @@
     font-size: 0.7em;
     word-wrap: break-word;
 }
-.leia-mais{
-    text-align: right;
-    font-size: 0.7em;
-}
 @media (min-width: 490px){
     .main-noticias{
         min-width: 30em;
@@ -58,6 +58,9 @@
     }
     .noticias-imagem{
         min-height: 15em;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 0;
     }
     .noticia-titulo{
         font-size: 1.5em;

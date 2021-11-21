@@ -10,7 +10,7 @@ require_once(dirname(__DIR__) . '/php/functions/startSession.php');
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-    <link rel="icon" href="assets/img/Logosemnome.svg">
+    <link rel="icon" href="/assets/img/Logosemnome.svg">
     <script type="text/javascript" src="/assets/js/menu-acessibilidade.js"></script>
     <link rel="stylesheet" href="/assets/css/allNews.css">
     <title>SENAC | Ver notícias</title>

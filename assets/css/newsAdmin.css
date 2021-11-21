@@ -27,14 +27,21 @@ main {
 }
 
 .btn-registrar {
-    width: 250px;
-    height: 50px;
-    left: 323px;
-    top: 164px;
+    width: 16em;
+    height: 3em;
+    left: 20em;
+    top: 10em;
     margin-bottom: 1em;
-
+    border: none;
     background: #000000;
-    color: white;
+    color: #ffffff;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+.btn-registrar:hover {
+    background: #1d1d1d;
+    cursor: pointer;
 }
 
 .main-noticias{
@@ -47,6 +54,8 @@ main {
     min-height: 300px;
     margin-top: 3em;
     margin-bottom:1em;
+    border-radius: 10px;
+    overflow: hidden;
 }
 .noticias-imagem{
     width: 26em;
@@ -98,27 +107,38 @@ main {
 }
 
 .btn-editar {
-    width: 100px;
-    height: 40px;
-    left: 986px;
-    top: 350px;
+    width: 6em;
+    height: 3em;
+    left: 62em;
+    top: 2em;
 
     background: #000000;
     color: white;
+    border: none;
     border-radius: 15px;
 }
 
+.btn-editar:hover {
+    background: #1d1d1d;
+    cursor: pointer;
+}
+
 .btn-apagar {
-    width: 100px;
-    height: 40px;
-    left: 986px;
-    top: 409px;
+    width: 6em;
+    height: 3em;
+    left: 62em;
+    top: 2em;
 
     background: white;
     border: 1px solid #000000;
     color: black;
     box-sizing: border-box;
     border-radius: 15px;
+}
+
+.btn-apagar:hover {
+    background: #ebebeb;
+    cursor: pointer;
 }
 
 @media (max-width: 768px)  {
@@ -139,6 +159,14 @@ main {
 
 }
 
+@media (max-width: 340px) {
+    .btn-registrar {
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 1em;
+    }
+}
+
 /* Formulário */
 
 #noticias-container:not(.hide) {
@@ -147,29 +175,42 @@ main {
     
     display: flex;
     flex-direction: column;
+    border-radius: 5px;
 }
 
-#form input, textarea {
+#form {
+    width: 100%;
+}
+
+.form-div {
+    padding: 1em;
+}
+
+.form-div input, 
+.form-div textarea {
     background: #202020;
     color: white;
     border: none;
-    margin: .9em;
+    margin: 0 auto;
+    width: 100%;
+    border-radius: 5px;
 }
 
-#form label {
+.form-div label {
     display: block;
     font-weight: 700;
 }
 
 #form button {
-    width: 120px;
-    height: 32px;
+    width: 8em;
+    height: 2em;
     border: none;
     cursor: pointer;
     color: white;
     background-color: black;
     font-weight: 700;
     margin: 2em;
+    border-radius: 5px;
 }
 
 @media (min-width: 1024px) {

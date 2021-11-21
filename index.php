@@ -1,4 +1,5 @@
 <?php
+require_once(__DIR__ . '/src/php/functions/startSession.php');
 require_once(__DIR__ . '/src/php/classes/NewsController.php');
 require_once(__DIR__ . '/src/php/functions/getPath.php');
 ?>

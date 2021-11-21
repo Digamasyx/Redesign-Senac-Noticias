@@ -19,12 +19,13 @@ $news = $dbh->getAllNews();
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="/assets/css/newsAdmin.css">
 	<link rel="shortcut icon" href="/assets/img/logosemnome.svg" type="image/x-icon">
+        <link rel="icon" href="/assets/img/Logosemnome.svg">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="/assets/js/newsAdmin.js"></script>
 	<title>Administrar notícias</title>
 </head>
 <body>
-	<?php require_once(dirname(__DIR__) . '\php\components\header.php')?>
+	<?php require_once(dirname(__DIR__) . '/php/components/header.php')?>
 
 	<?php if (isset($_GET['internalError']) || isset($_GET['success']) || isset($_GET['noChanges'])): ?>
 		<div id="admin-log">
@@ -60,22 +61,22 @@ $news = $dbh->getAllNews();
 				<h2 id="form-title">Insira uma notícia</h2>
 
 				<form id="form" enctype="multipart/form-data" method="POST">
-					<div>
+					<div class="form-div">
 						<label for="title">Título:</label>
 						<input type="text" id="title" name="title" required /> 
 					</div>
 
-					<div>
+					<div class="form-div">
 						<label for="shortDesc">Descrição curta:</label> 
-						<textarea id="shortDesc" name="shortDesc" rows="10"></textarea> 
+						<textarea id="shortDesc" name="shortDesc" rows="10" maxlength="255"></textarea> 
 					</div>
 
-					<div>
+					<div class="form-div">
 						<label for="content">Notícia:</label> 
 						<textarea id="content" name="content" rows="15" required></textarea>
 					</div>
 
-					<div>
+					<div class="form-div">
 						<label for="mainImg">Imagem:</label> 
 						<input type="file" id="mainImg" name="mainImg"/> 
 					</div>
@@ -108,15 +109,18 @@ $news = $dbh->getAllNews();
 		
 	</main>
 
-	<?php require_once(dirname(__DIR__) . '\php\components\footer.html')?>
+	<?php require_once(dirname(__DIR__) . '/php/components/footer.html')?>
 
-	<?php if (isset($_GET['id'])): ?>
-		<script>
-			activateEdit(<?php echo $_GET['id']; ?>);
-		</script>
-	<?php 
-	$_GET['id'] = null;
-	endif; 
-	?>
+	<?php if (isset($_GET['id']) && isset($_GET['action'])): ?>
+		<?php if ($_GET['action'] === 'edit'): ?>
+			<script>
+				activateEdit(<?php echo $_GET['id']; ?>);
+			</script>
+		<?php elseif ($_GET['action'] === 'remove'): ?>
+			<script>
+				deleteAction(<?php echo $_GET['id']; ?>);
+			</script>
+		<?php endif; ?>
+	<?php endif; ?>
 </body>
 </html>
