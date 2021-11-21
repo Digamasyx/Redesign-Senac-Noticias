@@ -80,7 +80,7 @@
         display: none;
     }
 }
-@media (max-width: 500px) {
+@media (max-width: 530px) {
     .news-tile:nth-of-type(1) {
         grid-column-start: 1;
         grid-column-end: 3;
