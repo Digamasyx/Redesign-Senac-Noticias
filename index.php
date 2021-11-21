@@ -12,7 +12,8 @@ require_once(__DIR__ . '/src/php/functions/getPath.php');
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" href="assets/css/newsletterForm.css">
-    
+    <link rel="stylesheet" href="/assets/css/contrast.css">
+	<script type="text/javascript" src="assets/js/menu-acessibilidade.js"></script>
     <link rel="icon" href="assets/img/Logosemnome.svg">
     <script type="text/javascript" src="assets/js/NLAction.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

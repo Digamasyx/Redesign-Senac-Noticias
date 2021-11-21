@@ -1,3 +1,5 @@
+@import url('lightmode.css');
+@import url('menu-acessibilidade.css');
 #news {
     width: 100%;
     box-sizing: border-box;
@@ -80,5 +82,12 @@
     }
     .news-tile:nth-of-type(2) {
         display: none;
+    }
+    #news-logo{
+        max-height: 4em;
+    }
+    #news{
+        display: flex;
+        flex-direction: column;
     }
 }
