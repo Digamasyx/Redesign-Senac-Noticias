@@ -191,12 +191,12 @@ if(window.location.pathname.includes('pages/news')){
         var all = document.getElementsByClassName('news-text');
         var all2 = document.getElementsByClassName('news-text-title')
         for (var i = 0; i < all.length; i++) {
-            if (all[i].style.fontSize == '12px' & all2[i].style.fontSize == '13px'){
+            if (all[i].style.fontSize == '0.75em' & all2[i].style.fontSize == '0.8em'){
                 all[i].style.fontSize = '';
                 all2[i].style.fontSize = '';
             }else{
-                all[i].style.fontSize = '18px';
-                all2[i].style.fontSize = '20px';
+                all[i].style.fontSize = '1.1em';
+                all2[i].style.fontSize = '1.25em';
             }    
         }
     }  
@@ -204,12 +204,12 @@ if(window.location.pathname.includes('pages/news')){
         var all = document.getElementsByClassName('news-text');
         var all2 = document.getElementsByClassName('news-text-title')
         for (var i = 0; i < all.length; i++) {
-            if (all[i].style.fontSize == '18px' & all2[i].style.fontSize == '20px'){
+            if (all[i].style.fontSize == '1.1em' & all2[i].style.fontSize == '1.25em'){
                 all[i].style.fontSize = '';
                 all2[i].style.fontSize = '';
             }else{
-                all[i].style.fontSize = '12px';
-                all2[i].style.fontSize = '13px';
+                all[i].style.fontSize = '0.75em';
+                all2[i].style.fontSize = '0.8em';
             }
             
         }
