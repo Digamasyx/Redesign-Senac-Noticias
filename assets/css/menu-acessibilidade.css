@@ -27,6 +27,7 @@
 .botao-acessibilidade{
     font-size: 1.3em;
     text-decoration: none;
+    margin-left: 0.2em;
     color: white;
     background: #0F0F0F ;
     text-decoration: none;
@@ -61,4 +62,80 @@
 }
 .negrito{
     font-weight: bold;
+}
+.fontIncrease h1,
+.fontIncrease h2,
+.fontIncrease h3,
+.fontIncrease h4,
+.fontIncrease h5,
+.fontIncrease h6,
+.fontIncrease p,
+.fontIncrease a,
+.fontIncrease span,
+.fontIncrease label,
+.fontIncrease strong,
+.fontIncrease em,
+.fontIncrease cite,
+.fontIncrease q,
+.fontIncrease i,
+.fontIncrease b,
+.fontIncrease u{
+    font-size: 2.4em;
+}
+.fontIncreaseMobile h1,
+.fontIncreaseMobile h2,
+.fontIncreaseMobile h3,
+.fontIncreaseMobile h4,
+.fontIncreaseMobile h5,
+.fontIncreaseMobile h6,
+.fontIncreaseMobile p,
+.fontIncreaseMobile a,
+.fontIncreaseMobile span,
+.fontIncreaseMobile label,
+.fontIncreaseMobile strong,
+.fontIncreaseMobile em,
+.fontIncreaseMobile cite,
+.fontIncreaseMobile q,
+.fontIncreaseMobile i,
+.fontIncreaseMobile b,
+.fontIncreaseMobile u{
+    font-size: 1.8em;
+}
+.fontDecrase h1,
+.fontDecrase h2,
+.fontDecrase h3,
+.fontDecrase h4,
+.fontDecrase h5,
+.fontDecrase h6,
+.fontDecrase p,
+.fontDecrase a,
+.fontDecrase span,
+.fontDecrase label,
+.fontDecrase strong,
+.fontDecrase em,
+.fontDecrase cite,
+.fontDecrase q,
+.fontDecrase i,
+.fontDecrase b,
+.fontDecrase u{
+    font-size: 1.2em;
+}
+.fontDecraseMobile h1,
+.fontDecraseMobile h2,
+.fontDecraseMobile h3,
+.fontDecraseMobile h4,
+.fontDecraseMobile h5,
+.fontDecraseMobile h6,
+.fontDecraseMobile p,
+.fontDecraseMobile a,
+.fontDecraseMobile span,
+.fontDecraseMobile label,
+.fontDecraseMobile strong,
+.fontDecraseMobile em,
+.fontDecraseMobile cite,
+.fontDecraseMobile q,
+.fontDecraseMobile i,
+.fontDecraseMobile b,
+.fontDecraseMobile u{
+    font-size: 0.8em;
 }

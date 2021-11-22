@@ -172,6 +172,10 @@ img:not(.midia-social-img) {
 #admin-remove {
     background:rgb(255, 0, 43);
 }
+.classtxt{
+    font-Family:"Roboto, serif";
+    font-weight: 100;
+}
 
 /* divisoria newsletter exemplo */
 @media (min-width: 600px){

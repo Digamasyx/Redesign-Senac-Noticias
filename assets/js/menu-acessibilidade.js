@@ -2,8 +2,7 @@ if(window.location.pathname.includes('pages/news')){
     window.onload = function(){
         document.getElementById('fonte-magra').classList.remove('none');
         document.getElementById('fonte-magra').classList.add('fonte-magra');
-    }
-    
+    }   
     function contrast(){
         var newsPage = document.getElementById("body-page");
         var accessBox = document.getElementById('caixa-de-acessibilidade');
@@ -37,34 +36,47 @@ if(window.location.pathname.includes('pages/news')){
         cleanBtn.style.display = 'none';
     }
     function thinFont(){
-        var text = document.getElementById("texto-noticias");
+        var all = document.getElementsByClassName("main-container-noticias-principal"); 
         var thinFontBtn = document.getElementById("fonte-magra");
         var noThinFontBtn = document.getElementById("fonte-nao-magra");
-        text.style.fontFamily = "Roboto, serif";
-        text.style.fontWeight = '100';
+        for (var i = 0; i < all.length; i++) {
+            all[i].style.fontFamily = "Roboto, serif";
+            all[i].style.fontWeight = "100";
+        }
         thinFontBtn.style.display = 'none';
         noThinFontBtn.style.display = 'block';
     }
     function noThinFont(){
-        var text = document.getElementById("texto-noticias");
+        var all = document.getElementsByClassName("main-container-noticias-principal");
         var thinFontBtn = document.getElementById("fonte-magra");
         var noThinFontBtn = document.getElementById("fonte-nao-magra");
-        text.style.fontFamily = "Sarala, sans-serif";
+        for (var i = 0; i < all.length; i++) {
+            all[i].style.fontFamily = "Sarala, sans-serif";
+            all[i].style.fontWeight = "";
+        }
         noThinFontBtn.style.display = 'none';
         thinFontBtn.style.display = 'block';
     }
     function boldFont(){
-        var text = document.getElementById("texto-noticias");
         var boldFontBtn = document.getElementById("fonte-negrito");
         var normalFontBtn = document.getElementById("negrito-desliga");
+        var text = document.getElementById("texto-noticias")
+        var all = document.getElementsByClassName("main-container-noticias-principal"); 
+        for (var i = 0; i < all.length; i++) {
+            all[i].style.fontWeight = 'bold';           
+        }
         text.style.fontWeight = 'bold';
         boldFontBtn.style.display = 'none'
         normalFontBtn.style.display = 'block';
     }
     function noBoldFont(){
-        var text = document.getElementById("texto-noticias");
         var boldFontBtn = document.getElementById("fonte-negrito");
+        var text = document.getElementById("texto-noticias")
         var normalFontBtn = document.getElementById("negrito-desliga");
+        var all = document.getElementsByClassName("main-container-noticias-principal"); 
+        for (var i = 0; i < all.length; i++) {
+            all[i].style.fontWeight = 'normal';     
+        }
         text.style.fontWeight = 'normal';
         boldFontBtn.style.display = 'block'
         normalFontBtn.style.display = 'none';
@@ -73,31 +85,39 @@ if(window.location.pathname.includes('pages/news')){
         var text = document.getElementById("texto-noticias");
         if(window.matchMedia("(min-width: 1024px)").matches){   
             if (text.style.fontSize == '2.2em'){
+                document.getElementById("testefont").classList.remove("fontIncrease");
                 return text.style.fontSize = '1.5em';
             }
             else{
+                document.getElementById("testefont").classList.add("fontDecrase");
                 return text.style.fontSize = '1.2em';
             }
         }
         if (text.style.fontSize == '1.8em'){
+            document.getElementById("testefont").classList.remove("fontIncreaseMobile");
             text.style.fontSize = '1.2em';
         }else{
+            document.getElementById("testefont").classList.add("fontDecraseMobile");
             text.style.fontSize = '0.8em';
         }
     }
     function fontSizeIncrease(){
-        var text = document.getElementById("texto-noticias");
+        var text = document.getElementById("texto-noticias"); 
         if(window.matchMedia("(min-width: 1024px)").matches){   
             if (text.style.fontSize == '1.2em'){
+                document.getElementById("testefont").classList.remove("fontDecrase");
                 return text.style.fontSize = '1.5em';
             }
             else{
+                document.getElementById("testefont").classList.add("fontIncrease");
                 return text.style.fontSize = '2.2em';
             }
         }
         if (text.style.fontSize == '0.8em'){
+            document.getElementById("testefont").classList.remove("fontDecraseMobile");
             text.style.fontSize = '1.2em';
         }else{
+            document.getElementById("testefont").classList.add("fontIncreaseMobile");
             text.style.fontSize = '1.8em';
         }
         
