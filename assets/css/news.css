@@ -74,7 +74,7 @@ img:not(.midia-social-img,.acessibilidade-iluminacao) {
     object-fit: cover;
 }
 .noticias-principal-texto{
-    font-size: 1.4em;
+    font-size: 1.2em;
     text-align: left;
     font-weight: 1;
     margin-bottom: 2vh;
@@ -292,4 +292,31 @@ img:not(.midia-social-img,.acessibilidade-iluminacao) {
         font-size: 1.7em;
     }
  
+}
+.mobiledecrase *{
+    font-size: 0.8em;
+}
+.mobileincrease h1,
+.mobileincrease h2,
+.mobileincrease h3,
+.mobileincrease h4,
+.mobileincrease h5,
+.mobileincrease h6{
+    font-size: 1em;
+}
+
+.mobileincrease p{
+    font-size: 1.6em;
+}
+
+.mobileincrease label,
+.mobileincrease strong,
+.mobileincrease em,
+.mobileincrease cite,
+.mobileincrease q,
+.mobileincrease i,
+.mobileincrease b,
+.mobileincrease u,
+.mobileincrease span{
+    font-size: 1em;
 }

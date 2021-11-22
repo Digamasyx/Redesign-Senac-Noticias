@@ -83,37 +83,13 @@ if(window.location.pathname.includes('pages/news')){
     }
     function fontSizeDecrease(){
         var text = document.getElementById("texto-noticias");
-        var all = document.getElementsByClassName("noticias-principal-texto");
-        if(window.matchMedia("(min-width: 1024px)").matches){   
-            if (text.style.fontSize == '2.3em'){
-                for (var i = 0; i < all.length; i++) {
-                    all[i].style.fontSize = '1.7em';
-                }
-            }
-            else{
-                for (var i = 0; i < all.length; i++) {
-                    all[i].style.fontSize = '1.4em';
-                }
-            }
-        }
-
-        
+        text.classList.toggle("mobiledecrase")
+ 
     }
     function fontSizeIncrease(){
         var text = document.getElementById("texto-noticias");
-        var all = document.getElementsByClassName("noticias-principal-texto");  
-        if(window.matchMedia("(min-width: 1150px)").matches){   
-            if (text.style.fontSize == '1.4em'){
-                for (var i = 0; i < all.length; i++) {
-                    all[i].style.fontSize = '1.7em';
-                }
-            }
-            else{
-                for (var i = 0; i < all.length; i++) {
-                    all[i].style.fontSize = '2.3em';
-                }
-            }
-        }
+        text.classList.toggle("mobileincrease")
+      
     }
     function lightMode(){
         var contrast = document.getElementById("body-page");
