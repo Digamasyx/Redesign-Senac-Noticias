@@ -9,7 +9,8 @@
 .light-mode h5,
 .light-mode h6,
 .light-mode p,
-.light-mode a{
+.light-mode a,
+.light-mode *{
     color: black;
 }
 .light-mode .botao-acessibilidade{

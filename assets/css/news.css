@@ -8,12 +8,13 @@
 @import url('newsletterForm.css');
 @import url('lightmode.css');
 @import url('menu-acessibilidade.css');
-
-img:not(.midia-social-img) {
+.acessibilidade-iluminacao{
+    width: 100%;
+}
+img:not(.midia-social-img,.acessibilidade-iluminacao) {
     border-radius: 10px;
     width: 100%;
 }
-
 #body-page {
     color: white;
 }
@@ -73,9 +74,8 @@ img:not(.midia-social-img) {
     object-fit: cover;
 }
 .noticias-principal-texto{
-    font-size: 1.2em;
+    font-size: 1.4em;
     text-align: left;
-    line-height: 1.3em;
     font-weight: 1;
     margin-bottom: 2vh;
 }
@@ -180,6 +180,9 @@ img:not(.midia-social-img) {
 
 /* divisoria newsletter exemplo */
 @media (min-width: 600px){
+    .acessibilidade-iluminacao{
+        width: 50%;
+    }
     #btn-iluminacao{
         width: 7em;
         margin-right: -2.5em;
@@ -226,7 +229,7 @@ img:not(.midia-social-img) {
    }
    /*fim seção newsletter teste*/
 }
-@media (min-width: 1150px) {
+@media (min-width: 1150px) {    
     .main-container-noticias{
         justify-content: center !important;
         align-items: center;
@@ -281,7 +284,7 @@ img:not(.midia-social-img) {
         -moz-box-shadow: 3px 2px 0px 0px rgba(0,0,0,0.59);   
     }
     .noticias-principal-texto{
-        font-size: 1.5em;
+        font-size: 1.7em;
     }
  
 }

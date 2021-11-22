@@ -1,11 +1,10 @@
 #btn-iluminacao{
-    width: 5em;
+    width: 3em;
     background: #0F0F0F;
     outline: none;
     text-decoration: none;
     border: none;
     cursor: pointer;
-    margin-right: -1em;
 }
 #limpar-contraste{
     display: none;
@@ -23,6 +22,7 @@
 }
 .botao-acessibilidade-luz{
     background: #0F0F0F;
+    width: 100%;
 }
 .botao-acessibilidade{
     font-size: 1.3em;
@@ -63,26 +63,6 @@
 .negrito{
     font-weight: bold;
 }
-.fontIncrease *{
-    font-size: 2.4em;
-}
-.fontIncreaseMobile *{
-    font-size: 1.8em;
-}
-.fontDecrase *{
-    font-size: 1.2em;
-}
-.fontDecraseMobile *{
-    font-size: 0.8em;
-}
-
-.fontIncrease strong,
-.fontIncreaseMobile strong,
-.fontIncrease h1,
-.fontIncreaseMobile h1,
-.fontIncrease h2,
-.fontIncreaseMobile h2,
-.fontIncrease h3,
-.fontIncreaseMobile h3 {
-    line-height: 1.2em;
+.none{
+    display: none;
 }
