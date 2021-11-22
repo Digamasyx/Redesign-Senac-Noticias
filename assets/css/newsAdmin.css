@@ -216,11 +216,6 @@ main {
     overflow-y: scroll;
 }
 
-.ql-toolbar button > svg,
-.ql-picker-label > svg {
-    filter: brightness(0) invert(1);
-}
-
 #content {
     display: none;
 }
