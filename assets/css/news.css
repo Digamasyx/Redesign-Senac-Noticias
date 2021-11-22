@@ -11,7 +11,7 @@
 .acessibilidade-iluminacao{
     width: 100%;
 }
-img:not(.midia-social-img,.acessibilidade-iluminacao) {
+#texto-noticias img:not(.midia-social-img,.acessibilidade-iluminacao) {
     border-radius: 10px;
     width: 100%;
 }
