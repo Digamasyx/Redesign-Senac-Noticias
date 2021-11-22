@@ -11,7 +11,7 @@
 .acessibilidade-iluminacao{
     width: 100%;
 }
-img:not(.midia-social-img,.acessibilidade-iluminacao) {
+#texto-noticias img:not(.midia-social-img,.acessibilidade-iluminacao) {
     border-radius: 10px;
     width: 100%;
 }
@@ -181,6 +181,10 @@ img:not(.midia-social-img,.acessibilidade-iluminacao) {
 #texto-noticias a {
     text-decoration: underline;
     color: yellow;
+}
+
+#texto-noticias a:visited {
+    color: #C58AF9;
 }
 
 /* divisoria newsletter exemplo */
