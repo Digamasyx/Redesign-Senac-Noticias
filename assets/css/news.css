@@ -183,6 +183,10 @@ img:not(.midia-social-img,.acessibilidade-iluminacao) {
     color: yellow;
 }
 
+#texto-noticias a:visited {
+    color: #C58AF9;
+}
+
 /* divisoria newsletter exemplo */
 @media (min-width: 600px){
     .acessibilidade-iluminacao{
