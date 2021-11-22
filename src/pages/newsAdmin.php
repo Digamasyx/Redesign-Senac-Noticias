@@ -17,9 +17,10 @@ $news = $dbh->getAllNews();
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="/assets/js/quill/quill.snow.css" rel="stylesheet">
 	<link rel="stylesheet" href="/assets/css/newsAdmin.css">
 	<link rel="shortcut icon" href="/assets/img/logosemnome.svg" type="image/x-icon">
-        <link rel="icon" href="/assets/img/Logosemnome.svg">
+	<link rel="icon" href="/assets/img/Logosemnome.svg">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="/assets/js/newsAdmin.js"></script>
 	<title>Administrar notícias</title>
@@ -72,7 +73,10 @@ $news = $dbh->getAllNews();
 					</div>
 
 					<div class="form-div">
-						<label for="content">Notícia:</label> 
+						<label for="content">Notícia:</label>
+						<div id="editor-all">
+							<div id="editor"></div>
+						</div>
 						<textarea id="content" name="content" rows="15" required></textarea>
 					</div>
 
@@ -80,8 +84,8 @@ $news = $dbh->getAllNews();
 						<label for="mainImg">Imagem:</label> 
 						<input type="file" id="mainImg" name="mainImg"/> 
 					</div>
-					<button>Pronto!</button>
-					
+
+					<button id="submit" onclick="attualizeContent()">Pronto!</button>
 				</form>
 			</div>
 
@@ -122,5 +126,20 @@ $news = $dbh->getAllNews();
 			</script>
 		<?php endif; ?>
 	<?php endif; ?>
+
+	<script src="/assets/js/quill/quill.js"></script>
+	<script>
+		var toolbarOptions = [
+			['bold', 'italic', 'underline', 'strike', { 'header': '1' }], 
+			[{ 'list': 'ordered'}, { 'list': 'bullet' }, { 'align': [] }], 
+			['link', 'image', 'video'],
+			[{ 'color': [] }, { 'background': [] }]
+		];
+		
+		var editor = new Quill('div#editor', {
+			modules: {toolbar: toolbarOptions},
+			theme: 'snow'
+		});
+	</script>
 </body>
 </html>

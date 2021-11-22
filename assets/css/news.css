@@ -11,6 +11,7 @@
 
 img:not(.midia-social-img) {
     border-radius: 10px;
+    width: 100%;
 }
 
 #body-page {

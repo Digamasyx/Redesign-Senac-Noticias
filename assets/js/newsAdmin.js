@@ -8,7 +8,7 @@ function activateRegister()
     form.setAttribute('action', '/src/php/handlers/handleAddNews.php');
     document.getElementById('title').value = '';
     document.getElementById('shortDesc').innerHTML = '';
-    document.getElementById('content').innerHTML = '';
+    document.getElementsByClassName('ql-editor')[0].innerHTML = '';
     document.getElementById('mainImg').setAttribute('required', 'required');
     formDiv.classList.toggle('hide');
 }
@@ -23,7 +23,7 @@ function activateEdit(id)
     {
         document.getElementById('title').value = output['title'];
         document.getElementById('shortDesc').innerHTML = br2nl(output['shortDescription']);
-        document.getElementById('content').innerHTML = br2nl(output['content']);
+        document.getElementsByClassName('ql-editor')[0].innerHTML = output['content'];
         
         form.setAttribute('action', `/src/php/handlers/handleEditNews.php?id=${id}&action=Edit&originalPath=${output['mainImage']}`);
     }, 'json');
@@ -45,4 +45,9 @@ function deleteAction(id)
 function br2nl(text)
 {
     return text.replaceAll('<br />', '');
+}
+
+function attualizeContent()
+{
+    document.getElementById('content').innerText = document.getElementsByClassName('ql-editor')[0].innerHTML;
 }

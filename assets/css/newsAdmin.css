@@ -187,13 +187,42 @@ main {
 }
 
 .form-div input, 
-.form-div textarea {
+.form-div textarea:not(#content) {
+    border-radius: 5px;
+}
+
+.form-div input, 
+.form-div textarea:not(#content),
+.ql-toolbar,
+.ql-editor {
     background: #202020;
     color: white;
     border: none;
     margin: 0 auto;
     width: 100%;
-    border-radius: 5px;
+}
+
+.ql-toolbar {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border: none !important;
+    border-bottom: 1px solid white !important;
+}
+
+.ql-editor {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: none !important;
+    outline: unset !important;
+}
+
+.ql-toolbar button > svg,
+.ql-picker-label > svg {
+    filter: brightness(0) invert(1);
+}
+
+#content {
+    display: none;
 }
 
 .form-div label {
@@ -201,7 +230,7 @@ main {
     font-weight: 700;
 }
 
-#form button {
+#submit {
     width: 8em;
     height: 2em;
     border: none;

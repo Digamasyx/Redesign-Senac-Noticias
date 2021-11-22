@@ -86,7 +86,7 @@ if (!isset($news)) header("Location: ../../index.php");
 				<?php require_once(dirname(__DIR__) . '/php/components/accessibility.html'); ?>
 
 				<div id='caixa-Texto-noticias'class='main-container-noticias-principal'>
-					<h2 id='texto-noticias' class='noticias-principal-texto'><?php echo $news["content"]; ?></h2>
+					<div id='texto-noticias' class='noticias-principal-texto'><?php echo $news["content"]; ?></div>
 				</div>
 			</div>
 		</div>
