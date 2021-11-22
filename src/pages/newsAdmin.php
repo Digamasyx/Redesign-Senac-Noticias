@@ -17,7 +17,7 @@ $news = $dbh->getAllNews();
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="/assets/js/quill/quill.snow.css" rel="stylesheet">
+	<link href="/assets/quill/quill.snow.css" rel="stylesheet">
 	<link rel="stylesheet" href="/assets/css/newsAdmin.css">
 	<link rel="shortcut icon" href="/assets/img/logosemnome.svg" type="image/x-icon">
 	<link rel="icon" href="/assets/img/Logosemnome.svg">
@@ -127,7 +127,7 @@ $news = $dbh->getAllNews();
 		<?php endif; ?>
 	<?php endif; ?>
 
-	<script src="/assets/js/quill/quill.js"></script>
+	<script src="/assets/quill/quill.js"></script>
 	<script>
 		var toolbarOptions = [
 			['bold', 'italic', 'underline', 'strike', { 'header': '1' }], 

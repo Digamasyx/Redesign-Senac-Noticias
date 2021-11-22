@@ -22,7 +22,7 @@ else
 			$data = array(
 				$_POST['title'],
 				nl2br($shortDesc),
-				nl2br($_POST['content']),
+				$_POST['content'],
 				NULL
 			);
 
