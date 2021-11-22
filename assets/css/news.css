@@ -13,6 +13,7 @@
 }
 #texto-noticias img:not(.midia-social-img,.acessibilidade-iluminacao) {
     border-radius: 10px;
+    width: 100%;
 }
 #body-page {
     color: white;
