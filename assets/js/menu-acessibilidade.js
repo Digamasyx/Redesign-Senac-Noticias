@@ -85,19 +85,19 @@ if(window.location.pathname.includes('pages/news')){
         var text = document.getElementById("texto-noticias");
         if(window.matchMedia("(min-width: 1024px)").matches){   
             if (text.style.fontSize == '2.2em'){
-                document.getElementById("testefont").classList.remove("fontIncrease");
+                document.getElementById("caixa-Texto-noticias").classList.remove("fontIncrease");
                 return text.style.fontSize = '1.5em';
             }
             else{
-                document.getElementById("testefont").classList.add("fontDecrase");
+                document.getElementById("caixa-Texto-noticias").classList.add("fontDecrase");
                 return text.style.fontSize = '1.2em';
             }
         }
         if (text.style.fontSize == '1.8em'){
-            document.getElementById("testefont").classList.remove("fontIncreaseMobile");
+            document.getElementById("caixa-Texto-noticias").classList.remove("fontIncreaseMobile");
             text.style.fontSize = '1.2em';
         }else{
-            document.getElementById("testefont").classList.add("fontDecraseMobile");
+            document.getElementById("caixa-Texto-noticias").classList.add("fontDecraseMobile");
             text.style.fontSize = '0.8em';
         }
     }
@@ -105,19 +105,19 @@ if(window.location.pathname.includes('pages/news')){
         var text = document.getElementById("texto-noticias"); 
         if(window.matchMedia("(min-width: 1024px)").matches){   
             if (text.style.fontSize == '1.2em'){
-                document.getElementById("testefont").classList.remove("fontDecrase");
+                document.getElementById("caixa-Texto-noticias").classList.remove("fontDecrase");
                 return text.style.fontSize = '1.5em';
             }
             else{
-                document.getElementById("testefont").classList.add("fontIncrease");
+                document.getElementById("caixa-Texto-noticias").classList.add("fontIncrease");
                 return text.style.fontSize = '2.2em';
             }
         }
         if (text.style.fontSize == '0.8em'){
-            document.getElementById("testefont").classList.remove("fontDecraseMobile");
+            document.getElementById("caixa-Texto-noticias").classList.remove("fontDecraseMobile");
             text.style.fontSize = '1.2em';
         }else{
-            document.getElementById("testefont").classList.add("fontIncreaseMobile");
+            document.getElementById("caixa-Texto-noticias").classList.add("fontIncreaseMobile");
             text.style.fontSize = '1.8em';
         }
         
