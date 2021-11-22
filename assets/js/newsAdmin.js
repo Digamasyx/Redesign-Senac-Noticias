@@ -32,6 +32,7 @@ function activateEdit(id)
 
     document.getElementById('mainImg').removeAttribute('required');
     formDiv.classList.remove('hide');
+    $('html, body').animate({ scrollTop: 0 }, 'fast');
 }
 
 function deleteAction(id)
