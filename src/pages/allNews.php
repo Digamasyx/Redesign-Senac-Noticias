@@ -13,6 +13,7 @@ require_once(dirname(__DIR__) . '/php/functions/startSession.php');
     <link rel="icon" href="/assets/img/Logosemnome.svg">
     <script type="text/javascript" src="/assets/js/menu-acessibilidade.js"></script>
     <link rel="stylesheet" href="/assets/css/allNews.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="/assets/js/scroll.js"></script>
     <title>SENAC | Ver notícias</title>
 </head>
