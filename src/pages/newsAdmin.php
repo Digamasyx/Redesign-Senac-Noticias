@@ -140,6 +140,75 @@ $news = $dbh->getAllNews();
 			modules: {toolbar: toolbarOptions},
 			theme: 'snow'
 		});
+
+		var allDeleted = [];
+	
+		function selectLocalImage() 
+		{
+			const input = document.createElement('input');
+
+			input.setAttribute('id', 'otherImages');
+			input.setAttribute('name', 'otherImages');
+			input.setAttribute('type', 'file');
+			input.click();
+
+			input.onchange = () => {
+				const file = input.files[0];
+
+				if (/^image\//.test(file.type)) 
+				{   
+					var form_data = new FormData();                  
+					form_data.append('file', file);
+					$.ajax({
+						url: '/src/php/functions/saveImage.php',
+						cache: false,
+						dataType: 'text',
+						contentType: false,
+						processData: false,
+						data: form_data,                         
+						type: 'post',
+						success: function(url) 
+						{
+							insertToEditor(url);
+						}
+					});
+				} 
+				else console.warn('Você só pode anexar imagens.');
+			};
+		}
+
+		function insertToEditor(url) 
+		{
+			const range = editor.getSelection();
+
+			editor.insertEmbed(range.index, 'image', url);
+		}
+
+		editor.getModule('toolbar').addHandler('image', () => selectLocalImage());
+
+		editor.on('text-change', (delta, oldContents, source) => 
+		{
+			if (source !== 'user') return;
+
+			const deleted = getImgUrls(editor.getContents().diff(oldContents));
+			allDeleted = merge(allDeleted, deleted);
+		});
+
+		function getImgUrls(delta) 
+		{
+			return delta.ops.filter(i => i.insert && i.insert.image).map(i => i.insert.image);
+		}
+
+		function merge(v1, v2)
+		{
+			let result = v1.concat(v2);
+
+			result = [...new Set([...v1,...v2])];
+
+			return result;
+		}
+
+		document.getElementById('form').addEventListener('submit', () => $.post('/src/php/functions/deleteFiles.php', { paths: allDeleted }));
 	</script>
 </body>
 </html>

@@ -45,7 +45,23 @@ function deleteAction(id)
 {
     $.post('/src/php/functions/getNewsData.php', { id: id }, function (output)
     {
-        document.location = `/src/php/handlers/handleEditNews.php?id=${id}&action=Remove&originalPath=${output['mainImage']}`;
+        const temp = document.createElement('div');
+        temp.display = 'none';
+        temp.innerHTML = output['content'];
+        const imgs = temp.getElementsByTagName('img');
+        const allSrc = [];
+
+        for (let i = 0; i < imgs.length; i++)
+        {
+            if (imgs[i].src.includes('/assets/img/news/content'))
+            {
+                let index = imgs[i].src.indexOf('/assets/img/news/content');
+                
+                allSrc.push(imgs[i].src.substring(index));
+            }
+        }
+
+        $.post('/src/php/functions/deleteFiles.php', { paths: allSrc }, () => document.location = `/src/php/handlers/handleEditNews.php?id=${id}&action=Remove&originalPath=${output['mainImage']}`);
     }, 'json');
 }
 
