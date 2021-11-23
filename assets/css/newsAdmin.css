@@ -212,7 +212,7 @@ main {
 .ql-editor {
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-    height: 20em;
+    height: 40em;
     overflow-y: scroll;
 }
 
