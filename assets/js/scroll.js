@@ -1,3 +1,4 @@
+window.onload = () => scrollFunction();
 window.onscroll = () => scrollFunction();
 
 function scrollFunction() 
