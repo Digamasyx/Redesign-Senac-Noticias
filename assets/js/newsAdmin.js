@@ -1,3 +1,5 @@
+let isEdit = false;
+
 function activateRegister()
 {
     const formDiv = document.getElementById('noticias-container');
@@ -10,7 +12,10 @@ function activateRegister()
     document.getElementById('shortDesc').innerHTML = '';
     document.getElementsByClassName('ql-editor')[0].innerHTML = '';
     document.getElementById('mainImg').setAttribute('required', 'required');
-    formDiv.classList.toggle('hide');
+    
+    if (!isEdit) formDiv.classList.toggle('hide');
+
+    isEdit = false;
 }
 
 function activateEdit(id)
@@ -29,6 +34,7 @@ function activateEdit(id)
     }, 'json');
 
     formTitle.innerText = 'Editar notícia';
+    isEdit = true;
 
     document.getElementById('mainImg').removeAttribute('required');
     formDiv.classList.remove('hide');
