@@ -23,6 +23,7 @@ $news = $dbh->getAllNews();
 	<link rel="icon" href="/assets/img/Logosemnome.svg">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="/assets/js/newsAdmin.js"></script>
+	<script src="/assets/js/scroll.js"></script>
 	<title>Administrar notícias</title>
 </head>
 <body>
@@ -114,6 +115,8 @@ $news = $dbh->getAllNews();
 	</main>
 
 	<?php require_once(dirname(__DIR__) . '/php/components/footer.html')?>
+
+	<?php require_once(dirname(__DIR__) . '/php/components/topButton.html'); ?>
 
 	<?php if (isset($_GET['id']) && isset($_GET['action'])): ?>
 		<?php if ($_GET['action'] === 'edit'): ?>

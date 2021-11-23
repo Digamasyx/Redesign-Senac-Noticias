@@ -13,3 +13,14 @@ html {
     scroll-behavior: smooth;
     background: var(--bg-color);
 }
+
+#topBtn {
+    border-radius: 100px;
+    background-color: orangered;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border: none;
+    width: 2.5em;
+    height: 2.5em;
+}

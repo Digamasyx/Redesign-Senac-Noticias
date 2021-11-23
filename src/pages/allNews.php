@@ -13,6 +13,7 @@ require_once(dirname(__DIR__) . '/php/functions/startSession.php');
     <link rel="icon" href="/assets/img/Logosemnome.svg">
     <script type="text/javascript" src="/assets/js/menu-acessibilidade.js"></script>
     <link rel="stylesheet" href="/assets/css/allNews.css">
+    <script src="/assets/js/scroll.js"></script>
     <title>SENAC | Ver notícias</title>
 </head>
 <body>
@@ -27,5 +28,7 @@ require_once(dirname(__DIR__) . '/php/functions/startSession.php');
     <?php require_once(dirname(__DIR__) . '/php/components/footer.html'); ?>
     <!-- News List movido do main para o footer -->
     <!-- <?php require_once(dirname(__DIR__) . '/php/components/newsList.php'); ?> -->
+
+    <?php require_once(dirname(__DIR__) . '/php/components/topButton.html'); ?>
 </body>
 </html>

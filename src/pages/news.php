@@ -29,6 +29,7 @@ if (!isset($news)) header("Location: ../../index.php");
 	<link rel="stylesheet" href="/assets/css/news.css">
 	<link rel="stylesheet" href="/assets/css/newsletterForm.css">
 	<script type="text/javascript" src="/assets/js/NLAction.js"></script>
+	<script src="/assets/js/scroll.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
@@ -95,5 +96,7 @@ if (!isset($news)) header("Location: ../../index.php");
 	<!--footer -->
 	<?php require_once(dirname(__DIR__) . '/php/components/footer.html') ?>
 	<!--footer -->
+
+	<?php require_once(dirname(__DIR__) . '/php/components/topButton.html'); ?>
 </body>
 </html>

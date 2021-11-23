@@ -16,6 +16,7 @@ require_once(__DIR__ . '/src/php/functions/getPath.php');
 	<script type="text/javascript" src="assets/js/menu-acessibilidade.js"></script>
     <link rel="icon" href="assets/img/Logosemnome.svg">
     <script type="text/javascript" src="assets/js/NLAction.js"></script>
+    <script type="text/javascript" src="assets/js/scroll.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>SENAC Notícias</title>
 </head>
@@ -45,5 +46,7 @@ require_once(__DIR__ . '/src/php/functions/getPath.php');
 
     <!-- Footer -->
     <?php require_once('src/php/components/footer.html') ?>
+
+    <?php require_once('src/php/components/topButton.html') ?>
 </body>
 </html>
