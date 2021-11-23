@@ -6,6 +6,14 @@
     align-items: center;
     background: #0F0F0F;
     height: 10vh;
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    z-index: 999;
+}
+
+main {
+    padding-top: 10vh;
 }
 
 #navbar {
