@@ -4,7 +4,7 @@ function activateRegister()
 {
     const ql = document.getElementsByClassName('ql-editor')[0];
     
-    if (ql.innerHTML != '')
+    if (ql.innerHTML > 10)
     {
         const allSrc = getAllSrc(ql);
 
@@ -95,7 +95,7 @@ window.onunload = function()
 {
     const ql = document.getElementsByClassName('ql-editor')[0];
     
-    if (ql.innerHTML != '')
+    if (ql.innerHTML > 10)
     {
         const allSrc = getAllSrc(ql);
 
