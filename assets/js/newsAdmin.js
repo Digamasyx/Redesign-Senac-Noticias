@@ -1,15 +1,9 @@
 let isEdit = false;
+let added = [];
 
 function activateRegister()
 {
-    const ql = document.getElementsByClassName('ql-editor')[0];
-    
-    if (ql.innerHTML.length > 10)
-    {
-        const allSrc = getAllSrc(ql);
-
-        $.post('/src/php/functions/deleteFiles.php', { paths: allSrc });
-    }
+    deleteExtra();
 
     const formDiv = document.getElementById('noticias-container');
     const formTitle = document.getElementById('form-title');
@@ -19,7 +13,7 @@ function activateRegister()
     form.setAttribute('action', '/src/php/handlers/handleAddNews.php');
     document.getElementById('title').value = '';
     document.getElementById('shortDesc').innerHTML = '';
-    ql.innerHTML = '';
+    document.getElementsByClassName('ql-editor')[0].innerHTML = '';
     document.getElementById('mainImg').setAttribute('required', 'required');
     
     if (!isEdit) formDiv.classList.toggle('hide');
@@ -29,6 +23,8 @@ function activateRegister()
 
 function activateEdit(id)
 {
+    deleteExtra();
+
     const formDiv = document.getElementById('noticias-container');
     const formTitle = document.getElementById('form-title');
     const form = document.getElementById('form');
@@ -52,12 +48,14 @@ function activateEdit(id)
 
 function deleteAction(id)
 {
+    deleteExtra();
+
     $.post('/src/php/functions/getNewsData.php', { id: id }, function (output)
     {
         const temp = document.createElement('div');
         temp.display = 'none';
         temp.innerHTML = output['content'];
-        const allSrc = getAllSrc(temp).
+        const allSrc = getAllSrc(temp);
 
         $.post('/src/php/functions/deleteFiles.php', { paths: allSrc }, () => document.location = `/src/php/handlers/handleEditNews.php?id=${id}&action=Remove&originalPath=${output['mainImage']}`);
     }, 'json');
@@ -70,6 +68,7 @@ function br2nl(text)
 
 function attualizeContent()
 {
+    added = [];
     document.getElementById('content').innerText = document.getElementsByClassName('ql-editor')[0].innerHTML;
 }
 
@@ -91,14 +90,19 @@ function getAllSrc(input)
     return allSrc;
 }
 
-window.onunload = function()
+function pushAdded(value)
 {
-    const ql = document.getElementsByClassName('ql-editor')[0];
-    
-    if (ql.innerHTML.length > 10)
-    {
-        const allSrc = getAllSrc(ql);
+    added.push(value);
+}
 
-        $.post('/src/php/functions/deleteFiles.php', { paths: allSrc });
+window.onunload = () => deleteExtra();
+
+function deleteExtra()
+{
+    if (added.length > 0)
+    {
+        $.post('/src/php/functions/deleteFiles.php', { paths: added });
+
+        added = [];
     }
 }

@@ -172,6 +172,7 @@ $news = $dbh->getAllNews();
 						type: 'post',
 						success: function(url) 
 						{
+							pushAdded(url);
 							insertToEditor(url);
 						}
 					});
@@ -210,7 +211,7 @@ $news = $dbh->getAllNews();
 
 			return result;
 		}
-
+		
 		document.getElementById('form').addEventListener('submit', () => $.post('/src/php/functions/deleteFiles.php', { paths: allDeleted }));
 	</script>
 </body>
