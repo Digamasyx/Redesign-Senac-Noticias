@@ -1,5 +1,5 @@
 <?php
-if ($_REQUEST['password'] === "SUASENHA")
+if ($_REQUEST['password'] === ":)")
 {
     session_start();
 
