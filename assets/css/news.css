@@ -141,7 +141,6 @@
     margin-left: 0.3em ;
     border-radius: 0.2em ;
     font-size: 0.8em ;
-    text-decoration: none ;
     outline: none ;
     background: #f78b1f ;
     border: 1px solid #005594;
@@ -269,7 +268,7 @@
     }
     .botao-social{
         width: 2%;
-        margin:2em 2em;
+        margin:2em;
     }
     .compartilhar-noticia{
         display: block;

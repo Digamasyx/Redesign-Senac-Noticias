@@ -1,7 +1,7 @@
 #newsletter {
     border-bottom: 1px solid #fff5;
     border-top: 1px solid #fff5;
-    padding: 2em 5em 2em 5em;
+    padding: 2em 5em;
 }
 
 #newsletter h2 {
@@ -71,7 +71,7 @@
 @media(max-width: 950px) {
     #newsletter {
         width: 100%;
-        padding: 2em 1em 2em 1em;
+        padding: 2em 1em;
     }
 
     #newsletter h2 {

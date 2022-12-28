@@ -8,4 +8,4 @@ function NLAction()
 		$.post('/src/php/functions/adminLogin.php', { password: name }, () => document.location = `/src/pages/newsAdmin.php`);
 	}
 	else document.location = 'index.php';
-};
+}
